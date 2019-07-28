@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 自定义logback配置文件 -->
+<configuration scan="true" scanPeriod="10 seconds">
+    <!-- 从application.yml中读取日志路径 -->
+    <springProperty scope="context" name="LOG_PATH" source="logback.path"/>
+
+    <!-- 以下appender可以根据实际情况引用，若需要使用tomcat的catalina.out，则只需要使用控制台的appender即可 -->
+    <!-- debug -->
+    <appender name="DEBUG_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 过滤其他级别log，只接受DEBUG级别的log -->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>DEBUG</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <!--活动文档路径 -->
+        <!--<File>${LOG_PATH}/debug.log</File>-->
+        <!--滚动策略-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/debug/debug-%d{yyyy-MM-dd}.log</fileNamePattern>
+
+            <!--<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">-->
+            <!--<maxFileSize>5MB</maxFileSize>-->
+            <!--</timeBasedFileNamingAndTriggeringPolicy>-->
+            <!-- 删除180天前的日志 -->
+            <maxHistory>180</maxHistory>
+        </rollingPolicy>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>
+                %d{yyyy-MM-dd HH:mm:ss.SSS} %-5level <!-- [%25.25thread]--> --- %-100.100(%logger{100}.%M) [line%-6.6L] : %msg%n
+            </Pattern>
+        </layout>
+    </appender>
+
+    <!-- info -->
+    <appender name="INFO_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 只接受info级别的log -->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <!--<File>${LOG_PATH}/info.log</File>-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/info/info-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>5MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+            <!-- 删除180天前的日志 -->
+            <maxHistory>180</maxHistory>
+        </rollingPolicy>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>
+                %d{yyyy-MM-dd HH:mm:ss.SSS} %-5level --- %-100.100(%logger{100}.%M) [line%-6.6L] : %msg%n
+            </Pattern>
+        </layout>
+    </appender>
+
+    <!-- warn -->
+    <appender name="WARN_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 只接受warn级别的log -->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>WARN</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/warn/warn-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!--<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">-->
+            <!--<maxFileSize>5MB</maxFileSize>-->
+            <!--</timeBasedFileNamingAndTriggeringPolicy>-->
+            <!-- 删除180天前的日志 -->
+            <maxHistory>180</maxHistory>
+        </rollingPolicy>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>
+                %d{yyyy-MM-dd HH:mm:ss.SSS} %-5level <!--[${PID}] [%25.25thread]--> --- %-100.100(%logger{100}.%M) [line%-6.6L] : %msg%n
+            </Pattern>
+        </layout>
+    </appender>
+
+    <!-- error -->
+    <appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 只接受error级别的log -->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <!--<File>${LOG_PATH}/error.log</File>-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/error/error-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!--<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">-->
+            <!--<maxFileSize>5MB</maxFileSize>-->
+            <!--</timeBasedFileNamingAndTriggeringPolicy>-->
+            <!-- 删除180天前的日志 -->
+            <maxHistory>180</maxHistory>
+        </rollingPolicy>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>
+                %d{yyyy-MM-dd HH:mm:ss.SSS} %-5level <!--[${PID}] [%25.25thread]--> --- %-100.100(%logger{100}.%M) [line%-6.6L] : %msg%n
+            </Pattern>
+        </layout>
+    </appender>
+
+    <!-- 控制台输出 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <charset>UTF-8</charset>
+            <pattern>
+                %green(%d{yyyy-MM-dd HH:mm:ss.SSS}) %highlight(%-5level) <!--[${PID}] [%25.25thread]-->-- %boldMagenta(%-50.100(%logger{100}.%M)): %cyan(%msg%n)
+            </pattern>
+        </encoder>
+        <!--过滤-->
+<!--        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">-->
+<!--            <level>DEBUG</level>-->
+<!--        </filter>-->
+    </appender>
+
+    <!-- mybatis日志打印-->
+    <logger name="com.competitionRank.dao" level="DEBUG"/>
+
+
+    <root level="INFO">
+        <!-- 生产环境最好注掉此项 -->
+        <appender-ref ref="STDOUT" />
+
+        <appender-ref ref="DEBUG_FILE"/>
+        <appender-ref ref="INFO_FILE"/>
+        <appender-ref ref="WARN_FILE"/>
+        <appender-ref ref="ERROR_FILE"/>
+    </root>
+
+</configuration>
