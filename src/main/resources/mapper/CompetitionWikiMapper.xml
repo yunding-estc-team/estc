@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.competition.dao.CompetitionWikiMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.competition.entity.CompetitionWiki">
+        <id column="wiki_id" property="wikiId" />
+        <result column="competition_id" property="competitionId" />
+        <result column="user_id" property="userId" />
+        <result column="content" property="content" />
+        <result column="createAt" property="createAt" />
+        <result column="updateAt" property="updateAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        wiki_id, competition_id, user_id, content, createAt, updateAt
+    </sql>
+
+</mapper>

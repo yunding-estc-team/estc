@@ -1,5 +1,5 @@
-2019-07-28 11:30:53.229 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 26003 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
-2019-07-28 11:30:53.231 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
+2019-07-28 11:30:53.229 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 26003 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
+2019-07-28 11:30:53.231 INFO  --- com.competition.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
 2019-07-28 11:30:58.194 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected    [line244   ] : Multiple Spring Data modules found, entering strict repository configuration mode!
 2019-07-28 11:30:58.201 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line126   ] : Bootstrapping Spring Data repositories in DEFAULT mode.
 2019-07-28 11:30:58.265 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line182   ] : Finished Spring Data repository scanning in 16ms. Found 0 repository interfaces.
@@ -11,8 +11,8 @@
 2019-07-28 11:31:04.415 INFO  --- org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener.logMessage   [line135   ] : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2019-07-28 11:34:28.751 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 26178 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
-2019-07-28 11:34:28.755 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
+2019-07-28 11:34:28.751 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 26178 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
+2019-07-28 11:34:28.755 INFO  --- com.competition.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
 2019-07-28 11:34:30.542 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected    [line244   ] : Multiple Spring Data modules found, entering strict repository configuration mode!
 2019-07-28 11:34:30.545 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line126   ] : Bootstrapping Spring Data repositories in DEFAULT mode.
 2019-07-28 11:34:30.655 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line182   ] : Finished Spring Data repository scanning in 10ms. Found 0 repository interfaces.
@@ -24,8 +24,8 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2019-07-28 11:34:33.959 INFO  --- org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener.logMessage   [line135   ] : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2019-07-28 11:37:00.721 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 26308 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
-2019-07-28 11:37:00.734 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
+2019-07-28 11:37:00.721 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 26308 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
+2019-07-28 11:37:00.734 INFO  --- com.competition.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
 2019-07-28 11:37:02.253 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected    [line244   ] : Multiple Spring Data modules found, entering strict repository configuration mode!
 2019-07-28 11:37:02.256 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line126   ] : Bootstrapping Spring Data repositories in DEFAULT mode.
 2019-07-28 11:37:02.286 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line182   ] : Finished Spring Data repository scanning in 11ms. Found 0 repository interfaces.
@@ -37,8 +37,8 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2019-07-28 11:37:05.079 INFO  --- org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener.logMessage   [line135   ] : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2019-07-28 11:37:29.610 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 26392 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
-2019-07-28 11:37:29.618 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
+2019-07-28 11:37:29.610 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 26392 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
+2019-07-28 11:37:29.618 INFO  --- com.competition.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
 2019-07-28 11:37:31.054 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected    [line244   ] : Multiple Spring Data modules found, entering strict repository configuration mode!
 2019-07-28 11:37:31.057 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line126   ] : Bootstrapping Spring Data repositories in DEFAULT mode.
 2019-07-28 11:37:31.086 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line182   ] : Finished Spring Data repository scanning in 11ms. Found 0 repository interfaces.
@@ -50,8 +50,8 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2019-07-28 11:37:34.084 INFO  --- org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener.logMessage   [line135   ] : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2019-07-28 11:38:25.950 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 26482 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
-2019-07-28 11:38:25.953 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
+2019-07-28 11:38:25.950 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 26482 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
+2019-07-28 11:38:25.953 INFO  --- com.competition.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
 2019-07-28 11:38:27.175 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected    [line244   ] : Multiple Spring Data modules found, entering strict repository configuration mode!
 2019-07-28 11:38:27.179 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line126   ] : Bootstrapping Spring Data repositories in DEFAULT mode.
 2019-07-28 11:38:27.208 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line182   ] : Finished Spring Data repository scanning in 11ms. Found 0 repository interfaces.
@@ -63,8 +63,8 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2019-07-28 11:38:30.268 INFO  --- org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener.logMessage   [line135   ] : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2019-07-28 11:43:07.611 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 26715 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
-2019-07-28 11:43:07.664 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
+2019-07-28 11:43:07.611 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 26715 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
+2019-07-28 11:43:07.664 INFO  --- com.competition.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
 2019-07-28 11:43:26.721 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected    [line244   ] : Multiple Spring Data modules found, entering strict repository configuration mode!
 2019-07-28 11:43:26.842 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line126   ] : Bootstrapping Spring Data repositories in DEFAULT mode.
 2019-07-28 11:43:27.361 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line182   ] : Finished Spring Data repository scanning in 11ms. Found 0 repository interfaces.
@@ -76,8 +76,8 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2019-07-28 11:43:41.340 INFO  --- org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener.logMessage   [line135   ] : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2019-07-28 11:47:59.111 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 26980 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
-2019-07-28 11:47:59.185 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
+2019-07-28 11:47:59.111 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 26980 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
+2019-07-28 11:47:59.185 INFO  --- com.competition.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
 2019-07-28 11:48:18.446 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected    [line244   ] : Multiple Spring Data modules found, entering strict repository configuration mode!
 2019-07-28 11:48:18.513 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line126   ] : Bootstrapping Spring Data repositories in DEFAULT mode.
 2019-07-28 11:48:18.630 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line182   ] : Finished Spring Data repository scanning in 16ms. Found 0 repository interfaces.
@@ -89,8 +89,8 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2019-07-28 11:48:26.334 INFO  --- org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener.logMessage   [line135   ] : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2019-07-28 11:50:53.295 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 27499 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
-2019-07-28 11:50:53.307 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
+2019-07-28 11:50:53.295 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 27499 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
+2019-07-28 11:50:53.307 INFO  --- com.competition.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
 2019-07-28 11:50:56.438 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected    [line244   ] : Multiple Spring Data modules found, entering strict repository configuration mode!
 2019-07-28 11:50:56.447 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line126   ] : Bootstrapping Spring Data repositories in DEFAULT mode.
 2019-07-28 11:50:56.496 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line182   ] : Finished Spring Data repository scanning in 15ms. Found 0 repository interfaces.
@@ -102,48 +102,48 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2019-07-28 11:51:00.112 INFO  --- org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener.logMessage   [line135   ] : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2019-07-28 11:54:08.871 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 27880 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
-2019-07-28 11:54:08.906 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
+2019-07-28 11:54:08.871 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 27880 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
+2019-07-28 11:54:08.906 INFO  --- com.competition.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
 2019-07-28 11:54:10.679 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected    [line244   ] : Multiple Spring Data modules found, entering strict repository configuration mode!
 2019-07-28 11:54:10.686 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line126   ] : Bootstrapping Spring Data repositories in DEFAULT mode.
 2019-07-28 11:54:10.745 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line182   ] : Finished Spring Data repository scanning in 32ms. Found 0 repository interfaces.
 2019-07-28 11:54:11.658 INFO  --- org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener.logMessage   [line135   ] : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2019-07-28 11:54:18.751 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 27961 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
-2019-07-28 11:54:18.754 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
+2019-07-28 11:54:18.751 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 27961 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
+2019-07-28 11:54:18.754 INFO  --- com.competition.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
 2019-07-28 11:54:20.521 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected    [line244   ] : Multiple Spring Data modules found, entering strict repository configuration mode!
 2019-07-28 11:54:20.526 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line126   ] : Bootstrapping Spring Data repositories in DEFAULT mode.
 2019-07-28 11:54:20.574 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line182   ] : Finished Spring Data repository scanning in 28ms. Found 0 repository interfaces.
 2019-07-28 11:54:21.412 INFO  --- org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener.logMessage   [line135   ] : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2019-07-28 11:57:15.905 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 29108 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
-2019-07-28 11:57:15.908 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
+2019-07-28 11:57:15.905 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 29108 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
+2019-07-28 11:57:15.908 INFO  --- com.competition.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
 2019-07-28 11:57:17.576 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected    [line244   ] : Multiple Spring Data modules found, entering strict repository configuration mode!
 2019-07-28 11:57:17.581 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line126   ] : Bootstrapping Spring Data repositories in DEFAULT mode.
 2019-07-28 11:57:17.624 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line182   ] : Finished Spring Data repository scanning in 26ms. Found 0 repository interfaces.
 2019-07-28 11:57:18.384 INFO  --- org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener.logMessage   [line135   ] : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2019-07-28 11:58:02.273 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 29196 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
-2019-07-28 11:58:02.276 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
+2019-07-28 11:58:02.273 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 29196 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
+2019-07-28 11:58:02.276 INFO  --- com.competition.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
 2019-07-28 11:58:03.746 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected    [line244   ] : Multiple Spring Data modules found, entering strict repository configuration mode!
 2019-07-28 11:58:03.751 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line126   ] : Bootstrapping Spring Data repositories in DEFAULT mode.
 2019-07-28 11:58:03.810 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line182   ] : Finished Spring Data repository scanning in 35ms. Found 0 repository interfaces.
 2019-07-28 11:58:04.649 INFO  --- org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener.logMessage   [line135   ] : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2019-07-28 11:59:55.782 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 29373 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
-2019-07-28 11:59:55.787 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
+2019-07-28 11:59:55.782 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 29373 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
+2019-07-28 11:59:55.787 INFO  --- com.competition.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
 2019-07-28 11:59:57.047 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected    [line244   ] : Multiple Spring Data modules found, entering strict repository configuration mode!
 2019-07-28 11:59:57.051 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line126   ] : Bootstrapping Spring Data repositories in DEFAULT mode.
 2019-07-28 11:59:57.087 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line182   ] : Finished Spring Data repository scanning in 20ms. Found 0 repository interfaces.
 2019-07-28 11:59:57.717 INFO  --- org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener.logMessage   [line135   ] : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2019-07-28 12:01:02.226 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 29519 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
-2019-07-28 12:01:02.233 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
+2019-07-28 12:01:02.226 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 29519 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
+2019-07-28 12:01:02.233 INFO  --- com.competition.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
 2019-07-28 12:01:03.572 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected    [line244   ] : Multiple Spring Data modules found, entering strict repository configuration mode!
 2019-07-28 12:01:03.577 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line126   ] : Bootstrapping Spring Data repositories in DEFAULT mode.
 2019-07-28 12:01:03.629 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line182   ] : Finished Spring Data repository scanning in 29ms. Found 0 repository interfaces.
@@ -151,21 +151,21 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2019-07-28 12:01:04.598 INFO  --- com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource                  [line56    ] : Init DruidDataSource
 2019-07-28 12:01:06.716 INFO  --- com.alibaba.druid.pool.DruidDataSource.init                                                          [line1003  ] : {dataSource-1} inited
 2019-07-28 12:01:08.436 INFO  --- org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.initialize                          [line171   ] : Initializing ExecutorService 'applicationTaskExecutor'
-2019-07-28 12:01:09.952 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarted                                        [line59    ] : Started SpringbootDemoApplicationTests in 9.295 seconds (JVM running for 11.345)
-2019-07-28 12:01:10.754 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.contextLoads                                      [line27    ] : 信息
+2019-07-28 12:01:09.952 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarted                                        [line59    ] : Started SpringbootDemoApplicationTests in 9.295 seconds (JVM running for 11.345)
+2019-07-28 12:01:10.754 INFO  --- com.competition.SpringbootDemoApplicationTests.contextLoads                                      [line27    ] : 信息
 2019-07-28 12:01:10.823 INFO  --- org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown                            [line208   ] : Shutting down ExecutorService 'applicationTaskExecutor'
 2019-07-28 12:01:10.825 INFO  --- com.alibaba.druid.pool.DruidDataSource.close                                                         [line1948  ] : {dataSource-1} closing ...
 2019-07-28 12:01:10.836 INFO  --- com.alibaba.druid.pool.DruidDataSource.close                                                         [line2020  ] : {dataSource-1} closed
-2019-07-28 12:03:00.396 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 29688 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
-2019-07-28 12:03:00.402 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
+2019-07-28 12:03:00.396 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 29688 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
+2019-07-28 12:03:00.402 INFO  --- com.competition.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
 2019-07-28 12:03:01.504 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected    [line244   ] : Multiple Spring Data modules found, entering strict repository configuration mode!
 2019-07-28 12:03:01.508 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line126   ] : Bootstrapping Spring Data repositories in DEFAULT mode.
 2019-07-28 12:03:01.550 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line182   ] : Finished Spring Data repository scanning in 24ms. Found 0 repository interfaces.
 2019-07-28 12:03:02.246 INFO  --- org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener.logMessage   [line135   ] : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2019-07-28 13:40:56.693 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 30710 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
-2019-07-28 13:40:56.703 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
+2019-07-28 13:40:56.693 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 30710 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
+2019-07-28 13:40:56.703 INFO  --- com.competition.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
 2019-07-28 13:40:58.485 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected    [line244   ] : Multiple Spring Data modules found, entering strict repository configuration mode!
 2019-07-28 13:40:58.489 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line126   ] : Bootstrapping Spring Data repositories in DEFAULT mode.
 2019-07-28 13:40:58.528 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line182   ] : Finished Spring Data repository scanning in 22ms. Found 0 repository interfaces.
@@ -173,13 +173,13 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2019-07-28 13:40:59.389 INFO  --- com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource                  [line56    ] : Init DruidDataSource
 2019-07-28 13:41:01.331 INFO  --- com.alibaba.druid.pool.DruidDataSource.init                                                          [line1003  ] : {dataSource-1} inited
 2019-07-28 13:41:02.827 INFO  --- org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.initialize                          [line171   ] : Initializing ExecutorService 'applicationTaskExecutor'
-2019-07-28 13:41:04.273 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarted                                        [line59    ] : Started SpringbootDemoApplicationTests in 9.488 seconds (JVM running for 11.311)
-2019-07-28 13:41:04.799 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.contextLoads                                      [line27    ] : 信息
+2019-07-28 13:41:04.273 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarted                                        [line59    ] : Started SpringbootDemoApplicationTests in 9.488 seconds (JVM running for 11.311)
+2019-07-28 13:41:04.799 INFO  --- com.competition.SpringbootDemoApplicationTests.contextLoads                                      [line27    ] : 信息
 2019-07-28 13:41:04.851 INFO  --- org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown                            [line208   ] : Shutting down ExecutorService 'applicationTaskExecutor'
 2019-07-28 13:41:04.858 INFO  --- com.alibaba.druid.pool.DruidDataSource.close                                                         [line1948  ] : {dataSource-1} closing ...
 2019-07-28 13:41:04.872 INFO  --- com.alibaba.druid.pool.DruidDataSource.close                                                         [line2020  ] : {dataSource-1} closed
-2019-07-28 13:41:53.882 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 30835 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
-2019-07-28 13:41:53.885 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
+2019-07-28 13:41:53.882 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 30835 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
+2019-07-28 13:41:53.885 INFO  --- com.competition.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
 2019-07-28 13:41:55.020 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected    [line244   ] : Multiple Spring Data modules found, entering strict repository configuration mode!
 2019-07-28 13:41:55.024 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line126   ] : Bootstrapping Spring Data repositories in DEFAULT mode.
 2019-07-28 13:41:55.062 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line182   ] : Finished Spring Data repository scanning in 22ms. Found 0 repository interfaces.
@@ -187,12 +187,12 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2019-07-28 13:41:55.918 INFO  --- com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource                  [line56    ] : Init DruidDataSource
 2019-07-28 13:41:57.574 INFO  --- com.alibaba.druid.pool.DruidDataSource.init                                                          [line1003  ] : {dataSource-1} inited
 2019-07-28 13:41:58.895 INFO  --- org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.initialize                          [line171   ] : Initializing ExecutorService 'applicationTaskExecutor'
-2019-07-28 13:41:59.956 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarted                                        [line59    ] : Started SpringbootDemoApplicationTests in 7.599 seconds (JVM running for 9.315)
+2019-07-28 13:41:59.956 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarted                                        [line59    ] : Started SpringbootDemoApplicationTests in 7.599 seconds (JVM running for 9.315)
 2019-07-28 13:42:00.477 INFO  --- org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown                            [line208   ] : Shutting down ExecutorService 'applicationTaskExecutor'
 2019-07-28 13:42:00.479 INFO  --- com.alibaba.druid.pool.DruidDataSource.close                                                         [line1948  ] : {dataSource-1} closing ...
 2019-07-28 13:42:00.491 INFO  --- com.alibaba.druid.pool.DruidDataSource.close                                                         [line2020  ] : {dataSource-1} closed
-2019-07-28 13:42:20.463 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 30925 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
-2019-07-28 13:42:20.466 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
+2019-07-28 13:42:20.463 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 30925 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
+2019-07-28 13:42:20.466 INFO  --- com.competition.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
 2019-07-28 13:42:21.707 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected    [line244   ] : Multiple Spring Data modules found, entering strict repository configuration mode!
 2019-07-28 13:42:21.710 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line126   ] : Bootstrapping Spring Data repositories in DEFAULT mode.
 2019-07-28 13:42:21.754 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line182   ] : Finished Spring Data repository scanning in 28ms. Found 0 repository interfaces.
@@ -200,12 +200,12 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2019-07-28 13:42:22.505 INFO  --- com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource                  [line56    ] : Init DruidDataSource
 2019-07-28 13:42:24.062 INFO  --- com.alibaba.druid.pool.DruidDataSource.init                                                          [line1003  ] : {dataSource-1} inited
 2019-07-28 13:42:25.153 INFO  --- org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.initialize                          [line171   ] : Initializing ExecutorService 'applicationTaskExecutor'
-2019-07-28 13:42:26.134 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarted                                        [line59    ] : Started SpringbootDemoApplicationTests in 7.164 seconds (JVM running for 8.769)
+2019-07-28 13:42:26.134 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarted                                        [line59    ] : Started SpringbootDemoApplicationTests in 7.164 seconds (JVM running for 8.769)
 2019-07-28 13:42:26.676 INFO  --- org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown                            [line208   ] : Shutting down ExecutorService 'applicationTaskExecutor'
 2019-07-28 13:42:26.682 INFO  --- com.alibaba.druid.pool.DruidDataSource.close                                                         [line1948  ] : {dataSource-1} closing ...
 2019-07-28 13:42:26.692 INFO  --- com.alibaba.druid.pool.DruidDataSource.close                                                         [line2020  ] : {dataSource-1} closed
-2019-07-28 14:01:50.408 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 31833 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
-2019-07-28 14:01:50.523 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
+2019-07-28 14:01:50.408 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 31833 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
+2019-07-28 14:01:50.523 INFO  --- com.competition.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
 2019-07-28 14:01:59.603 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected    [line244   ] : Multiple Spring Data modules found, entering strict repository configuration mode!
 2019-07-28 14:01:59.608 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line126   ] : Bootstrapping Spring Data repositories in DEFAULT mode.
 2019-07-28 14:01:59.745 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line182   ] : Finished Spring Data repository scanning in 90ms. Found 0 repository interfaces.
@@ -213,12 +213,12 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2019-07-28 14:02:01.724 INFO  --- com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource                  [line56    ] : Init DruidDataSource
 2019-07-28 14:02:05.463 INFO  --- com.alibaba.druid.pool.DruidDataSource.init                                                          [line1003  ] : {dataSource-1} inited
 2019-07-28 14:02:08.354 INFO  --- org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.initialize                          [line171   ] : Initializing ExecutorService 'applicationTaskExecutor'
-2019-07-28 14:02:11.180 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarted                                        [line59    ] : Started SpringbootDemoApplicationTests in 28.79 seconds (JVM running for 57.734)
+2019-07-28 14:02:11.180 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarted                                        [line59    ] : Started SpringbootDemoApplicationTests in 28.79 seconds (JVM running for 57.734)
 2019-07-28 14:02:12.242 INFO  --- org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown                            [line208   ] : Shutting down ExecutorService 'applicationTaskExecutor'
 2019-07-28 14:02:12.244 INFO  --- com.alibaba.druid.pool.DruidDataSource.close                                                         [line1948  ] : {dataSource-1} closing ...
 2019-07-28 14:02:12.260 INFO  --- com.alibaba.druid.pool.DruidDataSource.close                                                         [line2020  ] : {dataSource-1} closed
-2019-07-28 14:02:33.974 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 31930 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
-2019-07-28 14:02:33.978 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
+2019-07-28 14:02:33.974 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 31930 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
+2019-07-28 14:02:33.978 INFO  --- com.competition.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
 2019-07-28 14:02:35.817 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected    [line244   ] : Multiple Spring Data modules found, entering strict repository configuration mode!
 2019-07-28 14:02:35.822 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line126   ] : Bootstrapping Spring Data repositories in DEFAULT mode.
 2019-07-28 14:02:35.870 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line182   ] : Finished Spring Data repository scanning in 29ms. Found 0 repository interfaces.
@@ -226,12 +226,12 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2019-07-28 14:02:36.849 INFO  --- com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource                  [line56    ] : Init DruidDataSource
 2019-07-28 14:02:38.676 INFO  --- com.alibaba.druid.pool.DruidDataSource.init                                                          [line1003  ] : {dataSource-1} inited
 2019-07-28 14:02:40.211 INFO  --- org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.initialize                          [line171   ] : Initializing ExecutorService 'applicationTaskExecutor'
-2019-07-28 14:02:41.673 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarted                                        [line59    ] : Started SpringbootDemoApplicationTests in 9.34 seconds (JVM running for 11.747)
+2019-07-28 14:02:41.673 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarted                                        [line59    ] : Started SpringbootDemoApplicationTests in 9.34 seconds (JVM running for 11.747)
 2019-07-28 14:02:42.414 INFO  --- org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown                            [line208   ] : Shutting down ExecutorService 'applicationTaskExecutor'
 2019-07-28 14:02:42.418 INFO  --- com.alibaba.druid.pool.DruidDataSource.close                                                         [line1948  ] : {dataSource-1} closing ...
 2019-07-28 14:02:42.436 INFO  --- com.alibaba.druid.pool.DruidDataSource.close                                                         [line2020  ] : {dataSource-1} closed
-2019-07-28 14:03:35.033 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 32041 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
-2019-07-28 14:03:35.042 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
+2019-07-28 14:03:35.033 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 32041 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
+2019-07-28 14:03:35.042 INFO  --- com.competition.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
 2019-07-28 14:03:36.641 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected    [line244   ] : Multiple Spring Data modules found, entering strict repository configuration mode!
 2019-07-28 14:03:36.647 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line126   ] : Bootstrapping Spring Data repositories in DEFAULT mode.
 2019-07-28 14:03:36.699 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line182   ] : Finished Spring Data repository scanning in 26ms. Found 0 repository interfaces.
@@ -239,12 +239,12 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2019-07-28 14:03:37.821 INFO  --- com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource                  [line56    ] : Init DruidDataSource
 2019-07-28 14:03:40.127 INFO  --- com.alibaba.druid.pool.DruidDataSource.init                                                          [line1003  ] : {dataSource-1} inited
 2019-07-28 14:03:42.214 INFO  --- org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.initialize                          [line171   ] : Initializing ExecutorService 'applicationTaskExecutor'
-2019-07-28 14:03:44.022 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarted                                        [line59    ] : Started SpringbootDemoApplicationTests in 10.762 seconds (JVM running for 13.013)
+2019-07-28 14:03:44.022 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarted                                        [line59    ] : Started SpringbootDemoApplicationTests in 10.762 seconds (JVM running for 13.013)
 2019-07-28 14:03:44.939 INFO  --- org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown                            [line208   ] : Shutting down ExecutorService 'applicationTaskExecutor'
 2019-07-28 14:03:44.967 INFO  --- com.alibaba.druid.pool.DruidDataSource.close                                                         [line1948  ] : {dataSource-1} closing ...
 2019-07-28 14:03:45.107 INFO  --- com.alibaba.druid.pool.DruidDataSource.close                                                         [line2020  ] : {dataSource-1} closed
-2019-07-28 14:04:16.761 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 32134 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
-2019-07-28 14:04:16.765 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
+2019-07-28 14:04:16.761 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 32134 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
+2019-07-28 14:04:16.765 INFO  --- com.competition.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
 2019-07-28 14:04:18.379 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected    [line244   ] : Multiple Spring Data modules found, entering strict repository configuration mode!
 2019-07-28 14:04:18.386 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line126   ] : Bootstrapping Spring Data repositories in DEFAULT mode.
 2019-07-28 14:04:18.441 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line182   ] : Finished Spring Data repository scanning in 27ms. Found 0 repository interfaces.
@@ -252,12 +252,12 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2019-07-28 14:04:19.556 INFO  --- com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource                  [line56    ] : Init DruidDataSource
 2019-07-28 14:04:21.510 INFO  --- com.alibaba.druid.pool.DruidDataSource.init                                                          [line1003  ] : {dataSource-1} inited
 2019-07-28 14:04:23.478 INFO  --- org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.initialize                          [line171   ] : Initializing ExecutorService 'applicationTaskExecutor'
-2019-07-28 14:04:25.251 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarted                                        [line59    ] : Started SpringbootDemoApplicationTests in 10.584 seconds (JVM running for 12.62)
+2019-07-28 14:04:25.251 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarted                                        [line59    ] : Started SpringbootDemoApplicationTests in 10.584 seconds (JVM running for 12.62)
 2019-07-28 14:06:16.238 INFO  --- org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown                            [line208   ] : Shutting down ExecutorService 'applicationTaskExecutor'
 2019-07-28 14:06:16.242 INFO  --- com.alibaba.druid.pool.DruidDataSource.close                                                         [line1948  ] : {dataSource-1} closing ...
 2019-07-28 14:06:16.245 INFO  --- com.alibaba.druid.pool.DruidDataSource.close                                                         [line2020  ] : {dataSource-1} closed
-2019-07-28 14:06:42.738 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 32260 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
-2019-07-28 14:06:42.741 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
+2019-07-28 14:06:42.738 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 32260 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
+2019-07-28 14:06:42.741 INFO  --- com.competition.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
 2019-07-28 14:06:44.668 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected    [line244   ] : Multiple Spring Data modules found, entering strict repository configuration mode!
 2019-07-28 14:06:44.674 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line126   ] : Bootstrapping Spring Data repositories in DEFAULT mode.
 2019-07-28 14:06:44.727 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line182   ] : Finished Spring Data repository scanning in 28ms. Found 0 repository interfaces.
@@ -265,12 +265,12 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2019-07-28 14:06:45.930 INFO  --- com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource                  [line56    ] : Init DruidDataSource
 2019-07-28 14:06:47.899 INFO  --- com.alibaba.druid.pool.DruidDataSource.init                                                          [line1003  ] : {dataSource-1} inited
 2019-07-28 14:06:49.744 INFO  --- org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.initialize                          [line171   ] : Initializing ExecutorService 'applicationTaskExecutor'
-2019-07-28 14:06:51.396 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarted                                        [line59    ] : Started SpringbootDemoApplicationTests in 10.665 seconds (JVM running for 12.837)
+2019-07-28 14:06:51.396 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarted                                        [line59    ] : Started SpringbootDemoApplicationTests in 10.665 seconds (JVM running for 12.837)
 2019-07-28 14:07:19.932 INFO  --- org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown                            [line208   ] : Shutting down ExecutorService 'applicationTaskExecutor'
 2019-07-28 14:07:19.936 INFO  --- com.alibaba.druid.pool.DruidDataSource.close                                                         [line1948  ] : {dataSource-1} closing ...
 2019-07-28 14:07:19.949 INFO  --- com.alibaba.druid.pool.DruidDataSource.close                                                         [line2020  ] : {dataSource-1} closed
-2019-07-28 14:07:28.755 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 32356 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
-2019-07-28 14:07:28.760 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
+2019-07-28 14:07:28.755 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarting                                       [line50    ] : Starting SpringbootDemoApplicationTests on asparagusfern-Rev-1-0 with PID 32356 (started by asparagusfern in /home/asparagusfern/IdeaProjects/springbootDemo)
+2019-07-28 14:07:28.760 INFO  --- com.competition.SpringbootDemoApplicationTests.logStartupProfileInfo                             [line650   ] : The following profiles are active: dev
 2019-07-28 14:07:30.401 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected    [line244   ] : Multiple Spring Data modules found, entering strict repository configuration mode!
 2019-07-28 14:07:30.408 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line126   ] : Bootstrapping Spring Data repositories in DEFAULT mode.
 2019-07-28 14:07:30.466 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line182   ] : Finished Spring Data repository scanning in 30ms. Found 0 repository interfaces.
@@ -278,7 +278,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2019-07-28 14:07:31.535 INFO  --- com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource                  [line56    ] : Init DruidDataSource
 2019-07-28 14:07:33.485 INFO  --- com.alibaba.druid.pool.DruidDataSource.init                                                          [line1003  ] : {dataSource-1} inited
 2019-07-28 14:07:35.508 INFO  --- org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.initialize                          [line171   ] : Initializing ExecutorService 'applicationTaskExecutor'
-2019-07-28 14:07:37.355 INFO  --- com.competitionRank.SpringbootDemoApplicationTests.logStarted                                        [line59    ] : Started SpringbootDemoApplicationTests in 10.401 seconds (JVM running for 12.655)
+2019-07-28 14:07:37.355 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarted                                        [line59    ] : Started SpringbootDemoApplicationTests in 10.401 seconds (JVM running for 12.655)
 2019-07-28 14:07:44.148 INFO  --- org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown                            [line208   ] : Shutting down ExecutorService 'applicationTaskExecutor'
 2019-07-28 14:07:44.151 INFO  --- com.alibaba.druid.pool.DruidDataSource.close                                                         [line1948  ] : {dataSource-1} closing ...
 2019-07-28 14:07:44.166 INFO  --- com.alibaba.druid.pool.DruidDataSource.close                                                         [line2020  ] : {dataSource-1} closed

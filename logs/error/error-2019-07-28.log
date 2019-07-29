@@ -27,7 +27,7 @@ Action:
 
 Correct the classpath of your application so that it contains a single, compatible version of com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean
 
-2019-07-28 11:31:04.427 ERROR  --- org.springframework.test.context.TestContextManager.prepareTestInstance                              [line250   ] : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@59af0466] to prepare test instance [com.competitionRank.SpringbootDemoApplicationTests@2401856]
+2019-07-28 11:31:04.427 ERROR  --- org.springframework.test.context.TestContextManager.prepareTestInstance                              [line250   ] : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@59af0466] to prepare test instance [com.competition.SpringbootDemoApplicationTests@2401856]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
@@ -153,7 +153,7 @@ Action:
 
 Correct the classpath of your application so that it contains a single, compatible version of com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean
 
-2019-07-28 11:34:33.969 ERROR  --- org.springframework.test.context.TestContextManager.prepareTestInstance                              [line250   ] : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@6b8ca3c8] to prepare test instance [com.competitionRank.SpringbootDemoApplicationTests@5a1f778]
+2019-07-28 11:34:33.969 ERROR  --- org.springframework.test.context.TestContextManager.prepareTestInstance                              [line250   ] : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@6b8ca3c8] to prepare test instance [com.competition.SpringbootDemoApplicationTests@5a1f778]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
@@ -279,7 +279,7 @@ Action:
 
 Correct the classpath of your application so that it contains a single, compatible version of com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean
 
-2019-07-28 11:37:05.088 ERROR  --- org.springframework.test.context.TestContextManager.prepareTestInstance                              [line250   ] : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@366647c2] to prepare test instance [com.competitionRank.SpringbootDemoApplicationTests@73041b7d]
+2019-07-28 11:37:05.088 ERROR  --- org.springframework.test.context.TestContextManager.prepareTestInstance                              [line250   ] : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@366647c2] to prepare test instance [com.competition.SpringbootDemoApplicationTests@73041b7d]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
@@ -413,7 +413,7 @@ Action:
 
 Correct the classpath of your application so that it contains a single, compatible version of com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean
 
-2019-07-28 11:37:34.095 ERROR  --- org.springframework.test.context.TestContextManager.prepareTestInstance                              [line250   ] : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@49dc7102] to prepare test instance [com.competitionRank.SpringbootDemoApplicationTests@4dadd690]
+2019-07-28 11:37:34.095 ERROR  --- org.springframework.test.context.TestContextManager.prepareTestInstance                              [line250   ] : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@49dc7102] to prepare test instance [com.competition.SpringbootDemoApplicationTests@4dadd690]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
@@ -539,7 +539,7 @@ Action:
 
 Correct the classpath of your application so that it contains a single, compatible version of com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean
 
-2019-07-28 11:38:30.278 ERROR  --- org.springframework.test.context.TestContextManager.prepareTestInstance                              [line250   ] : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@482bce4f] to prepare test instance [com.competitionRank.SpringbootDemoApplicationTests@36776c32]
+2019-07-28 11:38:30.278 ERROR  --- org.springframework.test.context.TestContextManager.prepareTestInstance                              [line250   ] : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@482bce4f] to prepare test instance [com.competition.SpringbootDemoApplicationTests@36776c32]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
@@ -673,7 +673,7 @@ Action:
 
 Correct the classpath of your application so that it contains a single, compatible version of com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean
 
-2019-07-28 11:43:41.420 ERROR  --- org.springframework.test.context.TestContextManager.prepareTestInstance                              [line250   ] : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@1f97cf0d] to prepare test instance [com.competitionRank.SpringbootDemoApplicationTests@6d672bd4]
+2019-07-28 11:43:41.420 ERROR  --- org.springframework.test.context.TestContextManager.prepareTestInstance                              [line250   ] : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@1f97cf0d] to prepare test instance [com.competition.SpringbootDemoApplicationTests@6d672bd4]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
@@ -807,7 +807,7 @@ Action:
 
 Correct the classpath of your application so that it contains a single, compatible version of com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean
 
-2019-07-28 11:48:26.401 ERROR  --- org.springframework.test.context.TestContextManager.prepareTestInstance                              [line250   ] : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@68c72235] to prepare test instance [com.competitionRank.SpringbootDemoApplicationTests@83bb0f]
+2019-07-28 11:48:26.401 ERROR  --- org.springframework.test.context.TestContextManager.prepareTestInstance                              [line250   ] : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@68c72235] to prepare test instance [com.competition.SpringbootDemoApplicationTests@83bb0f]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
@@ -941,7 +941,7 @@ Action:
 
 Correct the classpath of your application so that it contains a single, compatible version of com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean
 
-2019-07-28 11:51:00.150 ERROR  --- org.springframework.test.context.TestContextManager.prepareTestInstance                              [line250   ] : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@3246fb96] to prepare test instance [com.competitionRank.SpringbootDemoApplicationTests@4b515eab]
+2019-07-28 11:51:00.150 ERROR  --- org.springframework.test.context.TestContextManager.prepareTestInstance                              [line250   ] : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@3246fb96] to prepare test instance [com.competition.SpringbootDemoApplicationTests@4b515eab]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
@@ -1121,7 +1121,7 @@ Caused by: java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or '
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1837)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774)
 	... 61 common frames omitted
-2019-07-28 11:54:11.670 ERROR  --- org.springframework.test.context.TestContextManager.prepareTestInstance                              [line250   ] : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@3315d2d7] to prepare test instance [com.competitionRank.SpringbootDemoApplicationTests@1f3165e7]
+2019-07-28 11:54:11.670 ERROR  --- org.springframework.test.context.TestContextManager.prepareTestInstance                              [line250   ] : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@3315d2d7] to prepare test instance [com.competition.SpringbootDemoApplicationTests@1f3165e7]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
@@ -1274,7 +1274,7 @@ Caused by: java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or '
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1837)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774)
 	... 61 common frames omitted
-2019-07-28 11:54:21.423 ERROR  --- org.springframework.test.context.TestContextManager.prepareTestInstance                              [line250   ] : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@3315d2d7] to prepare test instance [com.competitionRank.SpringbootDemoApplicationTests@5c448433]
+2019-07-28 11:54:21.423 ERROR  --- org.springframework.test.context.TestContextManager.prepareTestInstance                              [line250   ] : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@3315d2d7] to prepare test instance [com.competition.SpringbootDemoApplicationTests@5c448433]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
@@ -1427,7 +1427,7 @@ Caused by: java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or '
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1837)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774)
 	... 61 common frames omitted
-2019-07-28 11:57:18.396 ERROR  --- org.springframework.test.context.TestContextManager.prepareTestInstance                              [line250   ] : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@3315d2d7] to prepare test instance [com.competitionRank.SpringbootDemoApplicationTests@574cd322]
+2019-07-28 11:57:18.396 ERROR  --- org.springframework.test.context.TestContextManager.prepareTestInstance                              [line250   ] : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@3315d2d7] to prepare test instance [com.competition.SpringbootDemoApplicationTests@574cd322]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
@@ -1580,7 +1580,7 @@ Caused by: java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or '
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1837)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774)
 	... 61 common frames omitted
-2019-07-28 11:58:04.658 ERROR  --- org.springframework.test.context.TestContextManager.prepareTestInstance                              [line250   ] : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@3315d2d7] to prepare test instance [com.competitionRank.SpringbootDemoApplicationTests@1d5d5621]
+2019-07-28 11:58:04.658 ERROR  --- org.springframework.test.context.TestContextManager.prepareTestInstance                              [line250   ] : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@3315d2d7] to prepare test instance [com.competition.SpringbootDemoApplicationTests@1d5d5621]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
@@ -1733,7 +1733,7 @@ Caused by: java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or '
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1837)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774)
 	... 61 common frames omitted
-2019-07-28 11:59:57.727 ERROR  --- org.springframework.test.context.TestContextManager.prepareTestInstance                              [line250   ] : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@3315d2d7] to prepare test instance [com.competitionRank.SpringbootDemoApplicationTests@2ec3633f]
+2019-07-28 11:59:57.727 ERROR  --- org.springframework.test.context.TestContextManager.prepareTestInstance                              [line250   ] : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@3315d2d7] to prepare test instance [com.competition.SpringbootDemoApplicationTests@2ec3633f]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
@@ -1811,7 +1811,7 @@ Caused by: java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or '
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1837)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774)
 	... 61 common frames omitted
-2019-07-28 12:01:10.755 ERROR  --- com.competitionRank.SpringbootDemoApplicationTests.contextLoads                                      [line29    ] : 错误
+2019-07-28 12:01:10.755 ERROR  --- com.competition.SpringbootDemoApplicationTests.contextLoads                                      [line29    ] : 错误
 2019-07-28 12:03:02.251 ERROR  --- org.springframework.boot.SpringApplication.reportFailure                                             [line821   ] : Application run failed
 org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'UserService' defined in file [/home/asparagusfern/IdeaProjects/springbootDemo/target/classes/com/competitionRank/dao/service/impl/UserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userMapper' defined in file [/home/asparagusfern/IdeaProjects/springbootDemo/target/classes/com/competitionRank/dao/mapper/UserMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769)
@@ -1887,7 +1887,7 @@ Caused by: java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or '
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1837)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774)
 	... 61 common frames omitted
-2019-07-28 12:03:02.254 ERROR  --- org.springframework.test.context.TestContextManager.prepareTestInstance                              [line250   ] : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@3315d2d7] to prepare test instance [com.competitionRank.SpringbootDemoApplicationTests@5c448433]
+2019-07-28 12:03:02.254 ERROR  --- org.springframework.test.context.TestContextManager.prepareTestInstance                              [line250   ] : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@3315d2d7] to prepare test instance [com.competition.SpringbootDemoApplicationTests@5c448433]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
@@ -1965,4 +1965,4 @@ Caused by: java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or '
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1837)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774)
 	... 61 common frames omitted
-2019-07-28 13:41:04.800 ERROR  --- com.competitionRank.SpringbootDemoApplicationTests.contextLoads                                      [line29    ] : 错误
+2019-07-28 13:41:04.800 ERROR  --- com.competition.SpringbootDemoApplicationTests.contextLoads                                      [line29    ] : 错误

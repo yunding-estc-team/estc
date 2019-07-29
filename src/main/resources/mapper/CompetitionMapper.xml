@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.competition.dao.CompetitionMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.competition.entity.Competition">
+        <id column="competition_id" property="competitionId" />
+        <result column="name" property="name" />
+        <result column="cover" property="cover" />
+        <result column="isIndividual" property="isIndividual" />
+        <result column="type" property="type" />
+        <result column="host" property="host" />
+        <result column="introduce" property="introduce" />
+        <result column="content" property="content" />
+        <result column="join" property="join" />
+        <result column="rgr" property="rgr" />
+        <result column="check" property="check" />
+        <result column="click_count" property="clickCount" />
+        <result column="hot" property="hot" />
+        <result column="createAt" property="createAt" />
+        <result column="updateAt" property="updateAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        competition_id, name, cover, isIndividual, type, host, introduce, content, join, rgr, check, click_count, hot, createAt, updateAt
+    </sql>
+
+</mapper>
