@@ -31,6 +31,7 @@ public class SpringbootDemoApplicationTests {
 	}
 	@Test
 	public void selectById(){
+		System.out.println("1");
 	}
 
 
