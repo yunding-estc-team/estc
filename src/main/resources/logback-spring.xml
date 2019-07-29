@@ -104,12 +104,18 @@
     </appender>
 
     <!-- 控制台输出 -->
-    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
 
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>DENY</onMatch>
+            <onMismatch>ACCEPT</onMismatch>
+        </filter>
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <charset>UTF-8</charset>
             <pattern>
                 %green(%d{yyyy-MM-dd HH:mm:ss.SSS}) %highlight(%-5level) <!--[${PID}] [%25.25thread]-->-- %boldMagenta(%-50.100(%logger{100}.%M)): %cyan(%msg%n)
+<!--                %msg-->
             </pattern>
         </encoder>
         <!--过滤-->
@@ -119,7 +125,7 @@
     </appender>
 
     <!-- mybatis日志打印-->
-    <logger name="com.competitionRank.dao" level="DEBUG"/>
+    <logger name="com.competition.dao" level="DEBUG"/>
 
 
     <root level="INFO">
