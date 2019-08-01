@@ -1,0 +1,18 @@
+2019-07-29 20:34:18.779 DEBUG  --- com.competition.dao.CompetitionMapper.insert.debug                                                   [line143   ] : ==>  Preparing: INSERT INTO competition ( competition_id, name ) VALUES ( ?, ? ) 
+2019-07-29 20:34:18.886 DEBUG  --- com.competition.dao.CompetitionMapper.insert.debug                                                   [line143   ] : ==> Parameters: test1(String), hua(String)
+2019-07-29 20:34:19.645 DEBUG  --- com.competition.dao.CompetitionMapper.insert.debug                                                   [line143   ] : <==    Updates: 1
+2019-07-29 20:51:49.180 DEBUG  --- com.competition.dao.CompetitionMapper.insert.debug                                                   [line143   ] : ==>  Preparing: INSERT INTO competition ( competition_id, name ) VALUES ( ?, ? ) 
+2019-07-29 20:51:50.433 DEBUG  --- com.competition.dao.CompetitionMapper.insert.debug                                                   [line143   ] : ==> Parameters: liu(String), jing(String)
+2019-07-29 20:51:52.096 DEBUG  --- com.competition.dao.CompetitionMapper.insert.debug                                                   [line143   ] : <==    Updates: 1
+2019-07-29 20:52:58.498 DEBUG  --- com.competition.dao.CompetitionMapper.deleteById.debug                                               [line143   ] : ==>  Preparing: DELETE FROM competition WHERE competition_id=? 
+2019-07-29 20:52:58.554 DEBUG  --- com.competition.dao.CompetitionMapper.deleteById.debug                                               [line143   ] : ==> Parameters: liu(String)
+2019-07-29 20:52:58.695 DEBUG  --- com.competition.dao.CompetitionMapper.deleteById.debug                                               [line143   ] : <==    Updates: 1
+2019-07-29 20:55:17.164 DEBUG  --- com.competition.dao.CompetitionMapper.updateById.debug                                               [line143   ] : ==>  Preparing: UPDATE competition SET name=? WHERE competition_id=? 
+2019-07-29 20:55:17.239 DEBUG  --- com.competition.dao.CompetitionMapper.updateById.debug                                               [line143   ] : ==> Parameters: jing(String), test1(String)
+2019-07-29 20:55:17.371 DEBUG  --- com.competition.dao.CompetitionMapper.updateById.debug                                               [line143   ] : <==    Updates: 1
+2019-07-29 20:55:35.931 DEBUG  --- com.competition.dao.CompetitionMapper.updateById.debug                                               [line143   ] : ==>  Preparing: UPDATE competition SET name=?, click_count=? WHERE competition_id=? 
+2019-07-29 20:55:35.984 DEBUG  --- com.competition.dao.CompetitionMapper.updateById.debug                                               [line143   ] : ==> Parameters: jing(String), 1111(Integer), test1(String)
+2019-07-29 20:55:36.094 DEBUG  --- com.competition.dao.CompetitionMapper.updateById.debug                                               [line143   ] : <==    Updates: 1
+2019-07-29 20:56:13.811 DEBUG  --- com.competition.dao.CompetitionMapper.updateById.debug                                               [line143   ] : ==>  Preparing: UPDATE competition SET name=? WHERE competition_id=? 
+2019-07-29 20:56:13.884 DEBUG  --- com.competition.dao.CompetitionMapper.updateById.debug                                               [line143   ] : ==> Parameters: jing(String), test1(String)
+2019-07-29 20:56:13.887 DEBUG  --- com.competition.dao.CompetitionMapper.updateById.debug                                               [line143   ] : <==    Updates: 1

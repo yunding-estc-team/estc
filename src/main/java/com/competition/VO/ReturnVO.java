@@ -1,4 +1,4 @@
-package com.competition.view;
+package com.competition.VO;
 
 /**
  * 统一返回值使用AOP实现

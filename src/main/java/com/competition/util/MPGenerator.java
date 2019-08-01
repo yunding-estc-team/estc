@@ -9,7 +9,10 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-
+/**
+ * @author GuoHaodong
+ * @date 2019年07月30日09:42:31
+ */
 public class MPGenerator {
         public static void main(String[] args) {
             //读入配置文件

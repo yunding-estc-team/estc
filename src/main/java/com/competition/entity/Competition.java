@@ -20,14 +20,14 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-public class Competition extends Model<Competition> {
+public class Competition extends Model<Competition> implements Serializable {
 
-    private static final long serialVersionUID=1L;
+    private static final long serialVersionUID = 1L;
 
     /**
      * 唯一标识的比赛id(主键)
      */
-    @TableId
+
     private String competitionId;
 
     /**
@@ -102,5 +102,4 @@ public class Competition extends Model<Competition> {
     protected Serializable pkVal() {
         return this.competitionId;
     }
-
 }

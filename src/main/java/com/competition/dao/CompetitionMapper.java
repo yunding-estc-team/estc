@@ -13,5 +13,4 @@ import org.apache.ibatis.annotations.Mapper;
  * @since 2019-07-29
  */
 public interface CompetitionMapper extends BaseMapper<Competition> {
-
 }
