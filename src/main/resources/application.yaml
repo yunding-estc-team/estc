@@ -9,7 +9,7 @@ server:
 spring:
   profiles:
 #    active: prod
-    active: dev
+    active: ghd
 
 # 数据源(使用druid)
   datasource:

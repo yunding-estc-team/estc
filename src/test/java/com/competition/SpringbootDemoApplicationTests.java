@@ -1,12 +1,6 @@
 package com.competition;
 
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import com.competition.dao.CompetitionMapper;
-import com.competition.entity.Competition;
-import com.competition.entity.CompetitionWiki;
-import com.competition.entity.User;
-import com.competition.service.CompetitionService;
-import com.competition.service.CompetitionWikiService;
 import com.competition.util.ReturnCode;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -35,7 +29,7 @@ public class SpringbootDemoApplicationTests {
         logger.error("错误");
         logger.warn("警告");
 	}
-	@Test
+	/*@Test
 	public void selectById(){
 		System.out.println("1");
 	}
@@ -108,5 +102,5 @@ public class SpringbootDemoApplicationTests {
 		System.out.println(y.hashCode()+"\n"+s.hashCode());
 	}
 
-
+*/
 }

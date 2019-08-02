@@ -44,8 +44,7 @@ public class TokenDemo {
 
 		Claims claims = JwtHelper.parserToken(token);
 		logger.info(claims.getExpiration().toLocaleString());
-		JwtHelper.setTokenExpiredTime(token,1000*100L);
-//		claims.setExpiration(new Date(System.currentTimeMillis()));
+		claims.setExpiration(new Date(System.currentTimeMillis()));
 		logger.info("设置过期时间成功");
 		logger.info(claims.getExpiration().toLocaleString());
 	}

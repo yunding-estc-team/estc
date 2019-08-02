@@ -123,7 +123,7 @@
     <logger name="com.competition.dao" level="DEBUG"/>
 
 
-    <root level="DEBUG">
+    <root level="INFO">
         <!-- 生产环境最好注掉此项 -->
         <appender-ref ref="STDOUT" />
 

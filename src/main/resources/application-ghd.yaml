@@ -10,7 +10,7 @@ server:
 spring:
   profiles:
     #    active: prod
-    active: application-dev.yaml
+    active: application-ghd.yaml
 
   # 数据源(使用druid)
   datasource:

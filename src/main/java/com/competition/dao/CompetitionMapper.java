@@ -2,7 +2,6 @@ package com.competition.dao;
 
 import com.competition.entity.Competition;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.apache.ibatis.annotations.Mapper;
 
 /**
  * <p>
@@ -10,7 +9,8 @@ import org.apache.ibatis.annotations.Mapper;
  * </p>
  *
  * @author GuoHaodong
- * @since 2019-07-29
+ * @since 2019-08-02
  */
 public interface CompetitionMapper extends BaseMapper<Competition> {
+
 }

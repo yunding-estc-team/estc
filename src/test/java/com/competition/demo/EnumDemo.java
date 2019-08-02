@@ -1,6 +1,7 @@
 package com.competition.demo;
 
 import com.competition.util.ReturnCode;
+import lombok.extern.slf4j.Slf4j;
 import net.bytebuddy.asm.Advice;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,9 +14,14 @@ import org.springframework.test.context.junit4.SpringRunner;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@Slf4j
 public class EnumDemo {
 	@Test
 	public void enumDemo(){
+		log.debug("haha");
+		log.info("信息");
+		log.warn("警告");
+		log.error("错误");
 		System.out.println(ReturnCode.SUCCESS);
 		System.out.println(ReturnCode.SUCCESS.getDescription());
 		System.out.println(ReturnCode.SUCCESS.ordinal());
