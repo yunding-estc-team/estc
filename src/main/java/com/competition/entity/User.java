@@ -77,7 +77,6 @@ public class User extends Model<User> {
      * 生日
      */
     private String userBirth;
-
     /**
      * 手机号
      */

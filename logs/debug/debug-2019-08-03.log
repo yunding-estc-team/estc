@@ -1,2 +1,41 @@
+<<<<<<< HEAD
 2019-08-03 09:20:35.892 DEBUG  --- com.competition.dao.CompetitionMapper.selectById.debug                                               [line143   ] : ==>  Preparing: SELECT competition_id,name,cover,isIndividual,type,host,introduce,content,join,rgr,checkout,click_count,hot,createAt,updateAt FROM competition WHERE competition_id=? 
 2019-08-03 09:20:35.990 DEBUG  --- com.competition.dao.CompetitionMapper.selectById.debug                                               [line143   ] : ==> Parameters: null
+=======
+2019-08-03 08:51:01.310 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==>  Preparing: select * from user where user_phone = ? 
+2019-08-03 08:51:01.325 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==> Parameters: 15698614402(String)
+2019-08-03 08:51:01.447 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : <==      Total: 1
+2019-08-03 08:53:43.401 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==>  Preparing: select * from user where user_phone = ? 
+2019-08-03 08:53:43.415 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==> Parameters: 15698614402(String)
+2019-08-03 08:53:43.451 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : <==      Total: 1
+2019-08-03 08:53:52.084 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==>  Preparing: select * from user where user_phone = ? 
+2019-08-03 08:53:52.084 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==> Parameters: user(String)
+2019-08-03 08:53:52.168 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : <==      Total: 0
+2019-08-03 08:54:06.066 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==>  Preparing: select * from user where user_phone = ? 
+2019-08-03 08:54:06.066 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==> Parameters: 15103558101(String)
+2019-08-03 08:54:06.087 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : <==      Total: 1
+2019-08-03 09:17:11.672 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==>  Preparing: select * from user where user_phone = ? 
+2019-08-03 09:17:11.686 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==> Parameters: 15698614402(String)
+2019-08-03 09:17:11.725 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : <==      Total: 1
+2019-08-03 10:15:11.379 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==>  Preparing: select * from user where user_phone = ? 
+2019-08-03 10:15:11.393 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==> Parameters: 15698614402(String)
+2019-08-03 10:15:13.197 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : <==      Total: 1
+2019-08-03 10:15:29.391 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==>  Preparing: select * from user where user_phone = ? 
+2019-08-03 10:15:29.392 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==> Parameters: 13834835(String)
+2019-08-03 10:15:29.415 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : <==      Total: 0
+2019-08-03 10:15:41.700 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==>  Preparing: select * from user where user_phone = ? 
+2019-08-03 10:15:41.701 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==> Parameters: 13834835778(String)
+2019-08-03 10:15:43.150 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : <==      Total: 1
+2019-08-03 10:16:01.418 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==>  Preparing: select * from user where user_phone = ? 
+2019-08-03 10:16:01.419 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==> Parameters: 15103558101(String)
+2019-08-03 10:16:03.192 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : <==      Total: 1
+2019-08-03 15:02:30.157 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==>  Preparing: select * from user where user_phone = ? 
+2019-08-03 15:02:30.174 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==> Parameters: 15698614402(String)
+2019-08-03 15:02:30.325 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : <==      Total: 1
+2019-08-03 15:02:47.317 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==>  Preparing: select * from user where user_phone = ? 
+2019-08-03 15:02:47.318 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==> Parameters: 15698614402(String)
+2019-08-03 15:02:49.280 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : <==      Total: 1
+2019-08-03 15:03:00.653 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==>  Preparing: select * from user where user_phone = ? 
+2019-08-03 15:03:00.654 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==> Parameters: 13834835778(String)
+2019-08-03 15:03:00.683 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : <==      Total: 1
+>>>>>>> a2b9a95a85b2327d3776219597b52ba049b5ed88

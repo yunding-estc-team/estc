@@ -13,6 +13,7 @@ import org.springframework.context.annotation.Import;
 		com.competition.config.RedisConfig.class,
 		com.competition.config.MybatisPlusConfig.class
 		})
+@MapperScan(basePackages = "com.competition.dao")
 public class SpringbootDemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootDemoApplication.class, args);

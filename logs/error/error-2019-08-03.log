@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2019-08-03 09:06:33.071 ERROR  --- com.alibaba.druid.pool.DruidDataSource.init                                                          [line936   ] : init datasource error, url: jdbc:mysql://localhost/estc?serverTimezone=UTC
 com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
@@ -586,3 +587,8 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
+=======
+2019-08-03 08:53:52.170 ERROR  --- com.competition.controller.UserController.login                                                      [line86    ] : 用户不存在
+2019-08-03 10:15:29.418 ERROR  --- com.competition.controller.UserController.login                                                      [line148   ] : 用户不存在
+2019-08-03 15:02:49.287 ERROR  --- com.competition.controller.UserController.login                                                      [line152   ] : 密码错误
+>>>>>>> a2b9a95a85b2327d3776219597b52ba049b5ed88
