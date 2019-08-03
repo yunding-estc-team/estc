@@ -1,6 +1,5 @@
 package com.competition.entity;
 
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import java.time.LocalDateTime;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -15,7 +14,7 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author GuoHaodong
- * @since 2019-07-29
+ * @since 2019-08-02
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -27,18 +26,17 @@ public class CompetitionWiki extends Model<CompetitionWiki> {
     /**
      * 唯一标识的问答id
      */
-    @TableId
-    private Integer wikiId;
+    private String wikiId;
 
     /**
      * 比赛id
      */
-    private Integer competitionId;
+    private String competitionId;
 
     /**
      * 提问人id
      */
-    private Integer userId;
+    private String userId;
 
     /**
      * 内容

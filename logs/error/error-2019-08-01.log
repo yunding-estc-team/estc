@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2019-08-01 08:56:00.282 ERROR  --- com.competition.demo.LogbackDemo.test1                                                               [line29    ] : 错误
 2019-08-01 08:58:49.272 ERROR  --- com.competition.demo.LogbackDemo.test1                                                               [line29    ] : 错误
 2019-08-01 08:59:26.647 ERROR  --- com.competition.demo.LogbackDemo.test1                                                               [line29    ] : 错误
@@ -23,3 +24,7 @@
 2019-08-01 09:45:37.987 ERROR  --- com.competition.controller.UserController.login                                                      [line65    ] : UserContrller----------------------------------------
 2019-08-01 09:50:58.870 ERROR  --- com.competition.controller.UserController.login                                                      [line65    ] : UserContrller----------------------------------------
 2019-08-01 10:41:11.395 ERROR  --- com.competition.controller.UserController.login                                                      [line65    ] : UserContrller----------------------------------------
+=======
+2019-08-01 09:25:50.745 ERROR  --- com.competition.demo.EnumDemo.enumDemo                                                               [line24    ] : 错误
+2019-08-01 09:26:30.281 ERROR  --- com.competition.demo.EnumDemo.enumDemo                                                               [line24    ] : 错误
+>>>>>>> f6628263ea3b62868756ffc4d5e1491198b774a4
