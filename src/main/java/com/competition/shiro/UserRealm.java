@@ -40,7 +40,7 @@ public class UserRealm extends AuthorizingRealm {
         //定义一个集合保存角色
         Set<String> roles = new HashSet<>();
         //把数据库查出的角色添加到配置
-        roles.add(principal.getUserName());
+        roles.add(principal.getUserType());
         //给资源授权
         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo(roles);
         //从数据库查询权限数组
