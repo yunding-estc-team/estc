@@ -1,4 +1,4 @@
-package com.competitionRank.util;
+package com.competition.util;
 
 
 
@@ -10,7 +10,7 @@ import java.util.Map;
 
 /**
  * 发送验证码
- * @author xlong
+ * @author xlong99
  * @date 2019-06-01 15:55
  */
 public class SendMessage {
@@ -20,7 +20,7 @@ public class SendMessage {
         messageParam.put("phoneNum",phoneNum);
         String res = null;
         try {
-            res = HTTPUtils.get(url, messageParam);
+            res = com.competition.util.HTTPUtils.get(url, messageParam);
         } catch (Exception e) {
             e.printStackTrace();
         }
