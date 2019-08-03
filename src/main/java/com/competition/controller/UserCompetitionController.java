@@ -11,7 +11,7 @@ import org.springframework.stereotype.Controller;
  * </p>
  *
  * @author GuoHaodong
- * @since 2019-07-29
+ * @since 2019-08-02
  */
 @Controller
 @RequestMapping("/userCompetition")

@@ -1,6 +1,5 @@
 package com.competition.entity;
 
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import java.time.LocalDateTime;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -15,7 +14,7 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author GuoHaodong
- * @since 2019-07-29
+ * @since 2019-08-03
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -27,8 +26,7 @@ public class User extends Model<User> {
     /**
      * 用户唯一标识,采用uuid(主键)
      */
-    @TableId
-    private Integer userId;
+    private String userId;
 
     /**
      * md5加密后存储
@@ -79,11 +77,10 @@ public class User extends Model<User> {
      * 生日
      */
     private String userBirth;
-
     /**
      * 手机号
      */
-    private Integer userPhone;
+    private String userPhone;
 
     /**
      * 邮箱
@@ -107,13 +104,18 @@ public class User extends Model<User> {
     /**
      * 是否经过审查,0未审查，1已通过，2未通过
      */
-    private String check;
+    private String checkout;
 
     @TableField("createAt")
     private LocalDateTime createAt;
 
     @TableField("updateAt")
     private LocalDateTime updateAt;
+
+    /**
+     * 用户类型标示
+     */
+    private String userType;
 
 
     @Override

@@ -14,7 +14,7 @@
         <result column="content" property="content" />
         <result column="join" property="join" />
         <result column="rgr" property="rgr" />
-        <result column="check" property="check" />
+        <result column="check" property="checkout" />
         <result column="click_count" property="clickCount" />
         <result column="hot" property="hot" />
         <result column="createAt" property="createAt" />
@@ -23,7 +23,7 @@
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        competition_id, name, cover, isIndividual, type, host, introduce, content, join, rgr, check, click_count, hot, createAt, updateAt
+        competition_id, name, cover, isIndividual, type, host, introduce, content, join, rgr, checkout, click_count, hot, createAt, updateAt
     </sql>
 
 </mapper>

@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * </p>
  *
  * @author GuoHaodong
- * @since 2019-07-29
+ * @since 2019-08-02
  */
 @Service
 public class UserAnnounceServiceImpl extends ServiceImpl<UserAnnounceMapper, UserAnnounce> implements UserAnnounceService {

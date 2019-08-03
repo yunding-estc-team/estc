@@ -1,8 +1,6 @@
 package com.competition.controller;
 
-
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import org.springframework.stereotype.Controller;
 
 /**
@@ -11,11 +9,10 @@ import org.springframework.stereotype.Controller;
  * </p>
  *
  * @author GuoHaodong
- * @since 2019-07-29
+ * @since 2019-08-02
  */
 @Controller
 @RequestMapping("/user")
 public class UserController {
-
 }
 

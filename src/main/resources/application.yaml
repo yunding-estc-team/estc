@@ -8,9 +8,10 @@ server:
 # spring 相关配置
 spring:
   profiles:
-#    active: prod
-    active: dev
-
+    active: csw
+  #    active: prod
+#    active: dev
+#
 # 数据源(使用druid)
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver

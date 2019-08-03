@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+    <meta charset="UTF-8">
+    <title>测试页面</title>
+</head>
+<body>
+<h3>登陆成功！</h3>
+<h3 th:text="${name}"></h3>
+<div shiro:hasRole="organization">进入用户发布赛事功能：<a href="publish">发布比赛 </a></div>
+<br/>
+<br/>
+<shiro:hasRole name="student">
+    <li class="user">进入用户发布赛事功能：进入用户参赛功能：<a href="participate">参与比赛 </a></li>
+</shiro:hasRole>
+<br/>
+<br/>
+<div shiro:hasPermission="user:attention">
+    <a href="attention">我的关注</a>
+</div>
+<div shiro:hasPermission="user:praise">
+    <a href="praise">点赞</a>
+</div>
+<div shiro:hasPermission="user:attention">
+    <a href="comment">评论</a>
+</div>
+<div shiro:hasPermission="user:attention">
+    <a href="wiki">问答</a>
+</div>
+<br/>
+<a href="logout">退出登陆</a>
+</body>
+</html>

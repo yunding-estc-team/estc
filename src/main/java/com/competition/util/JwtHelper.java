@@ -1,20 +1,15 @@
 package com.competition.util;
 
-import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.JwtException;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
+import com.competition.VO.TokenObjectVO;
+import io.jsonwebtoken.*;
 import io.jsonwebtoken.impl.Base64UrlCodec;
 
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
 
 /**
- * @author asparagusfern
+ * @author guohaodong
  * token 工具
  */
 
@@ -23,22 +18,9 @@ public class JwtHelper {
      * token过期时间
      * 签名
      */
-    private static final long TOKEN_EXPIRED_TIME = 60 * 60;
+    private static final long TOKEN_EXPIRED_TIME = 60 * 60 *1000;
 
     private static final String TOKEN_SECRET = "asparagus";
-
-    /**
-     * 获取token(通过userId)
-     *
-     * @param userId 需要加密的id
-     * @return 加密后的token字符串
-     */
-    public static String getToken(String userId) {
-        Map<String,Object> map = new HashMap<>(1);
-        map.put("userId",userId);
-
-        return generateToken(map);
-    }
 
     /**
      * 解析token
@@ -47,7 +29,7 @@ public class JwtHelper {
      * @param token 待解析的字符串
      * @return 自定义的声明(Claims)
      */
-    public static Map<String,Object> parserToken(String token){
+    public static Claims parserToken(String token){
         //签名key
         SecretKey secretKey = getSecretKey();
 
@@ -60,16 +42,34 @@ public class JwtHelper {
         catch (JwtException ex){
             claims = null;
         }
-
         return claims;
+   }
+    /**
+     * 获取token中的用户信息
+     */
+    public static TokenObjectVO getTokenInfo(String token) {
+        Claims claims = parserToken(token);
+        // 将claim中的数据存入objectVO
+        TokenObjectVO objectVO = new TokenObjectVO();
+        assert claims != null;
+        objectVO.setId(claims.getId());
+        objectVO.setType(claims.getSubject());
+        return objectVO;
+    }
+    /**
+     * 设置token过期时间
+     */
+    public static void setTokenExpiredTime(String token,Date date){
+        Claims claims = parserToken(token);
+        claims.setExpiration(date);
     }
 
     /**
      * 生成token
-     * @param customClaims 自定义声明
+     * @param objectVO token所携带的对象
      * @return token字符串
      */
-    private static String generateToken(Map<String,Object> customClaims)  {
+    public static String generateToken(TokenObjectVO objectVO)  {
 
         //设置签发,到期时间
         long current = System.currentTimeMillis();
@@ -79,13 +79,13 @@ public class JwtHelper {
         //签名key
         SecretKey secretKey = getSecretKey();
 
-        //设置tokenId防止使用token重复提交
+        //设置tokenId(用户id)防止使用token重复提交
         return Jwts.builder()
-                .setClaims(customClaims)
+				.setId(objectVO.getId())
+                .setSubject(objectVO.getType())
                 .signWith(SignatureAlgorithm.HS256,secretKey)
                 .setIssuedAt(now)
                 .setExpiration(expired)
-                .setId(UUID.randomUUID().toString())
                 .compact();
     }
 

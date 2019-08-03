@@ -1,0 +1,55 @@
+# 服务器配置
+server:
+  tomcat:
+    accept-count: 100
+    uri-encoding: utf-8
+    accesslog:
+      file-date-format: MM-dd-yyyy
+
+# spring 相关配置
+spring:
+#  profiles:
+    #    active: prod
+#    active: application-csw.yaml
+
+  # 数据源(使用druid)
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: root
+    url: jdbc:mysql://39.105.210.140/estc?serverTimezone=UTC
+    platform: mysql
+    # druid连接池
+    druid:
+      initial-size: 5
+      max-active: 20
+      # 60秒检测一次
+      max-wait: 60000
+      min-evictable-idle-time-millis: 30000
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 3MB
+  #  redis
+  redis:
+    host: localhost
+    password: wenzhu27
+    port: 6379
+    lettuce:
+      pool:
+        max-active: 50
+        min-idle: 1
+        max-idle: 10
+
+# 日志框架
+logging:
+  config: classpath:logback-spring.xml
+  path: ./logs
+
+# mybatis
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*.Mapper.xml
+  type-aliases-package: com.competition.entity
+  check-config-location: true
+

@@ -1,6 +1,5 @@
 package com.competition.entity;
 
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import java.time.LocalDateTime;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -15,7 +14,7 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author GuoHaodong
- * @since 2019-07-29
+ * @since 2019-08-03
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -27,13 +26,12 @@ public class UserCompetition extends Model<UserCompetition> {
     /**
      * 比赛id,与比赛表competition_id关联
      */
-    @TableId
-    private Integer competitionId;
+    private String competitionId;
 
     /**
      * 用户id,与密码表的user_id关联
      */
-    private Integer userId;
+    private String userId;
 
     /**
      * 获得的奖项名称
@@ -48,7 +46,7 @@ public class UserCompetition extends Model<UserCompetition> {
     /**
      * 是否经过审查,0未审查，1已通过，2未通过
      */
-    private String check;
+    private String checkout;
 
     /**
      * 删除照片对应的hash值
@@ -61,10 +59,15 @@ public class UserCompetition extends Model<UserCompetition> {
     @TableField("updateAt")
     private LocalDateTime updateAt;
 
+    /**
+     * 用户参赛主键
+     */
+    private String id;
+
 
     @Override
     protected Serializable pkVal() {
-        return this.competitionId;
+        return null;
     }
 
 }
