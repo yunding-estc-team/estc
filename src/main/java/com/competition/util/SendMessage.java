@@ -1,8 +1,9 @@
-package com.competitionRank.util;
+package com.competition.util;
 
 
 
 import com.alibaba.fastjson.JSONObject;
+import com.competition.util.HTTPUtils;
 
 import java.awt.geom.RectangularShape;
 import java.util.HashMap;
