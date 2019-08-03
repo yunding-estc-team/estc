@@ -14,7 +14,7 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author GuoHaodong
- * @since 2019-08-02
+ * @since 2019-08-03
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -26,7 +26,7 @@ public class User extends Model<User> {
     /**
      * 用户唯一标识,采用uuid(主键)
      */
-    private Integer userId;
+    private String userId;
 
     /**
      * md5加密后存储
@@ -81,7 +81,7 @@ public class User extends Model<User> {
     /**
      * 手机号
      */
-    private Integer userPhone;
+    private String userPhone;
 
     /**
      * 邮箱

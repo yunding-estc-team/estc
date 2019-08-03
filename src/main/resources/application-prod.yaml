@@ -8,8 +8,8 @@ server:
 # spring 相关配置
 spring:
   profiles:
-#    active: prod
-#    active: ghd
+    active: prod
+#    active: dev
 
 # 数据源(使用druid)
   datasource:

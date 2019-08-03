@@ -1,8 +1,7 @@
 package com.competition.demo;
 
-import com.competition.util.ReturnCode;
+import com.competition.response.ReturnCode;
 import lombok.extern.slf4j.Slf4j;
-import net.bytebuddy.asm.Advice;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;

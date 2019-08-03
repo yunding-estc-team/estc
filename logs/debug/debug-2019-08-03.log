@@ -1,0 +1,2 @@
+2019-08-03 09:20:35.892 DEBUG  --- com.competition.dao.CompetitionMapper.selectById.debug                                               [line143   ] : ==>  Preparing: SELECT competition_id,name,cover,isIndividual,type,host,introduce,content,join,rgr,checkout,click_count,hot,createAt,updateAt FROM competition WHERE competition_id=? 
+2019-08-03 09:20:35.990 DEBUG  --- com.competition.dao.CompetitionMapper.selectById.debug                                               [line143   ] : ==> Parameters: null

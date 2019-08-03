@@ -1,4 +1,4 @@
-package com.competitionRank.util;
+package com.competition.util;
 
 
 
@@ -20,7 +20,7 @@ public class SendMessage {
         messageParam.put("phoneNum",phoneNum);
         String res = null;
         try {
-            res = HTTPUtils.get(url, messageParam);
+            res = com.competitionRank.util.HTTPUtils.get(url, messageParam);
         } catch (Exception e) {
             e.printStackTrace();
         }

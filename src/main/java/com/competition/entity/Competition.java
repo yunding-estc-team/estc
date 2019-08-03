@@ -14,7 +14,7 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author GuoHaodong
- * @since 2019-08-02
+ * @since 2019-08-03
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -67,7 +67,7 @@ public class Competition extends Model<Competition> {
     /**
      * 报名链接
      */
-    private String join;
+    private String joinLink;
 
     /**
      * 保研率

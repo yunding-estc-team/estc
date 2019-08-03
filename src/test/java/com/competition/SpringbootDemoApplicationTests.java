@@ -1,7 +1,12 @@
 package com.competition;
 
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import com.competition.util.ReturnCode;
+import com.competition.dao.CompetitionMapper;
+import com.competition.entity.Competition;
+import com.competition.entity.CompetitionWiki;
+import com.competition.service.CompetitionService;
+import com.competition.service.CompetitionWikiService;
+import com.competition.response.ReturnCode;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -10,10 +15,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import javax.validation.OverridesAttribute;
-import java.util.HashMap;
-import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 @RunWith(SpringRunner.class)
@@ -29,7 +30,7 @@ public class SpringbootDemoApplicationTests {
         logger.error("错误");
         logger.warn("警告");
 	}
-	/*@Test
+	@Test
 	public void selectById(){
 		System.out.println("1");
 	}
@@ -41,7 +42,7 @@ public class SpringbootDemoApplicationTests {
 	@Test
 	public void entityT(){
 		CompetitionWiki competitionWiki = new CompetitionWiki();
-		competitionWiki.setWikiId(1234);
+		competitionWiki.setWikiId("1234");
 		competitionWiki.setContent("weizhi");
 //		competitionWiki.insert();
 		logger.warn(competitionWiki.selectById().toString());
@@ -52,7 +53,7 @@ public class SpringbootDemoApplicationTests {
 	@Test
 	public void serviceT(){
 		CompetitionWiki competitionWiki = new CompetitionWiki();
-		competitionWiki.setWikiId(1234);
+		competitionWiki.setWikiId("1234");
 		competitionWiki.setContent("weizhi");
 
 		String s = competitionWikiService.getById(1234).toString();
@@ -102,5 +103,4 @@ public class SpringbootDemoApplicationTests {
 		System.out.println(y.hashCode()+"\n"+s.hashCode());
 	}
 
-*/
 }

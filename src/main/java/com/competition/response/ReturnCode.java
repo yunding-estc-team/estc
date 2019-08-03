@@ -1,4 +1,4 @@
-package com.competition.util;
+package com.competition.response;
 
 import com.baomidou.mybatisplus.extension.api.R;
 
@@ -11,7 +11,11 @@ public enum ReturnCode {
 	 * 每个枚举后面的description是所表示的意思,用于返回值
 	 * 可以使用ordinal()方式获取在枚举中的排名
 	 */
-	SUCCESS("成功"),FAILURE_1(""),FAILURE_2(""),FAILURE_3("");
+	SUCCESS("成功"),
+	FAILURE_1("信息缺失"),
+	FAILURE_2("信息错误"),
+	FAILURE_3("内部错误"),
+	FAILURE("未知错误");
 
 	private String description;
 

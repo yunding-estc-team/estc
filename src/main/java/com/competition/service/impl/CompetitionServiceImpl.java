@@ -4,6 +4,7 @@ import com.competition.entity.Competition;
 import com.competition.dao.CompetitionMapper;
 import com.competition.service.CompetitionService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -16,5 +17,10 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class CompetitionServiceImpl extends ServiceImpl<CompetitionMapper, Competition> implements CompetitionService {
-
+	@Autowired
+	CompetitionMapper mapper;
+	@Override
+	public void addClick(Competition competition) {
+		mapper.addClick(competition);
+	}
 }

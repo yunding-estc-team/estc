@@ -14,7 +14,7 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author GuoHaodong
- * @since 2019-08-02
+ * @since 2019-08-03
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -59,10 +59,15 @@ public class UserCompetition extends Model<UserCompetition> {
     @TableField("updateAt")
     private LocalDateTime updateAt;
 
+    /**
+     * 用户参赛主键
+     */
+    private String id;
+
 
     @Override
     protected Serializable pkVal() {
-        return this.competitionId;
+        return null;
     }
 
 }

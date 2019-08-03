@@ -14,7 +14,7 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author GuoHaodong
- * @since 2019-08-02
+ * @since 2019-08-03
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -45,10 +45,12 @@ public class UserAttention extends Model<UserAttention> {
     @TableField("updateAt")
     private LocalDateTime updateAt;
 
+    private String id;
+
 
     @Override
     protected Serializable pkVal() {
-        return this.userId;
+        return this.id;
     }
 
 }
