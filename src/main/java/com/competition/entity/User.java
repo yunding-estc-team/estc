@@ -79,11 +79,10 @@ public class User extends Model<User> {
      * 生日
      */
     private String userBirth;
-
     /**
      * 手机号
      */
-    private Integer userPhone;
+    private String userPhone;
 
     /**
      * 邮箱

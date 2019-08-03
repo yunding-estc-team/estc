@@ -1,5 +1,6 @@
 package com.competition.demo;
 
+import com.competition.dao.UserMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -22,10 +23,19 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class LogbackDemo {
 	Logger logger = LoggerFactory.getLogger(LogbackDemo.class);
+	@Autowired
+	private UserMapper userMapper;
 	@Test
 	public void test1(){
+		logger.info("信息");
 		logger.debug("调试");
 		logger.error("错误");
 		logger.warn("警告");
+		System.out.println("-------------------------------------------------------");
+	}
+	@Test
+	public void test(){
+		String phoneNumber="15698614402";
+		System.out.println(userMapper.findByPhoneNumber(phoneNumber));
 	}
 }
