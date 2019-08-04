@@ -198,12 +198,12 @@ public class UserController {
     /**
      * 获奖信息录入
      */@RequestMapping("/insertPrizeInfo")
-    public ReturnVO insertPrizeInfo(@RequestBody UserCompetition userCompetition,@RequestHeader String authorization){
-        String id =JwtHelper.parserToken(authorization).getId();
+    public ReturnVO insertPrizeInfo(@RequestBody UserCompetition userCompetition,@RequestHeader String authorization) {
+        String id = JwtHelper.parserToken(authorization).getId();
         userCompetition.setUserId(id);
         userCompetition.insert();
-        return  new ReturnVO(ReturnCode.SUCCESS);
-
+        return new ReturnVO(ReturnCode.SUCCESS);
+    }
 
 
     /**
