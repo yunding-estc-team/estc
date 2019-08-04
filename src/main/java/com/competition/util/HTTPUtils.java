@@ -1,4 +1,4 @@
-package com.competitionRank.util;
+package com.competition.util;
 
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -9,7 +9,7 @@ import java.util.Map;
 
 /**
  * http请求
- * @author xlong
+ * @author xlong99
  * @date 2019-06-01 15:57
  */
 public class HTTPUtils {
