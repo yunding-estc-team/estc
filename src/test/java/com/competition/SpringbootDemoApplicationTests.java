@@ -49,6 +49,14 @@ public class SpringbootDemoApplicationTests {
 
 	}
 	@Autowired
+	RedisTemplate<String,String> template;
+	@Test
+	public void redisT(){
+		template.opsForValue().set("user:1234","345678");
+		String s = template.opsForValue().get("user:1234");
+		logger.info(s);
+	}
+	@Autowired
 	CompetitionWikiService competitionWikiService;
 	@Test
 	public void serviceT(){

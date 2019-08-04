@@ -198,10 +198,14 @@
 			<artifactId>tomcat-embed-core</artifactId>
 			<version>9.0.21</version>
 		</dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-email</artifactId>
+            <version>1.5</version>
+        </dependency>
 
 
-
-	</dependencies>
+    </dependencies>
 
 	<build>
 		<resources>
