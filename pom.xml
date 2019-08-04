@@ -14,9 +14,10 @@
 	<name>springbootDemo</name>
 	<description>Demo project for Spring Boot</description>
 
-<!--	<properties>-->
+	<properties>
 <!--		<java.version>8</java.version>-->
-<!--	</properties>-->
+		<skipTests>true</skipTests>
+	</properties>
 
 
 	<dependencies>

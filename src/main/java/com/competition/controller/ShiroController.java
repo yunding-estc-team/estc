@@ -43,7 +43,7 @@ public class ShiroController {
      */
     @RequestMapping("/publish")
     public String publish(){
-        return "/testshiro/publish";
+        return "testshiro/publish";
     }
 
     /**
@@ -52,7 +52,7 @@ public class ShiroController {
      */
     @RequestMapping("/participate")
     public String participate(){
-        return "/testshiro/participate";
+        return "testshiro/participate";
     }
 
     /**
@@ -61,7 +61,7 @@ public class ShiroController {
      */
     @RequestMapping("/noAuth")
     public String noAuth(){
-        return "/noAuth";
+        return "noAuth";
     }
 
     /**
@@ -70,7 +70,7 @@ public class ShiroController {
      */
     @RequestMapping("/toLogin")
     public String toLogin(){
-        return "/login";
+        return "login";
     }
 
     /**
@@ -79,7 +79,7 @@ public class ShiroController {
      */
     @RequestMapping("/attention")
     public String attention(){
-        return "/power/attention";
+        return "power/attention";
     }
 
     /**
@@ -88,7 +88,7 @@ public class ShiroController {
      */
     @RequestMapping("/comment")
     public String comment(){
-        return "/power/comment";
+        return "power/comment";
     }
 
     /**
@@ -97,7 +97,7 @@ public class ShiroController {
      */
     @RequestMapping("/praise")
     public String praise(){
-        return "/power/praise";
+        return "power/praise";
     }
 
     /**
@@ -106,7 +106,7 @@ public class ShiroController {
      */
     @RequestMapping("/wiki")
     public String wiki(){
-        return "/power/wiki";
+        return "power/wiki";
     }
 
     /**
@@ -146,11 +146,11 @@ public class ShiroController {
             }catch (UnknownAccountException e){
                 model.addAttribute("msg","用户不存在");
                 logger.error("用户不存在");
-                return "/login";
+                return "login";
             }catch (IncorrectCredentialsException e){
                 model.addAttribute("msg","密码错误");
                 logger.error("密码错误");
-                return "/login";
+                return "login";
             }
         }
         return "redirect:testThymeleaf";
