@@ -20,7 +20,7 @@ public class Competition {
 	@Pointcut("execution(* com.competition.controller.CompetitionController.*(..))")
 	public void competitionAOP(){};
 
-	@AfterThrowing(pointcut = "competitionAOP",throwing = "ex")
+	@AfterThrowing(pointcut = "competitionAOP()",throwing = "ex")
 	public ReturnVO deRecovery(Exception ex){
 		log.error("捕获异常"+ex.getLocalizedMessage());
 
