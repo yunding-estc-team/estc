@@ -278,3 +278,12 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2019-08-03 15:02:47.317 INFO  --- com.competition.shiro.UserRealm.doGetAuthenticationInfo                                              [line64    ] : 执行认证逻辑
 2019-08-03 15:03:00.652 INFO  --- com.competition.shiro.UserRealm.doGetAuthenticationInfo                                              [line64    ] : 执行认证逻辑
 >>>>>>> a2b9a95a85b2327d3776219597b52ba049b5ed88
+2019-08-03 18:21:33.719 INFO  --- com.competition.SpringbootDemoApplication.logStarting                                                [line50    ] : Starting SpringbootDemoApplication on LAPTOP-DCJ3IIE0 with PID 6196 (started by HJUN in D:\【project】workHouse\20190803-02\estc)
+2019-08-03 18:21:33.722 INFO  --- com.competition.SpringbootDemoApplication.logStartupProfileInfo                                      [line650   ] : The following profiles are active: csw
+2019-08-03 18:21:34.467 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected    [line244   ] : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-03 18:21:34.469 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line126   ] : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-03 18:21:34.512 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line182   ] : Finished Spring Data repository scanning in 26ms. Found 0 repository interfaces.
+2019-08-03 18:21:34.877 INFO  --- xt.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization [line330   ] : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$aed6d50b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-03 18:21:34.944 INFO  --- org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener.logMessage   [line135   ] : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
