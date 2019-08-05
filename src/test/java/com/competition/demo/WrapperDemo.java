@@ -1,10 +1,6 @@
 package com.competition.demo;
 
-import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-/*import com.competition.dao.CompetitionWikiMapper;
-import com.competition.entity.CompetitionWiki;
-import com.competition.service.CompetitionWikiService;*/
 import com.competition.dao.CompetitionWikiMapper;
 import com.competition.entity.CompetitionWiki;
 import com.competition.service.CompetitionWikiService;
@@ -14,6 +10,10 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+/*import com.competition.dao.CompetitionWikiMapper;
+import com.competition.entity.CompetitionWiki;
+import com.competition.service.CompetitionWikiService;*/
 
 /**
  * @author GuoHaodong

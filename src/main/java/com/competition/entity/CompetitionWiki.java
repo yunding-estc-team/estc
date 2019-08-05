@@ -26,7 +26,7 @@ public class CompetitionWiki extends Model<CompetitionWiki> {
     /**
      * 唯一标识的问答id
      */
-    private String wikiId;
+    private Integer wikiId;
 
     /**
      * 比赛id

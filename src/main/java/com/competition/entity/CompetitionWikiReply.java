@@ -26,7 +26,7 @@ public class CompetitionWikiReply extends Model<CompetitionWikiReply> {
     /**
      * 主键
      */
-    private String id;
+    private Integer id;
 
     /**
      * 问答id

@@ -34,6 +34,11 @@ public class UserAnnounce extends Model<UserAnnounce> {
     private String userId;
 
     /**
+     * 通知标题
+     */
+    private String title;
+
+    /**
      * 通知的内容
      */
     private String announce;
