@@ -39,3 +39,6 @@
 2019-08-03 15:03:00.654 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==> Parameters: 13834835778(String)
 2019-08-03 15:03:00.683 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : <==      Total: 1
 >>>>>>> a2b9a95a85b2327d3776219597b52ba049b5ed88
+2019-08-03 19:49:11.108 DEBUG  --- com.competition.dao.CompetitionMapper.selectById.debug                                               [line143   ] : ==>  Preparing: SELECT competition_id,name,cover,isIndividual,type,host,introduce,content,join_link,rgr,checkout,click_count,hot,createAt,updateAt FROM competition WHERE competition_id=? 
+2019-08-03 19:49:11.291 DEBUG  --- com.competition.dao.CompetitionMapper.selectById.debug                                               [line143   ] : ==> Parameters: 1800bb87da81438ab982c0416631054c(String)
+2019-08-03 19:49:11.397 DEBUG  --- com.competition.dao.CompetitionMapper.selectById.debug                                               [line143   ] : <==      Total: 1

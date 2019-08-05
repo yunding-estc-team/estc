@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.competition.dao.UserAnnounceMapper">
+<mapper namespace="com.competitionRank.test.dao.UserAnnounceMapper">
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.competition.entity.UserAnnounce">
         <id column="id" property="id" />
         <result column="user_id" property="userId" />
+        <result column="title" property="title" />
         <result column="announce" property="announce" />
         <result column="src" property="src" />
         <result column="read" property="read" />
@@ -15,7 +16,7 @@
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, user_id, announce, src, read, createAt, updateAt
+        id, user_id, title, announce, src, read, createAt, updateAt
     </sql>
 
 </mapper>

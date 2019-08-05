@@ -9,7 +9,7 @@ import lombok.Data;
  * @date 2019-0803 09:40:14
  */
 @Data
-public class CompetitionPost {
+public class CompetitionForm {
 	private String id;
 	private String name;
 	private String cover;

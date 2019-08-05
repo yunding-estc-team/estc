@@ -11,7 +11,8 @@ import org.springframework.stereotype.Component;
 
 /**
  * @author GuoHaodong
- * @date 2019-0803 11:34:49
+ * @since 2019-0803 11:34:49
+ * @date 2019-08-04 19:27:40
  */
 @Aspect
 @Component
@@ -20,7 +21,7 @@ public class Competition {
 	@Pointcut("execution(* com.competition.controller.CompetitionController.*(..))")
 	public void competitionAOP(){};
 
-	@AfterThrowing(pointcut = "competitionAOP",throwing = "ex")
+	@AfterThrowing(pointcut = "competitionAOP()",throwing = "ex")
 	public ReturnVO deRecovery(Exception ex){
 		log.error("捕获异常"+ex.getLocalizedMessage());
 
@@ -33,7 +34,7 @@ public class Competition {
 			return new ReturnVO();
 		}
 		else{
-			log.info("出现未捕获的异常");
+			log.info("出现未捕获的异常"+ex.getClass());
 			return new ReturnVO(ReturnCode.FAILURE);
 		}
 	}

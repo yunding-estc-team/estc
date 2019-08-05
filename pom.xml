@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>springbootDemo</artifactId>
+	<artifactId>estc</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>springbootDemo</name>
+	<name>estc</name>
 	<description>Demo project for Spring Boot</description>
 
 <!--	<properties>-->
@@ -193,6 +193,16 @@
 			<artifactId>tomcat-embed-core</artifactId>
 			<version>9.0.21</version>
 		</dependency>
+
+		<!--矩阵-->
+		<!-- https://mvnrepository.com/artifact/org.ujmp/ujmp-core -->
+		<dependency>
+			<groupId>org.ujmp</groupId>
+			<artifactId>ujmp-core</artifactId>
+			<version>0.3.0</version>
+		</dependency>
+
+
 
 
 

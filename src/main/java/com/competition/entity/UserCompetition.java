@@ -1,5 +1,6 @@
 package com.competition.entity;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import java.time.LocalDateTime;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -26,6 +27,7 @@ public class UserCompetition extends Model<UserCompetition> {
     /**
      * 比赛id,与比赛表competition_id关联
      */
+    @TableId
     private String competitionId;
 
     /**

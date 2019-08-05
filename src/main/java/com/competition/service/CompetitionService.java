@@ -17,4 +17,6 @@ public interface CompetitionService extends IService<Competition> {
 	 * @param competition
 	 */
 	public void addClick(Competition competition);
+
+
 }
