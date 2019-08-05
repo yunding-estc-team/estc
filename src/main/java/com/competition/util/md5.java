@@ -1,4 +1,4 @@
-package com.competitionRank.util;
+package com.competition.util;
 
 
 
@@ -10,7 +10,7 @@ import java.security.NoSuchAlgorithmException;
 
 /**
  * 使用md5加密密码。数据库不明文保存密码
- * @author xlong
+ * @author xlong99
  * @date 2019-03-28 21:48
  */
 public class md5 {
@@ -39,7 +39,7 @@ public class md5 {
      * @return
      */
     public static String encoderAddSalt(String str) {
-        String salt = "xlong";
+        String salt = "xlong99";
         str = salt + str;
         return encoderByMd5(str);
     }

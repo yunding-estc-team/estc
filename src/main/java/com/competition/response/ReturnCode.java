@@ -15,6 +15,7 @@ public enum ReturnCode {
 	FAILURE_1("信息缺失"),
 	FAILURE_2("信息错误"),
 	FAILURE_3("内部错误"),
+	FAILURE_4("用户已存在"),
 	FAILURE("未知错误");
 
 	private String description;
