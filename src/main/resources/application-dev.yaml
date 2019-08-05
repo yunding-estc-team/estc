@@ -48,4 +48,4 @@ logging:
   path: ./logs
 
 mybatis-plus:
-  mapper-locations: classpath:mapper/*
+#  mapper-locations: classpath:mapper/*
