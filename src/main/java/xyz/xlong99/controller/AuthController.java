@@ -24,7 +24,7 @@ public class AuthController {
         return message;
     }
 //    /**
-//     * 获取认证中的获奖信息
+//     * 获取认证中的获奖信息啊
 //     */
 //    @RequestMapping("/getCheckingReward")
 //    public Map<String, String> getCheckingReward(){

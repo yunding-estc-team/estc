@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/admin/Announce")
 public class AnnounceController {
     /**
-     * 给单个用户发通知
+     * 给单个用户发通知啊
      */
     @RequestMapping("/announceOne")
     public ReturnVO announceOne(){
