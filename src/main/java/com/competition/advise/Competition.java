@@ -11,7 +11,8 @@ import org.springframework.stereotype.Component;
 
 /**
  * @author GuoHaodong
- * @date 2019-0803 11:34:49
+ * @since 2019-0803 11:34:49
+ * @date 2019-08-04 19:27:40
  */
 @Aspect
 @Component
@@ -33,7 +34,7 @@ public class Competition {
 			return new ReturnVO();
 		}
 		else{
-			log.info("出现未捕获的异常");
+			log.info("出现未捕获的异常"+ex.getClass());
 			return new ReturnVO(ReturnCode.FAILURE);
 		}
 	}

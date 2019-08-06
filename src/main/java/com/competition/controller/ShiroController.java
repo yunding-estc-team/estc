@@ -1,7 +1,11 @@
 package com.competition.controller;
 
+import com.competition.response.ReturnCode;
+import com.competition.response.ReturnVO;
 import com.competition.service.UserService;
+import com.competition.util.JwtHelper;
 import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.AccountException;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
@@ -11,6 +15,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -43,7 +48,7 @@ public class ShiroController {
      */
     @RequestMapping("/publish")
     public String publish(){
-        return "/testshiro/publish";
+        return "testshiro/publish";
     }
 
     /**
@@ -52,7 +57,7 @@ public class ShiroController {
      */
     @RequestMapping("/participate")
     public String participate(){
-        return "/testshiro/participate";
+        return "testshiro/participate";
     }
 
     /**
@@ -61,7 +66,7 @@ public class ShiroController {
      */
     @RequestMapping("/noAuth")
     public String noAuth(){
-        return "/noAuth";
+        return "noAuth";
     }
 
     /**
@@ -70,7 +75,7 @@ public class ShiroController {
      */
     @RequestMapping("/toLogin")
     public String toLogin(){
-        return "/login";
+        return "login";
     }
 
     /**
@@ -79,7 +84,7 @@ public class ShiroController {
      */
     @RequestMapping("/attention")
     public String attention(){
-        return "/power/attention";
+        return "power/attention";
     }
 
     /**
@@ -88,7 +93,7 @@ public class ShiroController {
      */
     @RequestMapping("/comment")
     public String comment(){
-        return "/power/comment";
+        return "power/comment";
     }
 
     /**
@@ -97,7 +102,7 @@ public class ShiroController {
      */
     @RequestMapping("/praise")
     public String praise(){
-        return "/power/praise";
+        return "power/praise";
     }
 
     /**
@@ -106,7 +111,7 @@ public class ShiroController {
      */
     @RequestMapping("/wiki")
     public String wiki(){
-        return "/power/wiki";
+        return "power/wiki";
     }
 
     /**
@@ -146,13 +151,24 @@ public class ShiroController {
             }catch (UnknownAccountException e){
                 model.addAttribute("msg","用户不存在");
                 logger.error("用户不存在");
-                return "/login";
+                return "login";
+            }catch (AccountException e){
+                model.addAttribute("msg","此号已被封停！");
+                logger.error("此号被封！");
+                return "login";
             }catch (IncorrectCredentialsException e){
                 model.addAttribute("msg","密码错误");
                 logger.error("密码错误");
-                return "/login";
+                return "login";
             }
         }
         return "redirect:testThymeleaf";
+    }
+
+    public ReturnVO setIsActive(@RequestHeader String authorization){
+        String userId = JwtHelper.getTokenInfo(authorization).getId();
+        String userType = JwtHelper.getTokenInfo(authorization).getType();
+        userService.setPermission(userId,userType);
+        return new ReturnVO(ReturnCode.SUCCESS);
     }
 }

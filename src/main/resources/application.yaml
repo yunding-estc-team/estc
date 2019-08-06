@@ -8,9 +8,9 @@ server:
 # spring 相关配置
 spring:
   profiles:
-    active: csw
+#    active: csw
   #    active: prod
-#    active: dev
+    active: dev
 #
 # 数据源(使用druid)
   datasource:
@@ -49,4 +49,4 @@ logging:
   path: ./logs
 
 mybatis-plus:
-  mapper-locations: classpath:mapper/*
+#  mapper-locations: classpath:mapper/*

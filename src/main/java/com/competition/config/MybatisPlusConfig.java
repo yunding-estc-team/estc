@@ -6,7 +6,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * @author GuoHaodong
- * @date 2019-0803 11:03:43
+ * @since  2019-0803 11:03:43
+ * @date 2019-08-04 18:12:23
  */
 @EnableTransactionManagement
 public class MybatisPlusConfig {

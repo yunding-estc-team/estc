@@ -18,7 +18,7 @@ import java.util.Map;
  * @description:
  * @action:
  */
-@Configuration
+
 public class ShiroConfig {
     //    为html标签引用而注入的bean
     @Bean
@@ -45,8 +45,8 @@ public class ShiroConfig {
         filter.put("/shiro/praise","perms[user:praise]");
         filter.put("/shiro/wiki","perms[user:wiki]");
         filter.put("/shiro/comment","perms[user:comment]");
-        filter.put("/*","authc");
-        System.out.println("------------------------------------------------------------");
+        //todo 生产环境打开
+//        filter.put("/*","authc");
         //修改调整登录页面
         factoryBean.setLoginUrl("/shiro/toLogin");
         factoryBean.setUnauthorizedUrl("/shiro/noAuth");
