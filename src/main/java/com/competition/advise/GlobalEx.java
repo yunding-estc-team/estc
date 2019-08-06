@@ -3,6 +3,7 @@ package com.competition.advise;
 import com.competition.response.ReturnCode;
 import com.competition.response.ReturnVO;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.ibatis.reflection.ReflectionException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -43,6 +44,26 @@ public class GlobalEx {
 		returnVO.setMsg("数字计算异常");
 		returnVO.setCode("203");
 		return returnVO;
+	}
+
+	@ExceptionHandler(IllegalStateException.class)
+	public ReturnVO e(IllegalStateException ex){
+		log.error(ex.toString());
+		return ReturnVO.failure(ReturnCode.FAILURE_3);
+	}
+
+	@ExceptionHandler(ReflectionException.class)
+	public ReturnVO e(ReflectionException ex){
+		log.error("mybatis plus 运行错误");
+		log.error(ex.toString());
+		return ReturnVO.failure(ReturnCode.FAILURE_3);
+	}
+
+	@ExceptionHandler(Exception.class)
+	public ReturnVO ex(Exception ex){
+		log.error("喂不活的异常");
+		log.error(ex.toString());
+		return ReturnVO.failure(ReturnCode.FAILURE_3);
 	}
 
 }

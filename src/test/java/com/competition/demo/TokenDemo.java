@@ -32,20 +32,23 @@ public class TokenDemo {
 		 */
 		TokenObjectVO vo = new TokenObjectVO();
 		vo.setType("admin");
-		vo.setId("1234567");
+		vo.setId("1");
 		logger.info(vo.getId());
 		String token = JwtHelper.generateToken(vo);
 		logger.info(token);
 		/**
 		 * 解析token
 		 */
-		String parse = JwtHelper.getTokenInfo(token).getId();
-		logger.info(parse);
-
-		Claims claims = JwtHelper.parserToken(token);
-		logger.info(claims.getExpiration().toLocaleString());
-		claims.setExpiration(new Date(System.currentTimeMillis()));
-		logger.info("设置过期时间成功");
-		logger.info(claims.getExpiration().toLocaleString());
+//		 TokenObjectVO parse = JwtHelper.getTokenInfo(token);
+//		logger.info(parse.getId());
+//		Claims claims = JwtHelper.parserToken(token);
+//		logger.info(claims.getExpiration().toLocaleString());
+//		claims.setExpiration(new Date(System.currentTimeMillis()+10000*60*60));
+//		logger.info("设置过期时间成功");
+//		logger.info(claims.getExpiration().toLocaleString());
+		/**
+		 *eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxIiwic3ViIjoiYWRtaW4iLCJpYXQiOjE1NjUwNTY2OTQsImV4cCI6MTU2NTA2MDI5NH0.ebyiS-kkE-CJAqYaK30coB6lCUEt0GOLaxB7QyesmFQ
+		 *eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxIiwic3ViIjoiYWRtaW4iLCJpYXQiOjE1NjUwNTY2OTQsImV4cCI6MTU2NTA2MDI5NH0.ebyiS-kkE-CJAqYaK30coB6lCUEt0GOLaxB7QyesmFQ
+ 		 */
 	}
 }
