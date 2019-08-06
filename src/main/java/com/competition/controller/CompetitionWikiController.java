@@ -3,7 +3,8 @@ package com.competition.controller;
 
 import com.competition.entity.CompetitionWiki;
 import com.competition.entity.CompetitionWikiReply;
-import com.competition.form.questionAndAnswer;
+import com.competition.form.CompetitionQAForm;
+import com.competition.form.QuestionAndAnswer;
 import com.competition.response.ReturnCode;
 import com.competition.response.ReturnVO;
 import com.competition.service.CompetitionWikiReplyService;
@@ -128,20 +129,17 @@ public class CompetitionWikiController {
     /**
      * 某个赛事获取问答信息（完整信息）
      *
-     * @param competitionId 赛事id
+     * @param competitionQaForm 前端传回的赛事数据，包括：赛事id，页码，每页展示条数
      * @return 问答列表（倒序排序）
-     *
-     * @TODO 有待测试 2019/08/04 2019/08/06
-     *
      */
     @PostMapping("/competitionGetAll")
-    public ReturnVO getAll(@RequestBody String competitionId) {
+    public ReturnVO getAll(@RequestBody CompetitionQAForm competitionQaForm) {
 
         // 日志记录
-        log.info("某个赛事获取问答信息\ncompetitionId:" + competitionId);
+        log.info("某个赛事获取问答信息\ncompetitionId:" + competitionQaForm.getCompetitionId());
 
         // 获取问答并提交
-        List<questionAndAnswer> theQA = wikiService.getAllAboutCompetition(competitionId);
+        List<QuestionAndAnswer> theQA = wikiService.getAllAboutCompetition(competitionQaForm);
         return new ReturnVO(ReturnCode.SUCCESS, theQA);
     }
 

@@ -31,7 +31,7 @@ public interface UserAnnounceMapper extends BaseMapper<UserAnnounce> {
      * @param userId 当前用户id | token
      * @return 消息列表(list)
      */
-    @Select("SELECT `id`,`title`, `read`, `createAt` FROM user_announce WHERE user_id = #{userId};")
+    @Select("SELECT `id`,`title`, `read`, `createAt` FROM user_announce WHERE user_id = #{userId} OR user_id = 0;")
     List<UserAnnouncePost> selectAnnounceByUserId(@Param("userId") String userId);
 
     /**

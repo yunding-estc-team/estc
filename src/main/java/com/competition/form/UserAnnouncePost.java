@@ -5,7 +5,7 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 /**
- * 用于向前端返回系统消息列表
+ * 用于向前端返回系统消息(列表)
  *
  * @author HaoJun
  * @since  2019-08

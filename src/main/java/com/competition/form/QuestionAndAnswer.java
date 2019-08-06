@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
  * @since 2019-08
  */
 @Data
-public class questionAndAnswer {
+public class QuestionAndAnswer {
 
     /**
      * 问题

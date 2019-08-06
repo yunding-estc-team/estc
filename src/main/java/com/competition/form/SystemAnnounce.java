@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.UUID;
 
 /**
- * 推送通知
+ * 推送系统通知
  *
  * @author HaoJun
  * @since 2019-08

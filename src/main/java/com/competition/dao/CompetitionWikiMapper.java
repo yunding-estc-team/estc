@@ -2,7 +2,7 @@ package com.competition.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.competition.entity.CompetitionWiki;
-import com.competition.form.questionAndAnswer;
+import com.competition.form.QuestionAndAnswer;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
@@ -38,15 +38,22 @@ public interface CompetitionWikiMapper extends BaseMapper<CompetitionWiki> {
      * 1. 查询 问题、答案、回答时间
      * 2. 条件：两个表中问题id相同且wiki（问题）表中赛事id=参数
      * 3. 倒序排序
+     * select * from table limit (start-1)*pageSize,pageSize; 其中start是页码，pageSize是每页显示的条数。
      *
      * @param competitionId 赛事id
+     * @param aParam        aParam = (pageCurrent-1)*pageSize
+     * @param bParam        bParam = pageSize
      * @return 问答列表
      */
-    @Select("SELECT competition_wiki.content, competition_wiki_reply.content, competition_wiki_reply.createAt " +
+    @Select("(SELECT competition_wiki.content AS userQuestion, competition_wiki_reply.content AS userAnswer, " +
+            "competition_wiki_reply.createAt AS answerCreatAt " +
             "FROM competition_wiki, `competition_wiki_reply` " +
             "WHERE competition_wiki.wiki_id = competition_wiki_reply.competition_wiki_id " +
-            "&& competition_wiki.competition_id = #{competitionId}" +
-            "ORDER BY createAt DESC;")
-    List<questionAndAnswer> selectAllAboutCompetition(@Param("competitionId") String competitionId);
+            "&& competition_wiki.competition_id = #{competitionId} " +
+            "ORDER BY createAt DESC ) " +
+            "limit ${aParam}, ${bParam}" +
+            ";")
+    List<QuestionAndAnswer> selectAllAboutCompetition(@Param("competitionId") String competitionId,
+                                                      @Param("aParam") Integer aParam, @Param("bParam") Integer bParam);
 
 }
