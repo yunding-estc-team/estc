@@ -5,3 +5,21 @@
 2019-08-06 09:46:46.858 WARN   --- org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException             [line198   ] : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public com.competition.response.ReturnVO com.competition.controller.CompetitionWikiController.getAll(java.lang.String,com.competition.form.PageForm)]
 2019-08-06 09:47:07.050 WARN   --- org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException             [line198   ] : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public com.competition.response.ReturnVO com.competition.controller.CompetitionWikiController.getAll(java.lang.String,com.competition.form.PageForm)]
 2019-08-06 10:58:06.186 WARN   --- org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException             [line198   ] : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2019-08-06 11:37:44.556 WARN   --- onObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer.logDuplicateJsonObjectsWarning [line81    ] : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mySoftWare/maven/localWarehose-3.6.1/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mySoftWare/maven/localWarehose-3.6.1/org/json/json/20141113/json-20141113.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2019-08-06 16:48:24.389 WARN   --- onObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer.logDuplicateJsonObjectsWarning [line81    ] : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mySoftWare/maven/localWarehose-3.6.1/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mySoftWare/maven/localWarehose-3.6.1/org/json/json/20141113/json-20141113.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+

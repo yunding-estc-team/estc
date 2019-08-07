@@ -5,13 +5,14 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 /**
- * 用于向前端返回系统消息(列表)
+ * 作用：向前端传递信息
+ * 场景：消息盒子，提供消息列表
  *
  * @author HaoJun
  * @since  2019-08
  */
 @Data
-public class UserAnnouncePost {
+public class UserAnnounceListPost {
 
     /**
      * 消息id

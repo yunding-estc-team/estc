@@ -5,13 +5,14 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 /**
- * 赛事详情页，向前端传回完整的问答信息
+ * 作用：向前端传递信息
+ * 场景：消息盒子，获取问答信息详情
  *
  * @author HaoJun
  * @since 2019-08
  */
 @Data
-public class QuestionAndAnswer {
+public class CompetitionWikiPost {
 
     /**
      * 问题

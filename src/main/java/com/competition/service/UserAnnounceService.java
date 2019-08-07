@@ -3,8 +3,7 @@ package com.competition.service;
 import com.competition.entity.CompetitionWikiReply;
 import com.competition.entity.UserAnnounce;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.competition.form.SystemAnnounce;
-import com.competition.form.UserAnnouncePost;
+import com.competition.form.UserAnnounceListPost;
 
 import java.util.List;
 
@@ -25,7 +24,7 @@ public interface UserAnnounceService extends IService<UserAnnounce> {
      * @param userId 当前用户id token
      * @return 消息列表
      */
-    List<UserAnnouncePost> getAnnounceByUserId(String userId);
+    List<UserAnnounceListPost> getAnnounceByUserId(String userId);
 
     /**
      * 调用mapper层，更改消息状态：已读

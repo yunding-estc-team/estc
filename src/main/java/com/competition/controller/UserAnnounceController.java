@@ -3,7 +3,7 @@ package com.competition.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.competition.entity.UserAnnounce;
-import com.competition.form.UserAnnouncePost;
+import com.competition.form.UserAnnounceListPost;
 import com.competition.response.ReturnCode;
 import com.competition.response.ReturnVO;
 import com.competition.service.UserAnnounceService;
@@ -55,13 +55,9 @@ public class UserAnnounceController {
         log.info("用户获取系统通知\nuserId:" + userId);
 
         // 通过下层获取消息列表并提交
-        List<UserAnnouncePost> userAnnounces = announceService.getAnnounceByUserId(userId);
+        List<UserAnnounceListPost> userAnnounces = announceService.getAnnounceByUserId(userId);
         return new ReturnVO(ReturnCode.SUCCESS,userAnnounces);
     }
-
-    /**
-     * 获取消息详细信息并标记已读
-     */
 
     /**
      * 标记消息已读，并获取详细信息

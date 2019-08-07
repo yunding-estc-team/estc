@@ -2,9 +2,10 @@ package com.competition.service.impl;
 
 import com.competition.entity.CompetitionWiki;
 import com.competition.dao.CompetitionWikiMapper;
-import com.competition.form.CompetitionQAForm;
+import com.competition.form.CompetitionWikiForm;
+import com.competition.form.CompetitionWikiPost;
 import com.competition.form.PageForm;
-import com.competition.form.QuestionAndAnswer;
+import com.competition.form.QuestionListToOrgPost;
 import com.competition.service.CompetitionWikiService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,31 +29,38 @@ public class CompetitionWikiServiceImpl extends ServiceImpl<CompetitionWikiMappe
      * mapper层对象
      */
     @Autowired
-    CompetitionWikiMapper wikiMapper;
+    CompetitionWikiMapper competitionWikiMapper;
 
     /**
      * 获取用户提问
-     * @param host 组织用户id
+     * @param hostId 组织用户id
      * @return 问题列表
      */
     @Override
-    public List<CompetitionWiki> getQuestionsByHost(String host) {
-        return wikiMapper.selectQuestionByHost(host);
+    public List<QuestionListToOrgPost> getQuestionsByHostId(String hostId, PageForm pageForm) {
+
+        // 获取分页信息
+        Integer pageCurrent = pageForm.getPageCurrent();
+        Integer pageSize = pageForm.getPageSize();
+        Integer aParam = (pageCurrent-1)*pageSize;
+
+        // 传入底层
+        return competitionWikiMapper.selectQuestionByHostId(hostId, aParam, pageSize);
     }
 
     /**
      * 获取关于某个赛事的问答整体
      *
-     * @param competitionQaForm 前端传回的信息
+     * @param competitionWikiForm 前端传回的信息
      * @return 问答列表
      */
     @Override
-    public List<QuestionAndAnswer> getAllAboutCompetition(CompetitionQAForm competitionQaForm) {
-        String competitionId = competitionQaForm.getCompetitionId();
-        Integer pageCurrent = competitionQaForm.getPageCurrent();
-        Integer pageSize = competitionQaForm.getPageSize();
+    public List<CompetitionWikiPost> getAllAboutCompetition(CompetitionWikiForm competitionWikiForm) {
+        String competitionId = competitionWikiForm.getCompetitionId();
+        Integer pageCurrent = competitionWikiForm.getPageCurrent();
+        Integer pageSize = competitionWikiForm.getPageSize();
         Integer aParam = (pageCurrent-1)* pageSize;
-        return wikiMapper.selectAllAboutCompetition(competitionId, aParam, pageSize);
+        return competitionWikiMapper.selectAllAboutCompetition(competitionId, aParam, pageSize);
     }
 
 

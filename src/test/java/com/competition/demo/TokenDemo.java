@@ -35,22 +35,22 @@ public class TokenDemo {
 		 * 生成token
 		 */
 		TokenObjectVO vo = new TokenObjectVO();
-		vo.setType("admin");
-		vo.setId("1234567");
+		vo.setType("student");
+		vo.setId("11");
 		logger.info(vo.getId());
 		String token = JwtHelper.generateToken(vo);
 		logger.info(token);
 		/**
 		 * 解析token
 		 */
-		String parse = JwtHelper.getTokenInfo(token).getId();
-		logger.info(parse);
-
-		Claims claims = JwtHelper.parserToken(token);
-		logger.info(claims.getExpiration().toLocaleString());
-		claims.setExpiration(new Date(System.currentTimeMillis()));
-		logger.info("设置过期时间成功");
-		logger.info(claims.getExpiration().toLocaleString());
+//		String parse = JwtHelper.getTokenInfo(token).getId();
+//		logger.info(parse);
+//
+//		Claims claims = JwtHelper.parserToken(token);
+//		logger.info(claims.getExpiration().toLocaleString());
+//		claims.setExpiration(new Date(System.currentTimeMillis()));
+//		logger.info("设置过期时间成功");
+//		logger.info(claims.getExpiration().toLocaleString());
 	}
 
 //	/**

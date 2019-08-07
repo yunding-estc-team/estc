@@ -1,14 +1,18 @@
 package com.competition.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.competition.dao.CompetitionWikiMapper;
 import com.competition.dao.UserAnnounceMapper;
+import com.competition.dao.UserMapper;
 import com.competition.entity.CompetitionWiki;
 import com.competition.entity.CompetitionWikiReply;
+import com.competition.entity.User;
 import com.competition.entity.UserAnnounce;
 import com.competition.form.SystemAnnounce;
-import com.competition.form.UserAnnouncePost;
+import com.competition.form.UserAnnounceListPost;
 import com.competition.service.UserAnnounceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,12 +32,14 @@ import java.util.List;
 public class UserAnnounceServiceImpl extends ServiceImpl<UserAnnounceMapper, UserAnnounce> implements UserAnnounceService {
 
     /**
-     * mapper层调用 | 创建对象
+     * mapper层调用 / 创建对象
      */
     @Autowired
     UserAnnounceMapper announceMapper;
     @Autowired
     CompetitionWikiMapper wikiMapper;
+    @Autowired
+    UserMapper userMapper;
 
     /**
      * 获取当前登录用户系统消息列表
@@ -42,8 +48,14 @@ public class UserAnnounceServiceImpl extends ServiceImpl<UserAnnounceMapper, Use
      * @return 问题列表
      */
     @Override
-    public List<UserAnnouncePost> getAnnounceByUserId(String userId) {
-        return announceMapper.selectAnnounceByUserId(userId);
+    public List<UserAnnounceListPost> getAnnounceByUserId(String userId) {
+
+        // 获取用户类型
+        User user = userMapper.selectOne(new QueryWrapper<User>().select("userType").lambda().eq(User::getUserId, userId));
+        String userType = user.getUserType();
+
+        // 传入底层
+        return announceMapper.selectAnnounceByUserId(userId, userType);
     }
 
     /**
@@ -73,8 +85,9 @@ public class UserAnnounceServiceImpl extends ServiceImpl<UserAnnounceMapper, Use
          * 2. 表单：competition_wiki 表单
          * 3. 结果：问题(CompetitionWiki)对象
          */
-        CompetitionWiki competitionWiki
-                = wikiMapper.selectOne(new QueryWrapper<CompetitionWiki>().lambda().eq(CompetitionWiki::getWikiId, theAnswer.getId()));
+        CompetitionWiki competitionWiki = wikiMapper.selectOne(new QueryWrapper<CompetitionWiki>()
+                                                    .lambda()
+                                                    .eq(CompetitionWiki::getWikiId, theAnswer.getCompetitionWikiId()));
 
         // 编辑推送信息
         SystemAnnounce systemAnnounce = new SystemAnnounce();

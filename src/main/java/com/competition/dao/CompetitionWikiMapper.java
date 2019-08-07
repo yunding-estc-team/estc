@@ -2,7 +2,8 @@ package com.competition.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.competition.entity.CompetitionWiki;
-import com.competition.form.QuestionAndAnswer;
+import com.competition.form.CompetitionWikiPost;
+import com.competition.form.QuestionListToOrgPost;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
@@ -25,12 +26,19 @@ public interface CompetitionWikiMapper extends BaseMapper<CompetitionWiki> {
      * 2. 外层查询：通过“赛事id”查询 competition_wiki 表单，获取所有提问
      * 3. 查询结果排序：根据字段 creatAt 倒序排序
      *
-     * @param host 登录组织id
+     * @param hostId 登录组织id
+     * @param aParam aParam = (pageCurrent-1)*pageSize
+     * @param pageSize 每页展示条数
      * @return 问题列表
      */
-    @Select("SELECT * FROM `competition_wiki` WHERE competition_id in (SELECT competition_id FROM competition " +
-            "WHERE `host` = #{host}) ORDER BY createAt DESC;")
-    List<CompetitionWiki> selectQuestionByHost(@Param("host") String host);
+    @Select("SELECT c.`name`,cw.wiki_id, cw.content,cw.createAt  " +
+            "FROM competition c INNER JOIN competition_wiki cw ON cw.competition_id=c.competition_id " +
+            "WHERE c.competition_id IN (SELECT competition_id FROM competition WHERE c.host = #{hostId}) " +
+            "ORDER BY createAt DESC " +
+            "LIMIT #{aParam}, #{pageSize};")
+    List<QuestionListToOrgPost> selectQuestionByHostId(@Param("hostId") String hostId,
+                                                       @Param("aParam") Integer aParam,
+                                                       @Param("pageSize") Integer pageSize);
 
 
     /**
@@ -53,7 +61,7 @@ public interface CompetitionWikiMapper extends BaseMapper<CompetitionWiki> {
             "ORDER BY createAt DESC ) " +
             "limit ${aParam}, ${bParam}" +
             ";")
-    List<QuestionAndAnswer> selectAllAboutCompetition(@Param("competitionId") String competitionId,
-                                                      @Param("aParam") Integer aParam, @Param("bParam") Integer bParam);
+    List<CompetitionWikiPost> selectAllAboutCompetition(@Param("competitionId") String competitionId,
+                                                        @Param("aParam") Integer aParam, @Param("bParam") Integer bParam);
 
 }
