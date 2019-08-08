@@ -27,7 +27,6 @@ public class UserCompetition extends Model<UserCompetition> {
     /**
      * 比赛id,与比赛表competition_id关联
      */
-    @TableId
     private String competitionId;
 
     /**
@@ -64,8 +63,8 @@ public class UserCompetition extends Model<UserCompetition> {
     /**
      * 用户参赛主键
      */
+    @TableId
     private String id;
-
 
     @Override
     protected Serializable pkVal() {
