@@ -5,7 +5,6 @@ import com.competition.dao.UserCompetitionMapper;
 import com.competition.response.CompetitionRewardVO;
 import com.competition.service.UserCompetitionService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,15 +19,19 @@ import java.util.List;
  */
 @Service
 public class UserCompetitionServiceImpl extends ServiceImpl<UserCompetitionMapper, UserCompetition> implements UserCompetitionService {
-	@Autowired
+	private final
 	UserCompetitionMapper userCompetitionMapper;
+
+	public UserCompetitionServiceImpl(UserCompetitionMapper userCompetitionMapper) {
+		this.userCompetitionMapper = userCompetitionMapper;
+	}
 
 	/**
 	 * 列出特定主办方的赛事获奖信息
 	 */
 	@Override
-	public List<CompetitionRewardVO> listReward(String id){
-		return userCompetitionMapper.listReward(id);
+	public List<CompetitionRewardVO> listReward(String id,int current,int size){
+		return userCompetitionMapper.listReward(id,current*size,size);
 	}
 
 }

@@ -18,7 +18,8 @@ public interface UserCompetitionService extends IService<UserCompetition> {
 
 	/**
 	 * 获取特定主办方的举办赛事的获奖记录
+	 *
 	 */
-	List<CompetitionRewardVO> listReward(String id);
+	List<CompetitionRewardVO> listReward(String id,int current,int size);
 
 }

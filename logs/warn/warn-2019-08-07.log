@@ -1,4 +1,4 @@
-2019-08-07 10:54:23.534 WARN   --- onObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer.logDuplicateJsonObjectsWarning [line81    ] : 
+2019-08-07 10:54:23.534 WARN   --- onObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer.logDuplicateJsonObjectsWarning [line81    ] :
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -7,7 +7,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2019-08-07 11:01:08.472 WARN   --- onObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer.logDuplicateJsonObjectsWarning [line81    ] : 
+2019-08-07 11:01:08.472 WARN   --- onObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer.logDuplicateJsonObjectsWarning [line81    ] :
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -17,7 +17,7 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 You may wish to exclude one of them to ensure predictable runtime behavior
 
 2019-08-07 11:02:51.689 WARN   --- org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.logException             [line198   ] : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public com.competition.response.ReturnVO com.competition.controller.CompetitionWikiController.getQuestions(java.lang.String,com.competition.form.PageForm)]
-2019-08-07 11:11:23.529 WARN   --- onObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer.logDuplicateJsonObjectsWarning [line81    ] : 
+2019-08-07 11:11:23.529 WARN   --- onObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer.logDuplicateJsonObjectsWarning [line81    ] :
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -212,3 +212,30 @@ Caused by: java.io.IOException: 你的主机中的软件中止了一个已建立
 	at org.apache.coyote.Response.action(Response.java:209)
 	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:295)
 	... 69 common frames omitted
+2019-08-07 10:39:45.230 WARN   --- onObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer.logDuplicateJsonObjectsWarning [line81    ] :
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/guohaodong/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/home/guohaodong/.m2/repository/org/json/json/20141113/json-20141113.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2019-08-07 10:50:32.208 WARN   --- onObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer.logDuplicateJsonObjectsWarning [line81    ] :
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/guohaodong/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/home/guohaodong/.m2/repository/org/json/json/20141113/json-20141113.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2019-08-07 10:51:24.215 WARN   --- onObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer.logDuplicateJsonObjectsWarning [line81    ] :
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/guohaodong/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/home/guohaodong/.m2/repository/org/json/json/20141113/json-20141113.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+

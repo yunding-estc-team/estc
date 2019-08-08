@@ -45,26 +45,15 @@ public class TokenDemo {
 		/**
 		 * 解析token
 		 */
-//		String parse = JwtHelper.getTokenInfo(token).getId();
-//		logger.info(parse);
-//
-//		Claims claims = JwtHelper.parserToken(token);
-//		logger.info(claims.getExpiration().toLocaleString());
-//		claims.setExpiration(new Date(System.currentTimeMillis()));
-//		logger.info("设置过期时间成功");
-//		logger.info(claims.getExpiration().toLocaleString());
+		 TokenObjectVO parse = JwtHelper.getTokenInfo(token);
+		logger.info(parse.getId());
+		Claims claims = JwtHelper.parserToken(token);
+		logger.info(claims.getExpiration().toString());
+		claims.setExpiration(new Date(System.currentTimeMillis()+100000000000L*60*60));
+		logger.info("设置过期时间成功");
+		logger.info(claims.getExpiration().toString());
+		logger.info("可以认为永久");
 
-//		 TokenObjectVO parse = JwtHelper.getTokenInfo(token);
-//		logger.info(parse.getId());
-//		Claims claims = JwtHelper.parserToken(token);
-//		logger.info(claims.getExpiration().toLocaleString());
-//		claims.setExpiration(new Date(System.currentTimeMillis()+10000*60*60));
-//		logger.info("设置过期时间成功");
-//		logger.info(claims.getExpiration().toLocaleString());
-		/**
-		 *eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxIiwic3ViIjoiYWRtaW4iLCJpYXQiOjE1NjUwNTY2OTQsImV4cCI6MTU2NTA2MDI5NH0.ebyiS-kkE-CJAqYaK30coB6lCUEt0GOLaxB7QyesmFQ
-		 *eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxIiwic3ViIjoiYWRtaW4iLCJpYXQiOjE1NjUwNTY2OTQsImV4cCI6MTU2NTA2MDI5NH0.ebyiS-kkE-CJAqYaK30coB6lCUEt0GOLaxB7QyesmFQ
- 		 */
 	}
 
 //	/**

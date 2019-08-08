@@ -77,3 +77,58 @@ title )  VALUES  ( 'b1f207fb79314b68aa8841f527526665',
 ; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'creatAt' in 'order clause'
 2019-08-08 11:17:07.828 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line34    ] : 空指针异常
 2019-08-08 11:34:34.170 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line34    ] : 空指针异常
+2019-08-08 09:41:27.473 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1817955671b34e56bc2921a6763ade5a' for key 'PRIMARY'
+### The error may exist in com/competition/dao/UserMapper.java (best guess)
+### The error may involve com.competition.dao.UserMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO user  ( user_id,             file, hash )  VALUES  ( ?,             ?, ? )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1817955671b34e56bc2921a6763ade5a' for key 'PRIMARY'
+; Duplicate entry '1817955671b34e56bc2921a6763ade5a' for key 'PRIMARY'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1817955671b34e56bc2921a6763ade5a' for key 'PRIMARY'
+2019-08-08 09:43:02.030 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1817955671b34e56bc2921a6763ade5a' for key 'PRIMARY'
+### The error may exist in com/competition/dao/UserMapper.java (best guess)
+### The error may involve com.competition.dao.UserMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO user  ( user_id,             file, hash )  VALUES  ( ?,             ?, ? )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1817955671b34e56bc2921a6763ade5a' for key 'PRIMARY'
+; Duplicate entry '1817955671b34e56bc2921a6763ade5a' for key 'PRIMARY'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1817955671b34e56bc2921a6763ade5a' for key 'PRIMARY'
+2019-08-08 09:51:49.627 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line65    ] : 喂不活的异常
+2019-08-08 09:51:49.628 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line66    ] : org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Illegal unquoted character ((CTRL-CHAR, code 10)): has to be escaped using backslash to be included in string value; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Illegal unquoted character ((CTRL-CHAR, code 10)): has to be escaped using backslash to be included in string value
+ at [Source: (PushbackInputStream); line: 5, column: 9] (through reference chain: com.competition.form.CompetitionForm["id"])
+2019-08-08 10:41:43.411 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE  competition_id='1'
+ AND user_id='11'
+ AND reward='特等奖'
+ AND certifi' at line 3
+### The error may exist in com/competition/dao/UserCompetitionMapper.java (best guess)
+### The error may involve com.competition.dao.UserCompetitionMapper.update-Inline
+### The error occurred while setting parameters
+### SQL: UPDATE user_competition        WHERE  competition_id=?  AND user_id=?  AND reward=?  AND certificate=?  AND checkout=?  AND hash=?  AND createAt=?  AND updateAt=?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE  competition_id='1'
+ AND user_id='11'
+ AND reward='特等奖'
+ AND certifi' at line 3
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE  competition_id='1'
+ AND user_id='11'
+ AND reward='特等奖'
+ AND certifi' at line 3
+2019-08-08 10:41:44.760 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE  competition_id='1'
+ AND user_id='11'
+ AND reward='特等奖'
+ AND certifi' at line 3
+### The error may exist in com/competition/dao/UserCompetitionMapper.java (best guess)
+### The error may involve com.competition.dao.UserCompetitionMapper.update-Inline
+### The error occurred while setting parameters
+### SQL: UPDATE user_competition        WHERE  competition_id=?  AND user_id=?  AND reward=?  AND certificate=?  AND checkout=?  AND hash=?  AND createAt=?  AND updateAt=?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE  competition_id='1'
+ AND user_id='11'
+ AND reward='特等奖'
+ AND certifi' at line 3
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE  competition_id='1'
+ AND user_id='11'
+ AND reward='特等奖'
+ AND certifi' at line 3
+2019-08-08 10:47:31.196 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line65    ] : 喂不活的异常
+2019-08-08 10:47:31.197 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line66    ] : org.springframework.web.bind.MissingRequestHeaderException: Missing request header 'authorization' for method parameter of type String

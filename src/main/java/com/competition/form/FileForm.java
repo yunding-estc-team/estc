@@ -22,4 +22,9 @@ public class FileForm {
 	 * 若为认领赛事,赛事id
 	 */
 	private String id;
+
+	/**
+	 * 认领赛事的描述
+	 */
+	private String description;
 }
