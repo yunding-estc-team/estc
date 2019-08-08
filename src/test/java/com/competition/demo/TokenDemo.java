@@ -35,8 +35,9 @@ public class TokenDemo {
 		 * 生成token
 		 */
 		TokenObjectVO vo = new TokenObjectVO();
-		vo.setType("organization");
-//		vo.setId("1817955671b34e56bc2921a6763ade5a");
+//		vo.setType("organization");
+//		vo.setType("student");
+		vo.setType("admin");
 		vo.setId("1");
 		logger.info(vo.getId());
 		String token = JwtHelper.generateToken(vo);
