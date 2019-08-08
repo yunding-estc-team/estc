@@ -1,5 +1,6 @@
 package com.competition.entity;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import java.time.LocalDateTime;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -26,6 +27,7 @@ public class Competition extends Model<Competition> {
     /**
      * 唯一标识的比赛id(主键)
      */
+    @TableId
     private String competitionId;
 
     /**
@@ -88,6 +90,16 @@ public class Competition extends Model<Competition> {
      * 热度值
      */
     private Integer hot;
+
+    /**
+     * 审核文件
+     */
+    private String file;
+
+    /**
+     * 删除文件用的hash值
+     */
+    private String hash;
 
     @TableField("createAt")
     private LocalDateTime createAt;

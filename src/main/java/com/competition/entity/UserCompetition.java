@@ -1,5 +1,6 @@
 package com.competition.entity;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import java.time.LocalDateTime;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -62,8 +63,8 @@ public class UserCompetition extends Model<UserCompetition> {
     /**
      * 用户参赛主键
      */
+    @TableId
     private String id;
-
 
     @Override
     protected Serializable pkVal() {

@@ -1,5 +1,6 @@
 package com.competition.entity;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import java.time.LocalDateTime;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -26,6 +27,7 @@ public class CompetitionWikiReply extends Model<CompetitionWikiReply> {
     /**
      * 主键
      */
+    @TableId
     private String id;
 
     /**

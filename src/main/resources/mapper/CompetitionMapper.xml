@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.competition.dao.CompetitionMapper">
+<mapper namespace="com.competitionRank.test.dao.CompetitionMapper">
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.competition.entity.Competition">
@@ -12,9 +12,9 @@
         <result column="host" property="host" />
         <result column="introduce" property="introduce" />
         <result column="content" property="content" />
-        <result column="join" property="join" />
+        <result column="join_link" property="joinLink" />
         <result column="rgr" property="rgr" />
-        <result column="check" property="checkout" />
+        <result column="checkout" property="checkout" />
         <result column="click_count" property="clickCount" />
         <result column="hot" property="hot" />
         <result column="createAt" property="createAt" />
@@ -23,7 +23,7 @@
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        competition_id, name, cover, isIndividual, type, host, introduce, content, join, rgr, checkout, click_count, hot, createAt, updateAt
+        competition_id, name, cover, isIndividual, type, host, introduce, content, join_link, rgr, checkout, click_count, hot, createAt, updateAt
     </sql>
 
 </mapper>

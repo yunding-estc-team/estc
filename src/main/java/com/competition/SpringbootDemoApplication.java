@@ -11,9 +11,11 @@ import org.springframework.context.annotation.Import;
 @SpringBootApplication
 @Import({com.competition.config.SpringConfig.class,
 		com.competition.config.RedisConfig.class,
-		com.competition.config.MybatisPlusConfig.class
+		com.competition.config.MybatisPlusConfig.class,
+		com.competition.config.ShiroConfig.class,
+		com.competition.config.SwaggerConfig.class
 		})
-@MapperScan(basePackages = "com.competition.dao")
+//@MapperScan(basePackages = "com.competition.dao")
 public class SpringbootDemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootDemoApplication.class, args);

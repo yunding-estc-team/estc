@@ -1,5 +1,8 @@
 package com.competition;
 
+import com.baomidou.mybatisplus.core.conditions.Wrapper;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.competition.dao.CompetitionMapper;
 import com.competition.entity.Competition;
@@ -66,12 +69,15 @@ public class SpringbootDemoApplicationTests {
 	}
 
 
+	@Autowired
+	CompetitionService competitionService;
 	@Test
 	public void insertT(){
 //		mapper.selectList(Wrappers.<Competition>lambdaQuery().select(Competition::getCompetitionId))
 //					.forEach(x->{
 //						assertThat(x.getCompetitionId()).isNotNull();
 //					});
+		competitionService.getOne(Wrappers.<Competition>lambdaQuery().eq(Competition::getClickCount,1));
 		mapper.selectOne(Wrappers.<Competition>lambdaQuery().select(Competition::getCompetitionId));
 		System.out.println(
 				mapper.selectOne(Wrappers.<Competition>lambdaQuery().select(Competition::getCompetitionId,Competition::getClickCount))
@@ -102,5 +108,10 @@ public class SpringbootDemoApplicationTests {
 		String y = "2018005643";
 		System.out.println(y.hashCode()+"\n"+s.hashCode());
 	}
+	@Test
+	public void competitionC(){
+		Competition competition = competitionService.getById("1800bb87da81438ab982c0416631054c");
+	}
+
 
 }

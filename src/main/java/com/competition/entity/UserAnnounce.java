@@ -1,5 +1,6 @@
 package com.competition.entity;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import java.time.LocalDateTime;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -26,6 +27,7 @@ public class UserAnnounce extends Model<UserAnnounce> {
     /**
      * 主键
      */
+    @TableId
     private String id;
 
     /**
@@ -47,6 +49,11 @@ public class UserAnnounce extends Model<UserAnnounce> {
      * 是否已读
      */
     private String read;
+
+    /**
+     * 标题
+     */
+    private String title;
 
     /**
      * 创建时间
