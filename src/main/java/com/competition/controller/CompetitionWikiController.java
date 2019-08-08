@@ -100,7 +100,7 @@ public class CompetitionWikiController {
      * @param authorization token
      * @return 200
      */
-    @PostMapping("/usersAnwser")
+    @PostMapping("/usersAnswer")
     public ReturnVO postAnswers(@RequestBody CompetitionWikiReplyForm theAnswers, @RequestHeader String authorization) {
 
         // 当前组织Id获取

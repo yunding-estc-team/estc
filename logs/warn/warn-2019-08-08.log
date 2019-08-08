@@ -157,3 +157,21 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
+2019-08-08 16:08:24.361 WARN   --- onObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer.logDuplicateJsonObjectsWarning [line81    ] : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mySoftWare/maven/localWarehose-3.6.1/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mySoftWare/maven/localWarehose-3.6.1/org/json/json/20141113/json-20141113.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2019-08-08 16:38:02.878 WARN   --- onObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer.logDuplicateJsonObjectsWarning [line81    ] : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mySoftWare/maven/localWarehose-3.6.1/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mySoftWare/maven/localWarehose-3.6.1/org/json/json/20141113/json-20141113.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
