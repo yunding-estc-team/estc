@@ -107,16 +107,6 @@ public class UserAnnounceServiceImpl extends ServiceImpl<UserAnnounceMapper, Use
 
         // 插入数据库
         announceMapper.insert(userAnnounce);
-//        announceMapper.insertSystemAnnounce(systemAnnounce);
     }
 
-//    /**
-//     * 推送系统通知
-//     *
-//     * @param systemAnnounce 前端传回的信息
-//     */
-//    @Override
-//    public void pushAnnounce(SystemAnnounce systemAnnounce) {
-//
-//    }
 }

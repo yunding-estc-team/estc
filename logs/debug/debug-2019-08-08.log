@@ -176,3 +176,15 @@
 2019-08-08 11:37:28.693 DEBUG  --- com.competition.dao.UserAnnounceMapper.selectAnnounceByUserId.debug                                  [line143   ] : ==>  Preparing: SELECT `id` AS announce_id,`title`, `has_read`, `createAt` FROM user_announce WHERE user_id = ? OR user_id = 'allUser' OR user_id = ? ORDER BY createAt DESC LIMIT ?, ?; 
 2019-08-08 11:37:28.694 DEBUG  --- com.competition.dao.UserAnnounceMapper.selectAnnounceByUserId.debug                                  [line143   ] : ==> Parameters: 11(String), student(String), 2(Integer), 2(Integer)
 2019-08-08 11:37:28.721 DEBUG  --- com.competition.dao.UserAnnounceMapper.selectAnnounceByUserId.debug                                  [line143   ] : <==      Total: 1
+2019-08-08 11:51:39.842 DEBUG  --- com.competition.dao.UserAnnounceMapper.updateAnnounceReadById.debug                                  [line143   ] : ==>  Preparing: UPDATE user_announce SET `has_read` = ? WHERE `id` = ?; 
+2019-08-08 11:51:39.859 DEBUG  --- com.competition.dao.UserAnnounceMapper.updateAnnounceReadById.debug                                  [line143   ] : ==> Parameters: 1(String), null
+2019-08-08 11:51:39.893 DEBUG  --- com.competition.dao.UserAnnounceMapper.updateAnnounceReadById.debug                                  [line143   ] : <==    Updates: 0
+2019-08-08 11:51:39.933 DEBUG  --- com.competition.dao.UserAnnounceMapper.selectOne.debug                                               [line143   ] : ==>  Preparing: SELECT id,user_id,announce,src,has_read,title,createAt,updateAt FROM user_announce WHERE id = ? 
+2019-08-08 11:51:39.933 DEBUG  --- com.competition.dao.UserAnnounceMapper.selectOne.debug                                               [line143   ] : ==> Parameters: null
+2019-08-08 11:51:39.980 DEBUG  --- com.competition.dao.UserAnnounceMapper.selectOne.debug                                               [line143   ] : <==      Total: 0
+2019-08-08 11:55:21.871 DEBUG  --- com.competition.dao.UserAnnounceMapper.updateAnnounceReadById.debug                                  [line143   ] : ==>  Preparing: UPDATE user_announce SET `has_read` = ? WHERE `id` = ?; 
+2019-08-08 11:55:21.872 DEBUG  --- com.competition.dao.UserAnnounceMapper.updateAnnounceReadById.debug                                  [line143   ] : ==> Parameters: 1(String), test001(String)
+2019-08-08 11:55:21.912 DEBUG  --- com.competition.dao.UserAnnounceMapper.updateAnnounceReadById.debug                                  [line143   ] : <==    Updates: 1
+2019-08-08 11:55:21.917 DEBUG  --- com.competition.dao.UserAnnounceMapper.selectOne.debug                                               [line143   ] : ==>  Preparing: SELECT id,user_id,announce,src,has_read,title,createAt,updateAt FROM user_announce WHERE id = ? 
+2019-08-08 11:55:21.918 DEBUG  --- com.competition.dao.UserAnnounceMapper.selectOne.debug                                               [line143   ] : ==> Parameters: test001(String)
+2019-08-08 11:55:21.945 DEBUG  --- com.competition.dao.UserAnnounceMapper.selectOne.debug                                               [line143   ] : <==      Total: 1

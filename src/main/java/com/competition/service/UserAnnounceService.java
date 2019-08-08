@@ -41,11 +41,4 @@ public interface UserAnnounceService extends IService<UserAnnounce> {
      */
     void pushAnnounce(CompetitionWikiReply theAnswer);
 
-//    /**
-//     * 推送通知 - 将systemAnnounce中的信息存入数据库
-//     *
-//     * @param systemAnnounce 前端传回的信息
-//     */
-//    void pushAnnounce(SystemAnnounce systemAnnounce);
-
 }

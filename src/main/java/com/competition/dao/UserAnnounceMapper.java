@@ -52,12 +52,4 @@ public interface UserAnnounceMapper extends BaseMapper<UserAnnounce> {
     @Update("UPDATE user_announce SET `has_read` = #{hasRead} WHERE `id` = #{announceId};")
     void updateAnnounceReadById(@Param("announceId") String announceId, @Param("hasRead") String hasRead);
 
-//    /**
-//     * 向数据库(user_announce)插入系统通知
-//     *
-//     * @param systemAnnounce 系统通知（对象）
-//     */
-//    @Insert("INSERT INTO user_announce VALUES #{systemAnnounce}")
-//    void insertSystemAnnounce(@Param("systemAnnounce") SystemAnnounce systemAnnounce);
-
 }
