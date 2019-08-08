@@ -809,3 +809,36 @@ Caused by: java.net.SocketException: 网络不可达 (connect failed)
 2019-08-06 14:49:11.156 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line34    ] : 空指针异常
 2019-08-06 14:49:14.909 ERROR  --- com.competition.advise.Competition.deRecovery                                                        [line26    ] : 捕获异常null
 2019-08-06 14:49:14.910 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line34    ] : 空指针异常
+2019-08-06 21:19:08.679 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line64    ] : 喂不活的异常
+2019-08-06 21:19:08.689 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line65    ] : org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `com.competition.form.CompetitionForm` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `com.competition.form.CompetitionForm` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: (PushbackInputStream); line: 2, column: 3]
+2019-08-06 21:20:59.638 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line64    ] : 喂不活的异常
+2019-08-06 21:20:59.639 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line65    ] : org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `com.competition.form.CompetitionForm` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `com.competition.form.CompetitionForm` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: (PushbackInputStream); line: 2, column: 3]
+2019-08-06 21:21:00.540 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line64    ] : 喂不活的异常
+2019-08-06 21:21:00.542 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line65    ] : org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `com.competition.form.CompetitionForm` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `com.competition.form.CompetitionForm` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: (PushbackInputStream); line: 2, column: 3]
+2019-08-06 21:23:38.350 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line35    ] : 空指针异常
+2019-08-06 21:24:07.577 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line35    ] : 空指针异常
+2019-08-06 21:24:18.722 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line35    ] : 空指针异常
+2019-08-06 21:24:21.743 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line35    ] : 空指针异常
+2019-08-06 21:26:04.927 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line35    ] : 空指针异常
+2019-08-06 21:26:04.928 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line38    ] : java.lang.NullPointerException
+2019-08-06 21:26:19.321 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line35    ] : 空指针异常
+2019-08-06 21:27:04.596 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line38    ] : java.lang.NullPointerException
+2019-08-06 21:27:35.532 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line35    ] : 空指针异常
+2019-08-06 21:27:36.830 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line38    ] : java.lang.NullPointerException
+2019-08-06 21:27:37.368 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line35    ] : 空指针异常
+2019-08-06 21:27:39.113 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line38    ] : java.lang.NullPointerException
+2019-08-06 21:28:19.831 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line35    ] : 空指针异常
+2019-08-06 21:28:39.735 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line38    ] : java.lang.NullPointerException
+2019-08-06 21:29:04.920 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line35    ] : 空指针异常
+2019-08-06 21:29:08.213 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line38    ] : java.lang.NullPointerException
+2019-08-06 21:30:02.033 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line35    ] : 空指针异常
+2019-08-06 21:30:02.034 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line38    ] : java.lang.NullPointerException
+2019-08-06 21:40:21.844 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line35    ] : 空指针异常
+2019-08-06 21:40:21.869 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line38    ] : java.lang.NullPointerException
+2019-08-06 21:40:21.997 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line35    ] : 空指针异常
+2019-08-06 21:40:21.998 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line38    ] : java.lang.NullPointerException
+2019-08-06 21:40:22.143 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line35    ] : 空指针异常
+2019-08-06 21:40:22.144 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line38    ] : java.lang.NullPointerException

@@ -9,14 +9,14 @@
         <result column="title" property="title" />
         <result column="announce" property="announce" />
         <result column="src" property="src" />
-        <result column="read" property="read" />
+        <result column="has_read" property="hasRead" />
         <result column="createAt" property="createAt" />
         <result column="updateAt" property="updateAt" />
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, user_id, title, announce, src, read, createAt, updateAt
+        id, user_id, title, announce, src, hasRead, createAt, updateAt
     </sql>
 
 </mapper>

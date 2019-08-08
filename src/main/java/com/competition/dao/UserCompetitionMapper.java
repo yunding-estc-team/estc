@@ -24,7 +24,9 @@ public interface UserCompetitionMapper extends BaseMapper<UserCompetition> {
 	/**
 	 * 查询主办方所举办的赛事的获奖情况
 	 * @param host 主办方id
-	 * @return
+	 * @param offset 起始值
+	 * @param size 分页大小
+	 * @return competitionRewardVo
 	 */
 	@Select("SELECT uc.competition_id ,uc.reward ,c.name ,u.realname FROM user_competition uc " +
 			"inner join competition c on uc.competition_id = c.competition_id " +
@@ -32,9 +34,15 @@ public interface UserCompetitionMapper extends BaseMapper<UserCompetition> {
 			"WHERE uc.competition_id in " +
 				"(SELECT competition_id " +
 				"FROM competition " +
-				"WHERE host =#{host})")
-	List<CompetitionRewardVO> listReward(String host);
+				"WHERE host =#{host})" +
+			"LIMIT #{offset},#{size}")
+	List<CompetitionRewardVO> listReward(String host,int offset,int size);
 
+	/**
+	 * 获得某主办方的所有赛事id
+	 * @param host 主办方id
+	 * @return 所举办的赛事id
+	 */
 	@Select("select competition_id from competition where host=#{host}")
 	public List<String> listHost(String host);
 

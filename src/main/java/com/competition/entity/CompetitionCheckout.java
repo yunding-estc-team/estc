@@ -3,6 +3,8 @@ package com.competition.entity;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import com.baomidou.mybatisplus.annotation.TableField;
 import java.io.Serializable;
+import java.time.LocalDateTime;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -48,6 +50,21 @@ public class CompetitionCheckout extends Model<CompetitionCheckout> {
      */
     private String userId;
 
+    /**
+     * 审查结果,0未审核,1审核中,2审核未通过,3审核通过
+     */
+    private String checkout;
+
+    /**
+     * 文字描述
+     */
+    private String description;
+
+    @TableField("createAt")
+    private LocalDateTime createAt;
+
+    @TableField("updateAt")
+    private LocalDateTime updateAt;
 
     @Override
     protected Serializable pkVal() {

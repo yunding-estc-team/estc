@@ -35,7 +35,8 @@ public class TokenDemo {
 		 * 生成token
 		 */
 		TokenObjectVO vo = new TokenObjectVO();
-		vo.setType("admin");
+		vo.setType("organization");
+//		vo.setId("1817955671b34e56bc2921a6763ade5a");
 		vo.setId("1");
 		logger.info(vo.getId());
 		String token = JwtHelper.generateToken(vo);
@@ -43,17 +44,15 @@ public class TokenDemo {
 		/**
 		 * 解析token
 		 */
-//		 TokenObjectVO parse = JwtHelper.getTokenInfo(token);
-//		logger.info(parse.getId());
-//		Claims claims = JwtHelper.parserToken(token);
-//		logger.info(claims.getExpiration().toLocaleString());
-//		claims.setExpiration(new Date(System.currentTimeMillis()+10000*60*60));
-//		logger.info("设置过期时间成功");
-//		logger.info(claims.getExpiration().toLocaleString());
-		/**
-		 *eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxIiwic3ViIjoiYWRtaW4iLCJpYXQiOjE1NjUwNTY2OTQsImV4cCI6MTU2NTA2MDI5NH0.ebyiS-kkE-CJAqYaK30coB6lCUEt0GOLaxB7QyesmFQ
-		 *eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxIiwic3ViIjoiYWRtaW4iLCJpYXQiOjE1NjUwNTY2OTQsImV4cCI6MTU2NTA2MDI5NH0.ebyiS-kkE-CJAqYaK30coB6lCUEt0GOLaxB7QyesmFQ
- 		 */
+		 TokenObjectVO parse = JwtHelper.getTokenInfo(token);
+		logger.info(parse.getId());
+		Claims claims = JwtHelper.parserToken(token);
+		logger.info(claims.getExpiration().toString());
+		claims.setExpiration(new Date(System.currentTimeMillis()+100000000000L*60*60));
+		logger.info("设置过期时间成功");
+		logger.info(claims.getExpiration().toString());
+		logger.info("可以认为永久");
+
 	}
 
 //	/**

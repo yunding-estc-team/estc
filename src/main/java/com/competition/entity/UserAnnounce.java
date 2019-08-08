@@ -48,7 +48,7 @@ public class UserAnnounce extends Model<UserAnnounce> {
     /**
      * 是否已读
      */
-    private String read;
+    private String hasRead;
 
     /**
      * 标题

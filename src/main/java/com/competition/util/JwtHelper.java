@@ -40,7 +40,7 @@ public class JwtHelper {
                     .parseClaimsJws(token).getBody();
         }
         catch (JwtException ex){
-            claims = null;
+            throw new JwtException("token异常");
         }
         return claims;
    }
@@ -51,7 +51,6 @@ public class JwtHelper {
         Claims claims = parserToken(token);
         // 将claim中的数据存入objectVO
         TokenObjectVO objectVO = new TokenObjectVO();
-        assert claims != null;
         objectVO.setId(claims.getId());
         objectVO.setType(claims.getSubject());
         return objectVO;
