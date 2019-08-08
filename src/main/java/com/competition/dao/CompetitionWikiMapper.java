@@ -31,7 +31,7 @@ public interface CompetitionWikiMapper extends BaseMapper<CompetitionWiki> {
      * @param pageSize 每页展示条数
      * @return 问题列表
      */
-    @Select("SELECT c.`name`,cw.wiki_id, cw.content,cw.createAt  " +
+    @Select("SELECT c.`name` AS competitionName, cw.wiki_id, cw.content,cw.createAt  " +
             "FROM competition c INNER JOIN competition_wiki cw ON cw.competition_id=c.competition_id " +
             "WHERE c.competition_id IN (SELECT competition_id FROM competition WHERE c.host = #{hostId}) " +
             "ORDER BY createAt DESC " +
@@ -53,12 +53,12 @@ public interface CompetitionWikiMapper extends BaseMapper<CompetitionWiki> {
      * @param bParam        bParam = pageSize
      * @return 问答列表
      */
-    @Select("(SELECT competition_wiki.content AS userQuestion, competition_wiki_reply.content AS userAnswer, " +
+    @Select("SELECT competition_wiki.content AS userQuestion, competition_wiki_reply.content AS userAnswer, " +
             "competition_wiki_reply.createAt AS answerCreatAt " +
             "FROM competition_wiki, `competition_wiki_reply` " +
             "WHERE competition_wiki.wiki_id = competition_wiki_reply.competition_wiki_id " +
             "&& competition_wiki.competition_id = #{competitionId} " +
-            "ORDER BY createAt DESC ) " +
+            "ORDER BY competition_wiki_reply.createAt DESC " +
             "limit ${aParam}, ${bParam}" +
             ";")
     List<CompetitionWikiPost> selectAllAboutCompetition(@Param("competitionId") String competitionId,

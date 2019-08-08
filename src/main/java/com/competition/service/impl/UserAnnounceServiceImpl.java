@@ -1,8 +1,6 @@
 package com.competition.service.impl;
 
-import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.competition.dao.CompetitionWikiMapper;
 import com.competition.dao.UserAnnounceMapper;
@@ -11,6 +9,7 @@ import com.competition.entity.CompetitionWiki;
 import com.competition.entity.CompetitionWikiReply;
 import com.competition.entity.User;
 import com.competition.entity.UserAnnounce;
+import com.competition.form.PageForm;
 import com.competition.form.SystemAnnounce;
 import com.competition.form.UserAnnounceListPost;
 import com.competition.service.UserAnnounceService;
@@ -48,26 +47,31 @@ public class UserAnnounceServiceImpl extends ServiceImpl<UserAnnounceMapper, Use
      * @return 问题列表
      */
     @Override
-    public List<UserAnnounceListPost> getAnnounceByUserId(String userId) {
+    public List<UserAnnounceListPost> getAnnounceByUserId(String userId, PageForm pageForm) {
 
         // 获取用户类型
-        User user = userMapper.selectOne(new QueryWrapper<User>().select("userType").lambda().eq(User::getUserId, userId));
+        User user = userMapper.selectOne(new QueryWrapper<User>().select("user_type").lambda().eq(User::getUserId, userId));
         String userType = user.getUserType();
 
+        // 获取分页信息
+        Integer pageCurrent = pageForm.getPageCurrent();
+        Integer pageSize = pageForm.getPageSize();
+        Integer aParam = (pageCurrent - 1) * pageSize;
+
         // 传入底层
-        return announceMapper.selectAnnounceByUserId(userId, userType);
+        return announceMapper.selectAnnounceByUserId(userId, userType, aParam, pageSize);
     }
 
     /**
      * 调用mapper层，更改消息状态：已读
      *
-     * @param announce 前端传回的信息，包括 announceId + hasRead (id + read)
+     * @param announce 前端传回的信息，包括 announceId + hasRead (id + hasRead)
      */
     @Override
     public void updateAnnounceReadById(UserAnnounce announce) {
         // 获取（分离）参数
         String announceId = announce.getId();
-        String hasRead = announce.getRead();
+        String hasRead = announce.getHasRead();
 
         // 底层调用
         announceMapper.updateAnnounceReadById(announceId,hasRead);
@@ -95,11 +99,15 @@ public class UserAnnounceServiceImpl extends ServiceImpl<UserAnnounceMapper, Use
         systemAnnounce.setUserId(userId);
         String title = "[系统通知] 提问被回答";
         systemAnnounce.setTitle(title);
-        String announce = "您的提问【" + competitionWiki.getContent() + "】已被回答";
+        String announce = "您的提问【" + competitionWiki.getContent() + "】已被回答。";
         systemAnnounce.setAnnounce(announce);
 
+        // 转化为实体类
+        UserAnnounce userAnnounce = systemAnnounce.toEntity();
+
         // 插入数据库
-        announceMapper.insertSystemAnnounce(systemAnnounce);
+        announceMapper.insert(userAnnounce);
+//        announceMapper.insertSystemAnnounce(systemAnnounce);
     }
 
 //    /**

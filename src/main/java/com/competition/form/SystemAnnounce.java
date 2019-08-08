@@ -1,5 +1,6 @@
 package com.competition.form;
 
+import com.competition.entity.UserAnnounce;
 import lombok.Data;
 
 import java.util.UUID;
@@ -11,7 +12,7 @@ import java.util.UUID;
  * @since 2019-08
  */
 @Data
-public class SystemAnnounce {
+public class SystemAnnounce implements IBaseDTO<UserAnnounce>{
 
     /**
      * 主键：announceID
@@ -41,6 +42,27 @@ public class SystemAnnounce {
     /**
      * 是否已读，默认未读
      */
-    private Integer read = 0;
+    private String hasRead = "0";
 
+    @Override
+    public UserAnnounce toEntity() {
+        UserAnnounce userAnnounce = new UserAnnounce();
+        userAnnounce.setId(id);
+        userAnnounce.setUserId(userId);
+        userAnnounce.setTitle(title);
+        userAnnounce.setAnnounce(announce);
+        userAnnounce.setSrc(src);
+        userAnnounce.setHasRead(hasRead);
+        return userAnnounce;
+    }
+
+    @Override
+    public void fromEntity(UserAnnounce entity) {
+        id = entity.getId();
+        userId = entity.getUserId();
+        title = entity.getTitle();
+        announce = entity.getAnnounce();
+        src = entity.getSrc();
+        hasRead = entity.getHasRead();
+    }
 }

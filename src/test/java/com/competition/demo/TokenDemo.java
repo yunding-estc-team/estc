@@ -35,6 +35,7 @@ public class TokenDemo {
 		 * 生成token
 		 */
 		TokenObjectVO vo = new TokenObjectVO();
+//		vo.setType("organization");
 		vo.setType("student");
 		vo.setId("11");
 		logger.info(vo.getId());

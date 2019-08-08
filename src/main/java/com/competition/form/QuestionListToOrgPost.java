@@ -33,7 +33,7 @@ public class QuestionListToOrgPost implements IBaseDTO<CompetitionWiki>{
     /**
      * 提问时间
      */
-    private LocalDateTime creatAt;
+    private LocalDateTime createAt;
 
     /**
      * form -> entity
@@ -46,7 +46,7 @@ public class QuestionListToOrgPost implements IBaseDTO<CompetitionWiki>{
         CompetitionWiki competitionWiki = new CompetitionWiki();
         competitionWiki.setWikiId(wikiId);
         competitionWiki.setContent(content);
-        competitionWiki.setCreateAt(creatAt);
+        competitionWiki.setCreateAt(createAt);
         return competitionWiki;
     }
 
@@ -60,6 +60,6 @@ public class QuestionListToOrgPost implements IBaseDTO<CompetitionWiki>{
     public void fromEntity(CompetitionWiki entity) {
         this.wikiId = entity.getWikiId();
         this.content = entity.getContent();
-        this.creatAt = entity.getCreateAt();
+        this.createAt = entity.getCreateAt();
     }
 }

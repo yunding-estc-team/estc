@@ -17,7 +17,7 @@ public class UserAnnounceListPost {
     /**
      * 消息id
      */
-    private Integer announceId;
+    private String announceId;
 
     /**
      * 标题
@@ -27,10 +27,10 @@ public class UserAnnounceListPost {
     /**
      * 是否已读
      */
-    private String read;
+    private String hasRead;
 
     /**
      * 创建时间
      */
-    private LocalDateTime creatAt;
+    private LocalDateTime createAt;
 }

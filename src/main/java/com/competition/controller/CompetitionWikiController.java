@@ -25,9 +25,8 @@ import java.util.List;
  * @author updayedBy:HaoJun 2019/08/04
  * @since 2019-08-02
  *
- * @TODO 修改url + 修改接口文档 2019/08/04 2019/08/05
  * @TODO 添加两个“历史”操作 2019/08/04 2019/08/--
- * @TODO 分页
+ * @TODO 进行假删除操作 20190808 201908--
  *
  */
 @RestController
@@ -52,9 +51,6 @@ public class CompetitionWikiController {
      * @param theQuestions 前端传回的问题信息，包括 userId + content
      * @param authorization token获取
      * @return 提示录入正常
-     *
-     * @TODO 等待测试 2019/08/04  2019/08/06
-     *
      */
     @PostMapping("/usersAsk")
     public ReturnVO postQuestions(@RequestBody CompetitionQuestionForm theQuestions, @RequestHeader String authorization) {
@@ -63,7 +59,7 @@ public class CompetitionWikiController {
         String userId = JwtHelper.parserToken(authorization).getId();
 
         // 日志记录
-        log.info("学生用户进行提问\n学生userId:" + userId);
+        log.info("\n学生用户进行提问\n学生userId:" + userId);
 
         // 将用户id信息并入入参，统一存入数据库
         theQuestions.setUserId(userId);
@@ -81,9 +77,6 @@ public class CompetitionWikiController {
      *
      * @param authorization token
      * @return 问题列表（时间倒序）
-     *
-     * TODO 等待测试 2019/08/04  2019/08/06
-     *
      */
     @PostMapping("/getUsersAsk")
     public ReturnVO getQuestions(@RequestHeader String authorization, @RequestBody PageForm pageForm) {
@@ -92,10 +85,11 @@ public class CompetitionWikiController {
         String userId = JwtHelper.parserToken(authorization).getId();
 
         // 日志记录
-        log.info("组织用户获取提问\n组织userId:" + userId);
+        log.info("\n组织用户获取提问\n组织userId:" + userId);
 
         // 获取问题列表并返回
         List<QuestionListToOrgPost> questions = wikiService.getQuestionsByHostId(userId, pageForm);
+        System.out.println(questions);
         return new ReturnVO(ReturnCode.SUCCESS, questions);
     }
 
@@ -105,25 +99,23 @@ public class CompetitionWikiController {
      * @param theAnswers    答案，包括 competitionWikiId + content
      * @param authorization token
      * @return 200
-     *
-     * @TODO 等待测试 2019/08/04 2019/08/06
-     *
      */
     @PostMapping("/usersAnwser")
-    public ReturnVO postAnswers(@RequestBody CompetitionWikiReply theAnswers, @RequestHeader String authorization) {
+    public ReturnVO postAnswers(@RequestBody CompetitionWikiReplyForm theAnswers, @RequestHeader String authorization) {
 
         // 当前组织Id获取
         String userId = JwtHelper.parserToken(authorization).getId();
 
         // 日志记录
-        log.info("组织用户进行回答\n组织userId:" + userId);
+        log.info("\n// 组织用户进行回答\n// 组织userId:" + userId);
 
         // 将用户id并入对象，存入数据库
         theAnswers.setUserId(userId);
-        replyService.save(theAnswers);
+        CompetitionWikiReply wikiReply = theAnswers.toEntity();
+        replyService.save(wikiReply);
 
         // 向用户发送系统通知（系统通知存入数据库）
-        announceService.pushAnnounce(theAnswers);
+        announceService.pushAnnounce(wikiReply);
 
         // 向前端返回成功信息
         return new ReturnVO(ReturnCode.SUCCESS);
@@ -139,7 +131,7 @@ public class CompetitionWikiController {
     public ReturnVO getAll(@RequestBody CompetitionWikiForm competitionWikiForm) {
 
         // 日志记录
-        log.info("某个赛事获取问答信息\ncompetitionId:" + competitionWikiForm.getCompetitionId());
+        log.info("\n// 某个赛事获取问答信息\n// competitionId:" + competitionWikiForm.getCompetitionId());
 
         // 获取问答并提交
         List<CompetitionWikiPost> theQA = wikiService.getAllAboutCompetition(competitionWikiForm);
