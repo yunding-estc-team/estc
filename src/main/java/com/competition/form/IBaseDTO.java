@@ -21,3 +21,4 @@ public interface IBaseDTO<T extends Model<T>> {
      */
     void fromEntity(T entity);
 }
+

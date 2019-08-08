@@ -21,7 +21,7 @@ public enum ReturnCode {
 	public String getDescription() {
 		return description;
 	}
-	private ReturnCode(String description){
+	ReturnCode(String description){
 		this.description = description;
 	}
 }

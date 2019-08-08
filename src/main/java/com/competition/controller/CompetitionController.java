@@ -35,6 +35,7 @@ import java.util.UUID;
 public class CompetitionController {
 	@Autowired
 	CompetitionService competitionService;
+
 	/**
 	 * 获取赛事信息
 	 */
@@ -45,6 +46,7 @@ public class CompetitionController {
 		Competition competition = competitionService.getById(competitionForm.getId());
 		return new ReturnVO(ReturnCode.SUCCESS,competition);
 	}
+
 	/**
 	 * 获取赛事排行榜
 	 */

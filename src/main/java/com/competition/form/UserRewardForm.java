@@ -1,21 +1,20 @@
 package com.competition.form;
 
 import com.competition.entity.UserCompetition;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NonNull;
 
 /**
  * @author GuoHaodong
- * @date 2019-0805 09:20:17
+ * @date 2019-0806 11:07:06
+ * 用户获奖信息表单
  */
-@EqualsAndHashCode(callSuper = true)
-@Data
 public class UserRewardForm extends UserCompetition {
-	@NonNull
-	private String competitionName;
-	@NonNull
-	private String pageCurrent;
-	@NonNull
-	private String pageSize;
+	/**
+	 * 当前页
+	 */
+	private int current;
+
+	/**
+	 * 分页大小
+	 */
+	private int size;
 }

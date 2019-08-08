@@ -93,3 +93,6 @@
 2019-08-05 15:12:49.183 INFO  --- org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown                            [line208   ] : Shutting down ExecutorService 'applicationTaskExecutor'
 2019-08-05 15:12:49.254 INFO  --- com.alibaba.druid.pool.DruidDataSource.close                                                         [line1948  ] : {dataSource-1} closing ...
 2019-08-05 15:12:49.264 INFO  --- com.alibaba.druid.pool.DruidDataSource.close                                                         [line2020  ] : {dataSource-1} closed
+2019-08-05 17:02:06.763 INFO  --- org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown                            [line208   ] : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-05 17:02:07.723 INFO  --- com.alibaba.druid.pool.DruidDataSource.close                                                         [line1948  ] : {dataSource-1} closing ...
+2019-08-05 17:02:07.726 INFO  --- com.alibaba.druid.pool.DruidDataSource.close                                                         [line2020  ] : {dataSource-1} closed
