@@ -31,6 +31,7 @@ public class CompetitionController {
      */
     @RequestMapping("/orderCompetition")
     public ReturnVO orderCompetition(String key,String rule){
+        //todo 分页
         return new ReturnVO(ReturnCode.SUCCESS);
     }
     /**
