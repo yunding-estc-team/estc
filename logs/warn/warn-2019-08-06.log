@@ -147,3 +147,30 @@ You may wish to exclude one of them to ensure predictable runtime behavior
 
 2019-08-06 14:49:11.123 WARN   --- com.competition.advise.Competition.deRecovery                                                        [line29    ] : null
 2019-08-06 14:49:14.909 WARN   --- com.competition.advise.Competition.deRecovery                                                        [line29    ] : null
+2019-08-06 20:19:05.526 WARN   --- onObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer.logDuplicateJsonObjectsWarning [line81    ] : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/guohaodong/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/home/guohaodong/.m2/repository/org/json/json/20141113/json-20141113.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2019-08-06 21:30:29.540 WARN   --- onObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer.logDuplicateJsonObjectsWarning [line81    ] : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/guohaodong/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/home/guohaodong/.m2/repository/org/json/json/20141113/json-20141113.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2019-08-06 21:37:28.867 WARN   --- onObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer.logDuplicateJsonObjectsWarning [line81    ] : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/guohaodong/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/home/guohaodong/.m2/repository/org/json/json/20141113/json-20141113.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
