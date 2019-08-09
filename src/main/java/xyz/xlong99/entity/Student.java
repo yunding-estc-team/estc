@@ -24,11 +24,6 @@ public class Student  {
     private String userId;
 
     /**
-     * md5加密后存储
-     */
-    private String password;
-
-    /**
      * 头像的url,有logo之后增加默认值
      */
     private String portrait;

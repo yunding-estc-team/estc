@@ -3,7 +3,7 @@ package xyz.xlong99.service.impl;
 import com.competition.entity.Competition;
 import xyz.xlong99.dao.CompetitionDao;
 import xyz.xlong99.entity.ClaimCompetition;
-import xyz.xlong99.service.CompetitionService1;
+import xyz.xlong99.service.CompetitionService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.List;
  * @description:
  * @action:
  */
-public class CompetitionService1Impl implements CompetitionService1 {
+public class CompetitionServiceImpl implements CompetitionService {
 
     @Autowired
     private CompetitionDao competitionDao;

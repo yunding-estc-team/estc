@@ -1,6 +1,7 @@
 package xyz.xlong99.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import com.competition.response.PermissionClass;
 import lombok.Data;
@@ -22,14 +23,8 @@ public class Organization extends Model<Organization> {
     /**
      * 用户唯一标识,采用uuid(主键)
      */
-//    @TableId
-
+    @TableId
     private String userId;
-
-    /**
-     * md5加密后存储
-     */
-    private String password;
 
     /**
      * 头像的url,有logo之后增加默认值

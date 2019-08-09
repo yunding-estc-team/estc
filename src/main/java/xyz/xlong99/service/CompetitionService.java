@@ -12,7 +12,7 @@ import java.util.List;
  * @description:
  * @action:
  */
-public interface CompetitionService1 {
+public interface CompetitionService {
 
     /**
      * 获取未审核的赛事
@@ -21,7 +21,7 @@ public interface CompetitionService1 {
     List<Competition> getCheckoutList();
 
     /**
-     * 审核赛事状态
+     * 设置审核赛事状态
      * @param competitionId
      * @param code
      */

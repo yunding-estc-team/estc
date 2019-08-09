@@ -33,7 +33,7 @@ public interface UserDao{
      * 通过用户id修改学生用户资料
      */
     @Update(" UPDATE `user` " +
-            "SET password=#{password},portrait=#{portrait},introduction=#{introduction},user_name=#{userName},realname=#{realname},user_no=#{userNo},user_school=#{userSchool},user_major=#{userMajor},user_sex=#{userSex},user_birth=#{userBirth},user_phone=#{userPhone},user_email=#{userEmail},ip_address=#{ipAddress},checkout=#{checkout}" +
+            "SET portrait=#{portrait},introduction=#{introduction},user_name=#{userName},realname=#{realname},user_no=#{userNo},user_school=#{userSchool},user_major=#{userMajor},user_sex=#{userSex},user_birth=#{userBirth},ip_address=#{ipAddress},checkout=#{checkout}" +
             " WHERE user_id = #{userId} ")
     void updateStudent(Student student);
 
@@ -41,7 +41,7 @@ public interface UserDao{
      * 通过id修改组织用户资料
      */
     @Update(" UPDATE `user`" +
-            " SET password=#{password},portrait=#{portrait},introduction=#{introduction},user_name=#{userName},realname=#{realname},user_school=#{userSchool},user_phone=#{userPhone},user_email=#{userEmail},ip_address=#{ipAddress},checkout=#{checkout} " +
+            " SET portrait=#{portrait},introduction=#{introduction},user_name=#{userName},realname=#{realname},user_school=#{userSchool},ip_address=#{ipAddress},checkout=#{checkout} " +
             " WHERE user_id = #{userId} ")
     void updateOrganization(Organization organization);
 

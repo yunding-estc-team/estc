@@ -5,7 +5,7 @@ import java.util.Map;
 
 import com.competition.response.ReturnCode;
 import com.competition.response.ReturnVO;
-import xyz.xlong99.service.CompetitionService1;
+import xyz.xlong99.service.CompetitionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class CompetitionController {
 
     @Autowired
-    private CompetitionService1 competitionService1;
+    private CompetitionService competitionService1;
     /**
      * 获取全部比赛信息
      * @return

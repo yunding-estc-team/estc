@@ -12,7 +12,7 @@ import java.util.List;
  * @description:
  * @action:
  */
-public interface UserService1 {
+public interface UserService {
 
     /**
      * 查询所有学生列表
