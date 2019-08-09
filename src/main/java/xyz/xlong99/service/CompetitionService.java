@@ -35,8 +35,8 @@ public interface CompetitionService {
 
     /**
      * 设置认领比赛成功与否
-     * @param ClaimCompetitionId
+     * @param claimCompetition
      * @param checkout
      */
-    void setClaimCompetition(String ClaimCompetitionId,String checkout);
+    void setClaimCompetition(ClaimCompetition claimCompetition,String checkout);
 }

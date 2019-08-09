@@ -50,11 +50,15 @@ public class CompetitionServiceImpl implements CompetitionService {
 
     /**
      * 设置需认领比赛的code
-     * @param ClaimCompetitionId
+     * @param claimCompetition
      * @param checkout
      */
     @Override
-    public void setClaimCompetition(String ClaimCompetitionId, String checkout) {
-        competitionDao.updateClaim(ClaimCompetitionId,checkout);
+    public void setClaimCompetition(ClaimCompetition claimCompetition, String checkout) {
+        competitionDao.updateClaim(claimCompetition.getId(),checkout);
+        if(checkout.equals("1")){
+            competitionDao.updateCompetitionHost(claimCompetition.getUserId(),claimCompetition.getCompetitionId());
+        }
+
     }
 }

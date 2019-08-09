@@ -49,4 +49,12 @@ public interface CompetitionDao {
      */
     @Update("UPDATE competition_checkout SET checkout=#{checkout} WHERE id=#{ClaimCompetitionId}")
     void updateClaim(String ClaimCompetitionId,String checkout);
+
+    /**
+     * 修改competition表
+     * @param userId
+     * @param competitionId
+     */
+    @Update("UPDATE competition SET host=#{userId} WHERE competition_id = #{competitionId}")
+    void updateCompetitionHost(String userId,String competitionId);
 }

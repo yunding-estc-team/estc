@@ -5,6 +5,7 @@ import java.util.Map;
 
 import com.competition.response.ReturnCode;
 import com.competition.response.ReturnVO;
+import xyz.xlong99.entity.ClaimCompetition;
 import xyz.xlong99.service.CompetitionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -79,8 +80,8 @@ public class CompetitionController {
      * 修改比赛认领状态
      */
     @RequestMapping("/updateClaim")
-    public ReturnVO updateClaim(String competitionId,String code){
-        competitionService1.setClaimCompetition(competitionId,code);
+    public ReturnVO updateClaim(ClaimCompetition claimCompetition, String code){
+        competitionService1.setClaimCompetition(claimCompetition,code);
         return new ReturnVO(ReturnCode.SUCCESS);
     }
 }
