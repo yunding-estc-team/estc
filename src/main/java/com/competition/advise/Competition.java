@@ -19,7 +19,7 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class Competition {
 	@Pointcut("execution(* com.competition.controller.CompetitionController.*(..))")
-	public void competitionAOP(){};
+	public void competitionAOP(){}
 
 	@AfterThrowing(pointcut = "competitionAOP()",throwing = "ex")
 	public ReturnVO deRecovery(Exception ex){

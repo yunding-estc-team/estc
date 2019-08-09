@@ -35,6 +35,7 @@ public class GlobalEx {
 		log.error("空指针异常");
 		returnVO.setCode("203");
 		returnVO.setMsg("空指针异常");
+		log.error(ex.toString());
 		return returnVO;
 	}
 

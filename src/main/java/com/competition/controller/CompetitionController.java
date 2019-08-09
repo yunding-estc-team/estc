@@ -44,6 +44,9 @@ public class CompetitionController {
 		log.info("获取赛事信息\n赛事id:"+ competitionForm.getId());
 
 		Competition competition = competitionService.getById(competitionForm.getId());
+		competitionService.addClick(competition);
+		log.info(competition.getCompetitionId());
+		log.info("访问量加1");
 		return new ReturnVO(ReturnCode.SUCCESS,competition);
 	}
 
@@ -83,7 +86,6 @@ public class CompetitionController {
 	/**
 	 * 认领赛事
 	 */
-	//todo 数据库没有相应字段
 	@PostMapping("claim")
 	public ReturnVO claim(@RequestBody FileForm fileForm,@RequestHeader String authorization){
 		String userId = JwtHelper.getTokenInfo(authorization).getId();
@@ -93,6 +95,7 @@ public class CompetitionController {
 		checkout.setFile(fileForm.getPath());
 		checkout.setHash(fileForm.getHash());
 		checkout.setUserId(userId);
+		checkout.setDescription(fileForm.getDescription());
 		checkout.setId(UUID.randomUUID().toString());
 
 		return new ReturnVO();

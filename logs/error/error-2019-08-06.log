@@ -1,3 +1,65 @@
+<<<<<<< HEAD
+2019-08-06 10:27:02.627 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(1-1)*3,3' at line 1
+### The error may exist in com/competition/dao/CompetitionWikiMapper.java (best guess)
+### The error may involve com.competition.dao.CompetitionWikiMapper.selectAllAboutCompetition-Inline
+### The error occurred while setting parameters
+### SQL: (SELECT competition_wiki.content, competition_wiki_reply.content, competition_wiki_reply.createAt FROM competition_wiki, `competition_wiki_reply` WHERE competition_wiki.wiki_id = competition_wiki_reply.competition_wiki_id && competition_wiki.competition_id = ?ORDER BY createAt DESC ) limit (?-1)*?,?;
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(1-1)*3,3' at line 1
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(1-1)*3,3' at line 1
+2019-08-06 10:32:00.638 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(1-1)*3,3' at line 1
+### The error may exist in com/competition/dao/CompetitionWikiMapper.java (best guess)
+### The error may involve com.competition.dao.CompetitionWikiMapper.selectAllAboutCompetition-Inline
+### The error occurred while setting parameters
+### SQL: (SELECT competition_wiki.content, competition_wiki_reply.content, competition_wiki_reply.createAt FROM competition_wiki, `competition_wiki_reply` WHERE competition_wiki.wiki_id = competition_wiki_reply.competition_wiki_id && competition_wiki.competition_id = ?ORDER BY createAt DESC ) limit (?-1)*?,?;
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(1-1)*3,3' at line 1
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(1-1)*3,3' at line 1
+2019-08-06 10:32:43.520 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(1-1)*3,3' at line 1
+### The error may exist in com/competition/dao/CompetitionWikiMapper.java (best guess)
+### The error may involve com.competition.dao.CompetitionWikiMapper.selectAllAboutCompetition-Inline
+### The error occurred while setting parameters
+### SQL: (SELECT competition_wiki.content, competition_wiki_reply.content, competition_wiki_reply.createAt FROM competition_wiki, `competition_wiki_reply` WHERE competition_wiki.wiki_id = competition_wiki_reply.competition_wiki_id && competition_wiki.competition_id = ?ORDER BY createAt DESC ) limit (?-1)*?,?;
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(1-1)*3,3' at line 1
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(1-1)*3,3' at line 1
+2019-08-06 10:35:35.935 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(1-1)*3, 3' at line 1
+### The error may exist in com/competition/dao/CompetitionWikiMapper.java (best guess)
+### The error may involve com.competition.dao.CompetitionWikiMapper.selectAllAboutCompetition-Inline
+### The error occurred while setting parameters
+### SQL: (SELECT competition_wiki.content, competition_wiki_reply.content, competition_wiki_reply.createAt FROM competition_wiki, `competition_wiki_reply` WHERE competition_wiki.wiki_id = competition_wiki_reply.competition_wiki_id && competition_wiki.competition_id = ? ORDER BY createAt DESC ) limit (?-1)*?, ?;
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(1-1)*3, 3' at line 1
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(1-1)*3, 3' at line 1
+2019-08-06 10:36:37.200 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(1-1)*3, 3' at line 1
+### The error may exist in com/competition/dao/CompetitionWikiMapper.java (best guess)
+### The error may involve com.competition.dao.CompetitionWikiMapper.selectAllAboutCompetition-Inline
+### The error occurred while setting parameters
+### SQL: (SELECT competition_wiki.content, competition_wiki_reply.content, competition_wiki_reply.createAt FROM competition_wiki, `competition_wiki_reply` WHERE competition_wiki.wiki_id = competition_wiki_reply.competition_wiki_id && competition_wiki.competition_id = ? ORDER BY createAt DESC ) limit (?-1)*?, ?;
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(1-1)*3, 3' at line 1
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(1-1)*3, 3' at line 1
+2019-08-06 11:05:10.216 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='competitionId', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.sql.SQLException: Parameter index out of range (1 > number of parameters, which is 0).
+2019-08-06 11:09:01.598 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'competition_wiki_reply.contentAS' in 'field list'
+### The error may exist in com/competition/dao/CompetitionWikiMapper.java (best guess)
+### The error may involve com.competition.dao.CompetitionWikiMapper.selectAllAboutCompetition-Inline
+### The error occurred while setting parameters
+### SQL: (SELECT competition_wiki.content AS userQuestion, competition_wiki_reply.contentAS userAnswer, competition_wiki_reply.createAt AS answerCreatAt FROM competition_wiki, `competition_wiki_reply` WHERE competition_wiki.wiki_id = competition_wiki_reply.competition_wiki_id && competition_wiki.competition_id = ? ORDER BY createAt DESC ) limit 0, 3;
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'competition_wiki_reply.contentAS' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'competition_wiki_reply.contentAS' in 'field list'
+2019-08-06 11:09:15.198 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'competition_wiki_reply.contentAS' in 'field list'
+### The error may exist in com/competition/dao/CompetitionWikiMapper.java (best guess)
+### The error may involve com.competition.dao.CompetitionWikiMapper.selectAllAboutCompetition-Inline
+### The error occurred while setting parameters
+### SQL: (SELECT competition_wiki.content AS userQuestion, competition_wiki_reply.contentAS userAnswer, competition_wiki_reply.createAt AS answerCreatAt FROM competition_wiki, `competition_wiki_reply` WHERE competition_wiki.wiki_id = competition_wiki_reply.competition_wiki_id && competition_wiki.competition_id = ? ORDER BY createAt DESC ) limit 0, 3;
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'competition_wiki_reply.contentAS' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'competition_wiki_reply.contentAS' in 'field list'
+2019-08-06 11:38:37.395 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常nested exception is org.apache.ibatis.reflection.ReflectionException: Could not set property 'wikiId' of 'class com.competition.entity.CompetitionWiki' with value '1158583126245634050' Cause: java.lang.IllegalArgumentException: argument type mismatch
+2019-08-06 16:50:45.997 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常nested exception is org.apache.ibatis.reflection.ReflectionException: Could not set property 'wikiId' of 'class com.competition.entity.CompetitionWiki' with value '1158661679691673601' Cause: java.lang.IllegalArgumentException: argument type mismatch
+2019-08-06 17:14:12.918 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常nested exception is org.apache.ibatis.reflection.ReflectionException: Could not set property 'wikiId' of 'class com.competition.entity.CompetitionWiki' with value '1158667548315619330' Cause: java.lang.IllegalArgumentException: argument type mismatch
+=======
 2019-08-06 12:34:24.839 ERROR  --- com.alibaba.druid.pool.DruidDataSource.init                                                          [line936   ] : init datasource error, url: jdbc:mysql://39.105.210.140/estc?serverTimezone=UTC
 com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
@@ -809,3 +871,4 @@ Caused by: java.net.SocketException: 网络不可达 (connect failed)
 2019-08-06 14:49:11.156 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line34    ] : 空指针异常
 2019-08-06 14:49:14.909 ERROR  --- com.competition.advise.Competition.deRecovery                                                        [line26    ] : 捕获异常null
 2019-08-06 14:49:14.910 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line34    ] : 空指针异常
+>>>>>>> ff68bcd2cabe96f3ab0a2921b1684de68c3b1a64
