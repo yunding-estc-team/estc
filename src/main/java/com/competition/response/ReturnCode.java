@@ -1,7 +1,5 @@
 package com.competition.response;
 
-import com.baomidou.mybatisplus.extension.api.R;
-
 /**
  * @author GuoHaodong
  * @date 2019/7/30 上午9:17

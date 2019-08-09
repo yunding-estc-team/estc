@@ -1,7 +1,7 @@
 package xyz.xlong99.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.extension.activerecord.Model;
 import com.competition.response.PermissionClass;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -16,14 +16,20 @@ import java.time.LocalDateTime;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-public class Organization {
+public class Organization extends Model<Organization> {
     private static final long serialVersionUID=1L;
 
     /**
      * 用户唯一标识,采用uuid(主键)
      */
-    @TableId
+//    @TableId
+
     private String userId;
+
+    /**
+     * md5加密后存储
+     */
+    private String password;
 
     /**
      * 头像的url,有logo之后增加默认值
@@ -44,11 +50,6 @@ public class Organization {
      * 真实姓名
      */
     private String realname;
-
-    /**
-     * 学号，比赛发布者为空
-     */
-    private Integer userNo;
 
     /**
      * 学校
@@ -88,5 +89,4 @@ public class Organization {
      * 权限
      */
     private PermissionClass permissionClass;
-
 }

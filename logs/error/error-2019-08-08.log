@@ -1,269 +1,134 @@
-2019-08-08 15:39:05.888 ERROR  --- org.springframework.boot.SpringApplication.reportFailure                                             [line821   ] : Application run failed
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.competition.SpringbootDemoApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'competitionController' for bean class [xyz.xlong99.controller.CompetitionController] conflicts with existing, non-compatible bean definition of same name and class [com.competition.controller.CompetitionController]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:181)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:315)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:232)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95)
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:705)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:531)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
-	at com.competition.SpringbootDemoApplication.main(SpringbootDemoApplication.java:24)
-Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'competitionController' for bean class [xyz.xlong99.controller.CompetitionController] conflicts with existing, non-compatible bean definition of same name and class [com.competition.controller.CompetitionController]
-	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:348)
-	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:286)
-	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:132)
-	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:287)
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:242)
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:199)
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:167)
-	... 13 common frames omitted
-2019-08-08 15:40:10.759 ERROR  --- org.springframework.boot.SpringApplication.reportFailure                                             [line821   ] : Application run failed
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.competition.SpringbootDemoApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'competitionController' for bean class [xyz.xlong99.controller.CompetitionController] conflicts with existing, non-compatible bean definition of same name and class [com.competition.controller.CompetitionController]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:181)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:315)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:232)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95)
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:705)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:531)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
-	at com.competition.SpringbootDemoApplication.main(SpringbootDemoApplication.java:24)
-Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'competitionController' for bean class [xyz.xlong99.controller.CompetitionController] conflicts with existing, non-compatible bean definition of same name and class [com.competition.controller.CompetitionController]
-	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:348)
-	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:286)
-	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:132)
-	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:287)
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:242)
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:199)
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:167)
-	... 13 common frames omitted
-2019-08-08 15:44:17.466 ERROR  --- org.springframework.boot.SpringApplication.reportFailure                                             [line821   ] : Application run failed
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.competition.SpringbootDemoApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'userController' for bean class [xyz.xlong99.controller.UserController] conflicts with existing, non-compatible bean definition of same name and class [com.competition.controller.UserController]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:181)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:315)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:232)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95)
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:705)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:531)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
-	at com.competition.SpringbootDemoApplication.main(SpringbootDemoApplication.java:24)
-Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'userController' for bean class [xyz.xlong99.controller.UserController] conflicts with existing, non-compatible bean definition of same name and class [com.competition.controller.UserController]
-	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:348)
-	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:286)
-	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:132)
-	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:287)
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:242)
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:199)
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:167)
-	... 13 common frames omitted
-2019-08-08 15:45:01.939 ERROR  --- org.springframework.boot.SpringApplication.reportFailure                                             [line821   ] : Application run failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'announceController': Unsatisfied dependency expressed through field 'announceService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'announceServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'xyz.xlong99.dao.AnnounceDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
-	at com.competition.SpringbootDemoApplication.main(SpringbootDemoApplication.java:24)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'announceServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'xyz.xlong99.dao.AnnounceDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
-	... 19 common frames omitted
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'xyz.xlong99.dao.AnnounceDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1658)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1217)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
-	... 32 common frames omitted
-2019-08-08 15:45:57.683 ERROR  --- org.springframework.boot.SpringApplication.reportFailure                                             [line821   ] : Application run failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminAnnounceController': Unsatisfied dependency expressed through field 'announceService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'announceServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'xyz.xlong99.dao.AnnounceDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
-	at com.competition.SpringbootDemoApplication.main(SpringbootDemoApplication.java:24)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'announceServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'xyz.xlong99.dao.AnnounceDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
-	... 19 common frames omitted
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'xyz.xlong99.dao.AnnounceDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1658)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1217)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
-	... 32 common frames omitted
-2019-08-08 15:47:30.989 ERROR  --- org.springframework.boot.SpringApplication.reportFailure                                             [line821   ] : Application run failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminAnnounceController': Unsatisfied dependency expressed through field 'announceService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'announceServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'xyz.xlong99.dao.AnnounceDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
-	at com.competition.SpringbootDemoApplication.main(SpringbootDemoApplication.java:24)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'announceServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'xyz.xlong99.dao.AnnounceDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
-	... 19 common frames omitted
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'xyz.xlong99.dao.AnnounceDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1658)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1217)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
-	... 32 common frames omitted
-2019-08-08 15:49:26.323 ERROR  --- org.springframework.boot.SpringApplication.reportFailure                                             [line821   ] : Application run failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'getShiroFilterFactoryBean' defined in com.competition.config.ShiroConfig: Unsatisfied dependency expressed through method 'getShiroFilterFactoryBean' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'defaultSecurityManager' defined in com.competition.config.ShiroConfig: Unsatisfied dependency expressed through method 'getDefaultSecurityManager' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userRealm': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.competition.service.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:240)
-	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:721)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:534)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
-	at com.competition.SpringbootDemoApplication.main(SpringbootDemoApplication.java:23)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'defaultSecurityManager' defined in com.competition.config.ShiroConfig: Unsatisfied dependency expressed through method 'getDefaultSecurityManager' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userRealm': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.competition.service.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
-	... 19 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userRealm': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.competition.service.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
-	... 33 common frames omitted
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.competition.service.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1658)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1217)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
-	... 47 common frames omitted
+2019-08-08 08:04:42.866 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line34    ] : 空指针异常
+2019-08-08 08:08:10.892 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='systemAnnounce', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.sql.SQLException: Invalid argument value: java.io.NotSerializableException
+2019-08-08 08:17:31.507 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='systemAnnounce', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.sql.SQLException: Invalid argument value: java.io.NotSerializableException
+2019-08-08 08:37:35.437 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='systemAnnounce', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.sql.SQLException: Invalid argument value: java.io.NotSerializableException
+2019-08-08 08:48:51.374 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'read,
+title )  VALUES  ( '6bf89e5cb57042feb12b3d397752de1c',
+'11',
+'您的提问' at line 5
+### The error may exist in com/competition/dao/UserAnnounceMapper.java (best guess)
+### The error may involve com.competition.dao.UserAnnounceMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO user_announce  ( id, user_id, announce,  read, title )  VALUES  ( ?, ?, ?,  ?, ? )
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'read,
+title )  VALUES  ( '6bf89e5cb57042feb12b3d397752de1c',
+'11',
+'您的提问' at line 5
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'read,
+title )  VALUES  ( '6bf89e5cb57042feb12b3d397752de1c',
+'11',
+'您的提问' at line 5
+2019-08-08 09:05:06.742 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'read,
+title )  VALUES  ( 'b1f207fb79314b68aa8841f527526665',
+'11',
+'您的提问' at line 5
+### The error may exist in com/competition/dao/UserAnnounceMapper.java (best guess)
+### The error may involve com.competition.dao.UserAnnounceMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO user_announce  ( id, user_id, announce,  read, title )  VALUES  ( ?, ?, ?,  ?, ? )
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'read,
+title )  VALUES  ( 'b1f207fb79314b68aa8841f527526665',
+'11',
+'您的提问' at line 5
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'read,
+title )  VALUES  ( 'b1f207fb79314b68aa8841f527526665',
+'11',
+'您的提问' at line 5
+2019-08-08 09:08:46.110 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error updating database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.alibaba.druid.pool.DataSourceDisableException
+### The error may exist in com/competition/dao/UserAnnounceMapper.java (best guess)
+### The error may involve com.competition.dao.UserAnnounceMapper.insert
+### The error occurred while executing an update
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.alibaba.druid.pool.DataSourceDisableException
+2019-08-08 09:21:38.391 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line34    ] : 空指针异常
+2019-08-08 10:18:01.296 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'userType' in 'field list'
+### The error may exist in com/competition/dao/UserMapper.java (best guess)
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT   userType   FROM user     WHERE user_id = ?
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'userType' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'userType' in 'field list'
+2019-08-08 10:28:13.719 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line34    ] : 空指针异常
+2019-08-08 10:31:51.012 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line34    ] : 空指针异常
+2019-08-08 10:32:37.001 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'hasRead' in 'field list'
+### The error may exist in com/competition/dao/UserAnnounceMapper.java (best guess)
+### The error may involve com.competition.dao.UserAnnounceMapper.selectAnnounceByUserId-Inline
+### The error occurred while setting parameters
+### SQL: SELECT `id`,`title`, `hasRead`, `createAt` FROM user_announce WHERE user_id = ? OR user_id = 'allUser' OR user_id = ?;
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'hasRead' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'hasRead' in 'field list'
+2019-08-08 10:46:13.444 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常Error attempting to get column 'id' from result set.  Cause: java.sql.SQLException: Error
+; uncategorized SQLException; SQL state [null]; error code [0]; Error; nested exception is java.sql.SQLException: Error
+2019-08-08 10:48:10.245 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常Error attempting to get column 'announceId' from result set.  Cause: java.sql.SQLException: Error
+; uncategorized SQLException; SQL state [null]; error code [0]; Error; nested exception is java.sql.SQLException: Error
+2019-08-08 10:52:15.021 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常Error attempting to get column 'announce_id' from result set.  Cause: java.sql.SQLException: Error
+; uncategorized SQLException; SQL state [null]; error code [0]; Error; nested exception is java.sql.SQLException: Error
+2019-08-08 11:15:38.612 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'creatAt' in 'order clause'
+### The error may exist in com/competition/dao/UserAnnounceMapper.java (best guess)
+### The error may involve com.competition.dao.UserAnnounceMapper.selectAnnounceByUserId-Inline
+### The error occurred while setting parameters
+### SQL: SELECT `id` AS announce_id,`title`, `has_read`, `createAt` FROM user_announce WHERE user_id = ? OR user_id = 'allUser' OR user_id = ? ORDER BY creatAt  DESC LIMIT ?, ?;
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'creatAt' in 'order clause'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'creatAt' in 'order clause'
+2019-08-08 11:17:07.828 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line34    ] : 空指针异常
+2019-08-08 11:34:34.170 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line34    ] : 空指针异常
+2019-08-08 09:41:27.473 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1817955671b34e56bc2921a6763ade5a' for key 'PRIMARY'
+### The error may exist in com/competition/dao/UserMapper.java (best guess)
+### The error may involve com.competition.dao.UserMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO user  ( user_id,             file, hash )  VALUES  ( ?,             ?, ? )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1817955671b34e56bc2921a6763ade5a' for key 'PRIMARY'
+; Duplicate entry '1817955671b34e56bc2921a6763ade5a' for key 'PRIMARY'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1817955671b34e56bc2921a6763ade5a' for key 'PRIMARY'
+2019-08-08 09:43:02.030 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1817955671b34e56bc2921a6763ade5a' for key 'PRIMARY'
+### The error may exist in com/competition/dao/UserMapper.java (best guess)
+### The error may involve com.competition.dao.UserMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO user  ( user_id,             file, hash )  VALUES  ( ?,             ?, ? )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1817955671b34e56bc2921a6763ade5a' for key 'PRIMARY'
+; Duplicate entry '1817955671b34e56bc2921a6763ade5a' for key 'PRIMARY'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1817955671b34e56bc2921a6763ade5a' for key 'PRIMARY'
+2019-08-08 09:51:49.627 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line65    ] : 喂不活的异常
+2019-08-08 09:51:49.628 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line66    ] : org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Illegal unquoted character ((CTRL-CHAR, code 10)): has to be escaped using backslash to be included in string value; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Illegal unquoted character ((CTRL-CHAR, code 10)): has to be escaped using backslash to be included in string value
+ at [Source: (PushbackInputStream); line: 5, column: 9] (through reference chain: com.competition.form.CompetitionForm["id"])
+2019-08-08 10:41:43.411 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE  competition_id='1'
+ AND user_id='11'
+ AND reward='特等奖'
+ AND certifi' at line 3
+### The error may exist in com/competition/dao/UserCompetitionMapper.java (best guess)
+### The error may involve com.competition.dao.UserCompetitionMapper.update-Inline
+### The error occurred while setting parameters
+### SQL: UPDATE user_competition        WHERE  competition_id=?  AND user_id=?  AND reward=?  AND certificate=?  AND checkout=?  AND hash=?  AND createAt=?  AND updateAt=?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE  competition_id='1'
+ AND user_id='11'
+ AND reward='特等奖'
+ AND certifi' at line 3
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE  competition_id='1'
+ AND user_id='11'
+ AND reward='特等奖'
+ AND certifi' at line 3
+2019-08-08 10:41:44.760 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE  competition_id='1'
+ AND user_id='11'
+ AND reward='特等奖'
+ AND certifi' at line 3
+### The error may exist in com/competition/dao/UserCompetitionMapper.java (best guess)
+### The error may involve com.competition.dao.UserCompetitionMapper.update-Inline
+### The error occurred while setting parameters
+### SQL: UPDATE user_competition        WHERE  competition_id=?  AND user_id=?  AND reward=?  AND certificate=?  AND checkout=?  AND hash=?  AND createAt=?  AND updateAt=?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE  competition_id='1'
+ AND user_id='11'
+ AND reward='特等奖'
+ AND certifi' at line 3
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE  competition_id='1'
+ AND user_id='11'
+ AND reward='特等奖'
+ AND certifi' at line 3
+2019-08-08 10:47:31.196 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line65    ] : 喂不活的异常
+2019-08-08 10:47:31.197 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line66    ] : org.springframework.web.bind.MissingRequestHeaderException: Missing request header 'authorization' for method parameter of type String

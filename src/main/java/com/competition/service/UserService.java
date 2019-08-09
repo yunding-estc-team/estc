@@ -28,17 +28,4 @@ public interface UserService extends IService<User> {
      */
     User findByPhoneNumber(String phoneNumber);
 
-    /**
-     * 设置用户属性
-     * @param userId
-     * @param isActive
-     */
-    void setPermission(String userId,String isActive);
-
-    /**
-     * 根据id获得permissionClass对象，id对应用户的权限对象
-     * @param userId
-     * @return
-     */
-    PermissionClass getIsActive(String userId);
 }

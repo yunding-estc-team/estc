@@ -6,6 +6,7 @@ import com.competition.service.CompetitionService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * <p>
@@ -16,6 +17,7 @@ import org.springframework.stereotype.Service;
  * @since 2019-08-02
  */
 @Service
+@Transactional(rollbackFor = {Exception.class})
 public class CompetitionServiceImpl extends ServiceImpl<CompetitionMapper, Competition> implements CompetitionService {
 	@Autowired
 	CompetitionMapper mapper;

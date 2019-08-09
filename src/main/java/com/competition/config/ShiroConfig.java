@@ -2,13 +2,15 @@ package com.competition.config;
 
 import at.pollux.thymeleaf.shiro.dialect.ShiroDialect;
 import com.competition.shiro.UserRealm;
+import xyz.xlong99.service.CompetitionService1;
+import xyz.xlong99.service.impl.CompetitionService1Impl;
+import xyz.xlong99.service.impl.UserService1Impl;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.mgt.DefaultSecurityManager;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -20,6 +22,15 @@ import java.util.Map;
  */
 
 public class ShiroConfig {
+
+    @Bean
+    public CompetitionService1 getCompetitionService1(){
+        return new CompetitionService1Impl();
+    }
+    @Bean
+    public UserService1Impl getUserService1(){
+        return new UserService1Impl();
+    }
     //    为html标签引用而注入的bean
     @Bean
     public ShiroDialect shiroDialect() {

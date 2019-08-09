@@ -165,10 +165,10 @@ public class ShiroController {
         return "redirect:testThymeleaf";
     }
 
-    public ReturnVO setIsActive(@RequestHeader String authorization){
-        String userId = JwtHelper.getTokenInfo(authorization).getId();
-        String userType = JwtHelper.getTokenInfo(authorization).getType();
-        userService.setPermission(userId,userType);
-        return new ReturnVO(ReturnCode.SUCCESS);
-    }
+//    public ReturnVO setIsActive(@RequestHeader String authorization){
+//        String userId = JwtHelper.getTokenInfo(authorization).getId();
+//        String userType = JwtHelper.getTokenInfo(authorization).getType();
+//        userService.setPermission(userId,userType);
+//        return new ReturnVO(ReturnCode.SUCCESS);
+//    }
 }

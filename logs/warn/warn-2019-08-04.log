@@ -1,3 +1,13 @@
+<<<<<<<<< Temporary merge branch 1
+2019-08-04 10:54:33.046 WARN   --- org.mybatis.spring.mapper.ClassPathMapperScanner.warn                                                [line44    ] : Skipping MapperFactoryBean with name 'competitionMapper' and 'com.competition.dao.CompetitionMapper' mapperInterface. Bean already defined with the same name!
+2019-08-04 10:54:33.047 WARN   --- org.mybatis.spring.mapper.ClassPathMapperScanner.warn                                                [line44    ] : Skipping MapperFactoryBean with name 'competitionWikiMapper' and 'com.competition.dao.CompetitionWikiMapper' mapperInterface. Bean already defined with the same name!
+2019-08-04 10:54:33.047 WARN   --- org.mybatis.spring.mapper.ClassPathMapperScanner.warn                                                [line44    ] : Skipping MapperFactoryBean with name 'competitionWikiReplyMapper' and 'com.competition.dao.CompetitionWikiReplyMapper' mapperInterface. Bean already defined with the same name!
+2019-08-04 10:54:33.048 WARN   --- org.mybatis.spring.mapper.ClassPathMapperScanner.warn                                                [line44    ] : Skipping MapperFactoryBean with name 'userAnnounceMapper' and 'com.competition.dao.UserAnnounceMapper' mapperInterface. Bean already defined with the same name!
+2019-08-04 10:54:33.048 WARN   --- org.mybatis.spring.mapper.ClassPathMapperScanner.warn                                                [line44    ] : Skipping MapperFactoryBean with name 'userAttentionMapper' and 'com.competition.dao.UserAttentionMapper' mapperInterface. Bean already defined with the same name!
+2019-08-04 10:54:33.049 WARN   --- org.mybatis.spring.mapper.ClassPathMapperScanner.warn                                                [line44    ] : Skipping MapperFactoryBean with name 'userCompetitionMapper' and 'com.competition.dao.UserCompetitionMapper' mapperInterface. Bean already defined with the same name!
+2019-08-04 10:54:33.049 WARN   --- org.mybatis.spring.mapper.ClassPathMapperScanner.warn                                                [line44    ] : Skipping MapperFactoryBean with name 'userMapper' and 'com.competition.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-08-04 10:54:33.049 WARN   --- org.mybatis.spring.mapper.ClassPathMapperScanner.warn                                                [line44    ] : No MyBatis mapper was found in '[com.competition.dao]' package. Please check your configuration.
+=========
 2019-08-04 09:22:22.239 WARN   --- onObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer.logDuplicateJsonObjectsWarning [line81    ] : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
@@ -122,3 +132,4 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
+>>>>>>>>> Temporary merge branch 2

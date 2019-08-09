@@ -1,12 +1,12 @@
 package xyz.xlong99.controller;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import com.competition.response.ReturnCode;
 import com.competition.response.ReturnVO;
-import org.springframework.stereotype.Controller;
+import xyz.xlong99.service.CompetitionService1;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,6 +18,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController("adminCompetitionController")
 @RequestMapping("/admin/Competition")
 public class CompetitionController {
+
+    @Autowired
+    private CompetitionService1 competitionService1;
     /**
      * 获取全部比赛信息
      * @return
@@ -54,32 +57,30 @@ public class CompetitionController {
      * 获取未审核的赛事
      */
     @RequestMapping("/getCheck")
-    public Map<String, String> getCheck(){
-        Map<String, String> message = new HashMap<>(2);
-        return message;
+    public ReturnVO getCheck(){
+        return new ReturnVO(ReturnCode.SUCCESS,competitionService1.getCheckoutList());
     }
     /**
      * 修改赛事审核状态
      */
     @RequestMapping("/updateCheck")
-    public Map<String, String> updateCheck(){
-        Map<String, String> message = new HashMap<>(2);
-        return message;
+    public ReturnVO updateCheck(String competitionId,String code){
+        competitionService1.setCheckoutCompetition(competitionId,code);
+        return new ReturnVO(ReturnCode.SUCCESS);
     }
     /**
      * 获取比赛认领申请
      */
     @RequestMapping("/getClaim")
-    public Map<String, String> getClaim(){
-        Map<String, String> message = new HashMap<>(2);
-        return message;
+    public ReturnVO getClaim(){
+        return new ReturnVO(ReturnCode.SUCCESS,competitionService1.getClaimList());
     }
     /**
      * 修改比赛认领状态
      */
     @RequestMapping("/updateClaim")
-    public Map<String, String> updateClaim(){
-        Map<String, String> message = new HashMap<>(2);
-        return message;
+    public ReturnVO updateClaim(String competitionId,String code){
+        competitionService1.setClaimCompetition(competitionId,code);
+        return new ReturnVO(ReturnCode.SUCCESS);
     }
 }

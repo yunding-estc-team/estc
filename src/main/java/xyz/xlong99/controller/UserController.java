@@ -2,9 +2,15 @@ package xyz.xlong99.controller;
 
 import com.competition.response.ReturnCode;
 import com.competition.response.ReturnVO;
-import org.springframework.stereotype.Controller;
+import xyz.xlong99.util.ActiveUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import xyz.xlong99.entity.Organization;
+import xyz.xlong99.entity.Student;
+import xyz.xlong99.service.UserService1;
+
+import java.util.List;
 
 /**
  * @author xlong
@@ -14,29 +20,60 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController("adminUserController")
 @RequestMapping("/admin/user")
 public class UserController {
+
+    @Autowired
+    private UserService1 userService1;
+
     /**
-     * 获取用户列表
-     * @param method 用户类型，学生或组织
+     * 获取学生列表
+     * @return
      */
-    @RequestMapping("/getUser")
-    public ReturnVO getUser(String method){
+    @RequestMapping("/getStudent")
+    public ReturnVO getStudent(){
+        List<Student> students = userService1.findAllStudent();
+        return new ReturnVO(ReturnCode.SUCCESS,students);
+    }
+
+    /**
+     * 获取组织列表
+     * @return
+     */
+    @RequestMapping("/getOrganization")
+    public ReturnVO getOrganization(){
+        List<Organization> organizations = userService1.findAllOrganization();
+        return new ReturnVO(ReturnCode.SUCCESS,ActiveUtil.permissionHelper(organizations));
+    }
+
+    /**
+     * 修改学生资料
+     * @param
+     * @return
+     */
+    @RequestMapping("/updateStudent")
+    public ReturnVO updateStudent(Student student){
+        userService1.updateStudent(student);
+        return new ReturnVO(ReturnCode.SUCCESS);
+    }
+    /**
+     * 修改组织资料
+     * @param
+     * @return
+     */
+    @RequestMapping("/updateOrgnization")
+    public ReturnVO updateOrgnization(Organization organization){
+        userService1.updateOrganization(organization);
         return new ReturnVO(ReturnCode.SUCCESS);
     }
 
     /**
-     * 修改用户资料
-     * @param
+     * 修改权限
+     * @param userId
+     * @param isActive
      * @return
      */
-    @RequestMapping("/updateUser")
-    public ReturnVO updateUser(){
-        return new ReturnVO(ReturnCode.SUCCESS);
-    }
-    /**
-     * 修改权限
-     */
-    @RequestMapping("/changeActive")
-    public ReturnVO changeActive(){
+    @RequestMapping("/changePermission")
+    public ReturnVO changePermission(String userId,String isActive){
+        userService1.changePermission(userId,isActive);
         return new ReturnVO(ReturnCode.SUCCESS);
     }
 }

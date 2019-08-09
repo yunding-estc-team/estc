@@ -9,6 +9,13 @@ import lombok.Data;
  */
 @Data
 public class PageForm {
-	private int pageCurrent;
-	private int pageSize;
+	/**
+	 * 当前页
+	 */
+	protected int pageCurrent;
+
+	/**
+	 * 每页显示的条数
+	 */
+	protected int pageSize;
 }
