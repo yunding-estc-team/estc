@@ -2,6 +2,7 @@ package xyz.xlong99.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.competition.entity.Competition;
+import com.competition.entity.User;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 import xyz.xlong99.entity.Student;
@@ -12,7 +13,7 @@ import java.util.List;
  * @author xlong
  * @date 2019-08-07 08:47
  */
-public interface UserDao extends BaseMapper<Competition> {
+public interface UserDao extends BaseMapper<User> {
 
     /**
      * 获取学生用户列表(分页)

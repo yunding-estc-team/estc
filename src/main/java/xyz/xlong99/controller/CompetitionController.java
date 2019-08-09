@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2019-08-05 20:49
  *
  */
-@RestController
+@RestController("adminCompetitionController")
 @RequestMapping("/admin/Competition")
 public class CompetitionController {
     /**
