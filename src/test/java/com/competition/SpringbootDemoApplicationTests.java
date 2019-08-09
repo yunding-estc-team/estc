@@ -1,8 +1,5 @@
 package com.competition;
 
-import com.baomidou.mybatisplus.core.conditions.Wrapper;
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.competition.dao.CompetitionMapper;
 import com.competition.entity.Competition;
@@ -10,6 +7,8 @@ import com.competition.entity.CompetitionWiki;
 import com.competition.service.CompetitionService;
 import com.competition.service.CompetitionWikiService;
 import com.competition.response.ReturnCode;
+import xyz.xlong99.entity.Organization;
+import xyz.xlong99.service.UserService1;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -18,6 +17,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 @RunWith(SpringRunner.class)
@@ -108,9 +109,12 @@ public class SpringbootDemoApplicationTests {
 		String y = "2018005643";
 		System.out.println(y.hashCode()+"\n"+s.hashCode());
 	}
+	@Autowired
+	private UserService1 userService1;
 	@Test
 	public void competitionC(){
-		Competition competition = competitionService.getById("1800bb87da81438ab982c0416631054c");
+		List<Organization> organizations = userService1.findAllOrganization();
+		System.out.println("organizations = " + organizations);
 	}
 
 

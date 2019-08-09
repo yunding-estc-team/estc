@@ -1,26 +1,34 @@
 package xyz.xlong99.entity;
-import com.competition.response.PermissionClass;
+
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.extension.activerecord.Model;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
- * @author xlong
- * @date 2019-08-07 08:57
+ * <p>
+ * 
+ * </p>
+ *
+ * @author GuoHaodong
+ * @since 2019-08-03
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-public class Student  {
+public class UserBack extends Model<UserBack> {
+
     private static final long serialVersionUID=1L;
 
     /**
      * 用户唯一标识,采用uuid(主键)
      */
-
+    @TableId
     private String userId;
 
     /**
@@ -82,6 +90,16 @@ public class Student  {
      */
     private String userEmail;
 
+    /**
+     * 认证文件照片
+     */
+    private String file;
+
+    /**
+     * 删除照片对应的hash值
+     */
+    private String hash;
+
     private String isActive;
 
     private String ipAddress;
@@ -101,8 +119,11 @@ public class Student  {
      * 用户类型标示
      */
     private String userType;
-    /**
-     * 权限
-     */
-    private PermissionClass permissionClass;
+
+
+    @Override
+    protected Serializable pkVal() {
+        return this.userId;
+    }
+
 }

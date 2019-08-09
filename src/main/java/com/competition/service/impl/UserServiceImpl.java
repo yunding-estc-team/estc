@@ -42,57 +42,5 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     public User findByPhoneNumber(String phoneNumber) {
         return userMapper.findByPhoneNumber(phoneNumber);
     }
-    /**
-     *  设置属性
-     * @param userId
-     * @param isActive
-     */
-    //String userId = JwtHelper.parse(token).getId();
-    @Override
-    public void setPermission(String userId,String isActive){
 
-        String isActives =  userMapper.selectById(userId).getIsActive();
-        List<String> list = new ArrayList<String>(Arrays.asList(isActives.split(",")));
-        if(list.contains(isActive)){
-            list.remove(isActive);
-        }else {
-            list.add(isActive);
-        }
-        StringBuilder updateIsActive=new StringBuilder();
-        for(String s : list){
-            updateIsActive.append(",").append(s);
-        }
-        User user = new User();
-        user.setIsActive(updateIsActive.toString());
-        user.setUserId(userId);
-        userMapper.updateById(user);
-    }
-
-    /**
-     * 根据id获得permissionClass对象，id对应用户的权限对象
-     * @param userId
-     * @return
-     */
-    @Override
-    public PermissionClass getIsActive(String userId){
-        PermissionClass permissionClass = new PermissionClass();
-        String isActives = userMapper.selectById(userId).getIsActive();
-        List<String> list = new ArrayList<>(Arrays.asList(isActives.split(",")));
-        if(list.contains("user:login")){
-            permissionClass.setLogin(true);
-        }
-        if(list.contains("user:comment")){
-            permissionClass.setComment(true);
-        }
-        if(list.contains("user:attention")){
-            permissionClass.setAttention(true);
-        }
-        if(list.contains("user:praise")){
-            permissionClass.setPraise(true);
-        }
-        if(list.contains("user:wiki")){
-            permissionClass.setWiki(true);
-        }
-        return permissionClass;
-    }
 }
