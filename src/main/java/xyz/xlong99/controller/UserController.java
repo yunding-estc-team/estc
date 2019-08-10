@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import xyz.xlong99.entity.Organization;
 import xyz.xlong99.entity.Student;
-import xyz.xlong99.service.UserService1;
+import xyz.xlong99.service.UserService;
 
 import java.util.List;
 
@@ -22,7 +22,7 @@ import java.util.List;
 public class UserController {
 
     @Autowired
-    private UserService1 userService1;
+    private UserService userService1;
 
     /**
      * 获取学生列表

@@ -6,7 +6,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field competitionService1 in xyz.xlong99.controller.CompetitionController1 required a bean of type 'xyz.xlong99.service.CompetitionService1' that could not be found.
+Field competitionService1 in xyz.xlong99.controller.CompetitionController1 required a bean of type 'xyz.xlong99.service.CompetitionService' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -14,7 +14,7 @@ The injection point has the following annotations:
 
 Action:
 
-Consider defining a bean of type 'xyz.xlong99.service.CompetitionService1' in your configuration.
+Consider defining a bean of type 'xyz.xlong99.service.CompetitionService' in your configuration.
 
 2019-08-09 10:44:37.022 ERROR  --- org.springframework.test.context.TestContextManager.prepareTestInstance                              [line250   ] : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@2a798d51] to prepare test instance [com.competition.demo.test@45eab322]
 java.lang.IllegalStateException: Failed to load ApplicationContext
@@ -43,7 +43,7 @@ java.lang.IllegalStateException: Failed to load ApplicationContext
 	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
 	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
 	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'competitionController1': Unsatisfied dependency expressed through field 'competitionService1'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'xyz.xlong99.service.CompetitionService1' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'competitionController1': Unsatisfied dependency expressed through field 'competitionService1'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'xyz.xlong99.service.CompetitionService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
@@ -64,7 +64,7 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
 	... 24 common frames omitted
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'xyz.xlong99.service.CompetitionService1' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'xyz.xlong99.service.CompetitionService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1658)
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1217)
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
@@ -78,7 +78,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field competitionService1 in xyz.xlong99.controller.CompetitionController1 required a bean of type 'xyz.xlong99.service.CompetitionService1' that could not be found.
+Field competitionService1 in xyz.xlong99.controller.CompetitionController1 required a bean of type 'xyz.xlong99.service.CompetitionService' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -86,5 +86,5 @@ The injection point has the following annotations:
 
 Action:
 
-Consider defining a bean of type 'xyz.xlong99.service.CompetitionService1' in your configuration.
+Consider defining a bean of type 'xyz.xlong99.service.CompetitionService' in your configuration.
 

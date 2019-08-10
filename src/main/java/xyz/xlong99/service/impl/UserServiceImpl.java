@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import xyz.xlong99.dao.UserDao;
 import xyz.xlong99.entity.Organization;
 import xyz.xlong99.entity.Student;
-import xyz.xlong99.service.UserService1;
+import xyz.xlong99.service.UserService;
 
 import java.util.List;
 
@@ -16,7 +16,7 @@ import java.util.List;
  * @description:
  * @action:
  */
-public class UserService1Impl implements UserService1 {
+public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserDao userDao;

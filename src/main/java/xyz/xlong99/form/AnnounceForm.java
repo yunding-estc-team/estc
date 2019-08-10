@@ -34,7 +34,7 @@ public class AnnounceForm implements IBaseDTO<UserAnnounce> {
         userAnnounce.setUserId(this.userId);
         userAnnounce.setAnnounce(this.announce);
         userAnnounce.setTitle(this.title);
-        return null;
+        return userAnnounce;
     }
 
     @Override

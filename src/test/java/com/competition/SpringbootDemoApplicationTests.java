@@ -8,7 +8,7 @@ import com.competition.service.CompetitionService;
 import com.competition.service.CompetitionWikiService;
 import com.competition.response.ReturnCode;
 import xyz.xlong99.entity.Organization;
-import xyz.xlong99.service.UserService1;
+import xyz.xlong99.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -110,7 +110,7 @@ public class SpringbootDemoApplicationTests {
 		System.out.println(y.hashCode()+"\n"+s.hashCode());
 	}
 	@Autowired
-	private UserService1 userService1;
+	private UserService userService1;
 	@Test
 	public void competitionC(){
 		List<Organization> organizations = userService1.findAllOrganization();

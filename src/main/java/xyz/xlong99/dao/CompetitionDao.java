@@ -1,5 +1,6 @@
 package xyz.xlong99.dao;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.competition.entity.Competition;
 import xyz.xlong99.entity.ClaimCompetition;
 import org.apache.ibatis.annotations.Select;
@@ -14,7 +15,31 @@ import java.util.List;
  * @description:
  * @action:
  */
-public interface CompetitionDao {
+public interface CompetitionDao extends BaseMapper<Competition  > {
+//    /**
+//     * 获取全部已审核的赛事
+//     * @return
+//     */
+//    @Select("SELECT * FROM competition WHERE checkout = '1'")
+//    List<Competition> getAllCompetition();
+
+    /**
+     * 按照规则排序比赛
+     * @param orderSql
+     * @param page 分页参数，(n-1)*10
+     * @return
+     */
+    @Select("SELECT * FROM competition WHERE checkout = '1' ${orderSql} LIMIT ${page},10")
+    List<Competition> orderCompetition(String orderSql,String page);
+
+    /**
+     * 更新赛事信息
+     * @param competition 比赛
+     */
+    @Update("UPDATE competition " +
+            "SET `name`=#{name},cover=#{cover},isIndividual=#{isIndividual},type=#{type},introduce=#{introduce},content=#{content},join_link=#{joinLink} " +
+            "WHERE competition_id=#{competitionId}")
+    void updateCompetition(Competition competition);
 
     /**
      * 获取未审核的赛事

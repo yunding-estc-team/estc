@@ -1,5 +1,6 @@
 package xyz.xlong99.service;
 
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.competition.entity.Competition;
 import xyz.xlong99.entity.ClaimCompetition;
 
@@ -12,7 +13,27 @@ import java.util.List;
  * @description:
  * @action:
  */
-public interface CompetitionService1 {
+public interface CompetitionService extends IService<Competition>{
+//    /**
+//     * 获取已审核的赛事列表
+//     * @return
+//     */
+//    List<Competition> getCompetitionList();
+
+    /**
+     * 按规则排序获取赛事列表
+     * @param page
+     * @param order
+     * @param sort
+     * @return
+     */
+    List<Competition> orderCompetition(String page,String sort,String order);
+
+    /**
+     * 更新比赛信息
+     * @param competition
+     */
+    void updateCompetition(Competition competition);
 
     /**
      * 获取未审核的赛事
