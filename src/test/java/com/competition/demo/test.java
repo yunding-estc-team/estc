@@ -1,8 +1,8 @@
 package com.competition.demo;
 
 import xyz.xlong99.entity.Student;
-import xyz.xlong99.service.CompetitionService1;
-import xyz.xlong99.service.UserService1;
+import xyz.xlong99.service.CompetitionService;
+import xyz.xlong99.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,10 +22,10 @@ import org.springframework.test.context.junit4.SpringRunner;
 @Slf4j
 public class test {
     @Autowired
-    private UserService1 userService1;
+    private UserService userService1;
 
     @Autowired
-    private CompetitionService1 competitionService1;
+    private CompetitionService competitionService1;
     @Test
     public void testupdate(){
         Student student = new Student();
@@ -34,11 +34,10 @@ public class test {
         student.setIntroduction("sad");
         student.setPortrait("asd");
         student.setRealname("adsd");
-        student.setPassword("wwwwwwwwww");
         userService1.changePermission(student.getUserId(),"user:attention");
     }
     @Test
     public void testSetPermission(){
-        competitionService1.setCheckoutCompetition("1234","1");
+
     }
 }

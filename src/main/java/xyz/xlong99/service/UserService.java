@@ -18,13 +18,13 @@ public interface UserService {
      * 查询所有学生列表
      * @return
      */
-    List<Student> findAllStudent(Integer page);
+    List<Student> findAllStudent(String page,String sort,String order);
 
     /**
      * 查询所有组织列表
      * @return
      */
-    List<Organization> findAllOrganization(Integer page);
+    List<Organization> findAllOrganization(String page,String sort,String order);
 
     /**
      * 修改学生属性

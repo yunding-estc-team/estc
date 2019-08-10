@@ -19,16 +19,16 @@ public interface UserDao{
      */
     @Select(" SELECT portrait,introduction,user_name,realname,user_no,user_school,user_major,user_sex,user_birth,user_phone,user_email,is_active,ip_address,checkout,user_type" +
             " FROM `user`" +
-            " WHERE user_type = 'student' LIMIT #{startNum},#{lastNum} ")
-    List<Student> selectAllStudent(Integer startNum,Integer lastNum);
+            " WHERE user_type = 'student' ${orderSql} LIMIT #{startNum},10 ")
+    List<Student> selectAllStudent(Integer startNum,String orderSql);
     /**
      * 获取组织用户列表(分页)
      * @return 返回组织的list集合
      */
     @Select(" SELECT user_id,portrait,introduction,user_name,realname,user_school,user_phone,user_email,is_active,ip_address,checkout,user_type" +
             " FROM `user`" +
-            " WHERE user_type = 'organization' LIMIT #{startNum},#{lastNum} ")
-    List<Organization> selectAllOrganization(Integer startNum,Integer lastNum);
+            " WHERE user_type = 'organization' ${orderSql} LIMIT #{startNum},10 ")
+    List<Organization> selectAllOrganization(Integer startNum,String orderSql);
     /**
      * 通过用户id修改学生用户资料
      */
