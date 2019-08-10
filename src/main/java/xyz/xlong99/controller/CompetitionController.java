@@ -58,8 +58,8 @@ public class CompetitionController {
      * 获取未审核的赛事
      */
     @RequestMapping("/getCheck")
-    public ReturnVO getCheck(){
-        return new ReturnVO(ReturnCode.SUCCESS,competitionService1.getCheckoutList());
+    public ReturnVO getCheck(Integer page){
+        return new ReturnVO(ReturnCode.SUCCESS,competitionService1.getCheckoutList(page));
     }
     /**
      * 修改赛事审核状态
@@ -73,8 +73,8 @@ public class CompetitionController {
      * 获取比赛认领申请
      */
     @RequestMapping("/getClaim")
-    public ReturnVO getClaim(){
-        return new ReturnVO(ReturnCode.SUCCESS,competitionService1.getClaimList());
+    public ReturnVO getClaim(Integer page){
+        return new ReturnVO(ReturnCode.SUCCESS,competitionService1.getClaimList(page));
     }
     /**
      * 修改比赛认领状态

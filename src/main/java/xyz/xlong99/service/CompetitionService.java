@@ -18,7 +18,7 @@ public interface CompetitionService {
      * 获取未审核的赛事
      * @return
      */
-    List<Competition> getCheckoutList();
+    List<Competition> getCheckoutList(Integer page);
 
     /**
      * 设置审核赛事状态
@@ -31,7 +31,7 @@ public interface CompetitionService {
      * 获取认领比赛的列表
      * @return
      */
-    List<ClaimCompetition> getClaimList();
+    List<ClaimCompetition> getClaimList(Integer page);
 
     /**
      * 设置认领比赛成功与否

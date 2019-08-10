@@ -20,8 +20,8 @@ public interface CompetitionDao {
      * 获取未审核的赛事
      * @return
      */
-    @Select("SELECT * FROM competition WHERE checkout = '0'")
-    List<Competition> selectCheckoutList();
+    @Select("SELECT * FROM competition WHERE checkout = '0' LIMIT #{startNum},#{lastNum}")
+    List<Competition> selectCheckoutList(Integer startNum,Integer lastNum);
 
     /**
      * 审核赛事状态
@@ -39,8 +39,8 @@ public interface CompetitionDao {
             "FROM " +
             "competition_checkout cc INNER JOIN competition c ON " +
             "cc.competition_id = c.competition_id INNER JOIN `user` u ON " +
-            "cc.user_id=u.user_id ; ")
-    List<ClaimCompetition> selectClaimList();
+            "cc.user_id=u.user_id LIMIT #{startNum},#{lastNum} ")
+    List<ClaimCompetition> selectClaimList(Integer startNum,Integer lastNum);
 
     /**
      * 设置认领比赛的成功与否

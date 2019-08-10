@@ -7,9 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import xyz.xlong99.service.AuthService;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * @author xlong
  * @date 2019-08-06 10:10

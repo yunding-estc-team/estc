@@ -3,8 +3,6 @@ package xyz.xlong99.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.competition.entity.UserAnnounce;
 
-import javax.print.DocFlavor;
-
 /**
  * @author xlong
  * @date 2019-08-08 09:32

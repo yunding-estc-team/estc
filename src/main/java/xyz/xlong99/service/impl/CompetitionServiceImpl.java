@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * @author:Cui
  * @date:2019/8/8
- * @type: class(类)
+ * @type:class(类)
  * @description:
  * @action:
  */
@@ -25,8 +25,10 @@ public class CompetitionServiceImpl implements CompetitionService {
      * @return competitionDao.selectCompetitionList()
      */
     @Override
-    public List<Competition> getCheckoutList() {
-        return competitionDao.selectCheckoutList();
+    public List<Competition> getCheckoutList(Integer page) {
+        Integer startNum = (page-1)*10;
+        Integer lastNum = page*10;
+        return competitionDao.selectCheckoutList(startNum,lastNum);
     }
 
     /**
@@ -44,8 +46,10 @@ public class CompetitionServiceImpl implements CompetitionService {
      * @return competitionDao.selectCheckoutList()
      */
     @Override
-    public List<ClaimCompetition> getClaimList() {
-        return competitionDao.selectClaimList();
+    public List<ClaimCompetition> getClaimList(Integer page) {
+        Integer startNum = (page-1)*2;
+        Integer lastNum = page*2;
+        return competitionDao.selectClaimList(startNum,lastNum);
     }
 
     /**

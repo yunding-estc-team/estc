@@ -1,6 +1,5 @@
 package xyz.xlong99.form;
 
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.competition.entity.UserAnnounce;
 import com.competition.form.IBaseDTO;
 import lombok.Data;

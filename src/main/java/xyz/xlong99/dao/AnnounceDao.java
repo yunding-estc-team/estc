@@ -1,9 +1,7 @@
 package xyz.xlong99.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.competition.entity.Competition;
 import com.competition.entity.UserAnnounce;
-import org.apache.ibatis.annotations.Insert;
 
 /**
  * @author xlong
