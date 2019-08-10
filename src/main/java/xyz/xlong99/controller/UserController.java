@@ -29,8 +29,8 @@ public class UserController {
      * @return
      */
     @RequestMapping("/getStudent")
-    public ReturnVO getStudent(){
-        List<Student> students = userService1.findAllStudent();
+    public ReturnVO getStudent(Integer page){
+        List<Student> students = userService1.findAllStudent(page);
         return new ReturnVO(ReturnCode.SUCCESS,students);
     }
 
@@ -39,8 +39,8 @@ public class UserController {
      * @return
      */
     @RequestMapping("/getOrganization")
-    public ReturnVO getOrganization(){
-        List<Organization> organizations = userService1.findAllOrganization();
+    public ReturnVO getOrganization(Integer page){
+        List<Organization> organizations = userService1.findAllOrganization(page);
         return new ReturnVO(ReturnCode.SUCCESS,ActiveUtil.permissionHelper(organizations));
     }
 

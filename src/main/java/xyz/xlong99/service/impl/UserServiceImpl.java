@@ -22,13 +22,17 @@ public class UserServiceImpl implements UserService {
     private UserDao userDao;
 
     @Override
-    public List<Student> findAllStudent() {
-        return userDao.selectAllStudent();
+    public List<Student> findAllStudent(Integer page) {
+        Integer startNum = (page-1)*10;
+        Integer lastNum = page*10;
+        return userDao.selectAllStudent(startNum,lastNum);
     }
 
     @Override
-    public List<Organization> findAllOrganization() {
-        return userDao.selectAllOrganization();
+    public List<Organization> findAllOrganization(Integer page) {
+        Integer startNum = (page-1)*10;
+        Integer lastNum = page*10;
+        return userDao.selectAllOrganization(startNum,lastNum);
     }
 
     @Override

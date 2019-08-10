@@ -1,8 +1,6 @@
 package xyz.xlong99.controller;
 
-import com.baomidou.mybatisplus.extension.service.IService;
 import com.competition.entity.UserAnnounce;
-import com.competition.form.FileForm;
 import com.competition.response.ReturnCode;
 import com.competition.response.ReturnVO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import xyz.xlong99.form.AnnounceForm;
 import xyz.xlong99.service.AnnounceService;
-import xyz.xlong99.service.impl.AnnounceServiceImpl;
 
 /**
  * @author xlong

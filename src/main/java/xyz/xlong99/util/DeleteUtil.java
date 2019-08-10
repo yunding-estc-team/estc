@@ -1,11 +1,7 @@
 package xyz.xlong99.util;
 
 import com.alibaba.fastjson.JSONObject;
-import com.competition.util.HTTPUtils;
-import com.competition.util.SendMessage;
-import org.json.HTTP;
 
-import javax.sound.midi.Soundbank;
 import java.util.HashMap;
 import java.util.Map;
 
