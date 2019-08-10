@@ -22,7 +22,7 @@ import java.util.List;
 public class UserController {
 
     @Autowired
-    private UserService userService1;
+    private UserService userService;
 
     /**
      * 获取学生列表
@@ -30,7 +30,7 @@ public class UserController {
      */
     @RequestMapping("/getStudent")
     public ReturnVO getStudent(Integer page){
-        List<Student> students = userService1.findAllStudent(page);
+        List<Student> students = userService.findAllStudent(page);
         return new ReturnVO(ReturnCode.SUCCESS,students);
     }
 
@@ -40,7 +40,7 @@ public class UserController {
      */
     @RequestMapping("/getOrganization")
     public ReturnVO getOrganization(Integer page){
-        List<Organization> organizations = userService1.findAllOrganization(page);
+        List<Organization> organizations = userService.findAllOrganization(page);
         return new ReturnVO(ReturnCode.SUCCESS,ActiveUtil.permissionHelper(organizations));
     }
 
@@ -51,7 +51,7 @@ public class UserController {
      */
     @RequestMapping("/updateStudent")
     public ReturnVO updateStudent(Student student){
-        userService1.updateStudent(student);
+        userService.updateStudent(student);
         return new ReturnVO(ReturnCode.SUCCESS);
     }
     /**
@@ -61,7 +61,7 @@ public class UserController {
      */
     @RequestMapping("/updateOrgnization")
     public ReturnVO updateOrgnization(Organization organization){
-        userService1.updateOrganization(organization);
+        userService.updateOrganization(organization);
         return new ReturnVO(ReturnCode.SUCCESS);
     }
 
@@ -73,7 +73,8 @@ public class UserController {
      */
     @RequestMapping("/changePermission")
     public ReturnVO changePermission(String userId,String isActive){
-        userService1.changePermission(userId,isActive);
+        userService.changePermission(userId,isActive);
         return new ReturnVO(ReturnCode.SUCCESS);
     }
+
 }

@@ -3,6 +3,7 @@ package xyz.xlong99.controller;
 import com.competition.entity.Competition;
 import com.competition.response.ReturnCode;
 import com.competition.response.ReturnVO;
+import xyz.xlong99.entity.ClaimCompetition;
 import xyz.xlong99.form.CompetitionForm;
 import xyz.xlong99.service.CompetitionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,8 +58,8 @@ public class CompetitionController {
      * 获取未审核的赛事
      */
     @RequestMapping("/getCheck")
-    public ReturnVO getCheck(){
-        return new ReturnVO(ReturnCode.SUCCESS, competitionService.getCheckoutList());
+    public ReturnVO getCheck(Integer page){
+        return new ReturnVO(ReturnCode.SUCCESS,competitionService.getCheckoutList(page));
     }
     /**
      * 修改赛事审核状态
@@ -72,15 +73,15 @@ public class CompetitionController {
      * 获取比赛认领申请
      */
     @RequestMapping("/getClaim")
-    public ReturnVO getClaim(){
-        return new ReturnVO(ReturnCode.SUCCESS, competitionService.getClaimList());
+    public ReturnVO getClaim(Integer page){
+        return new ReturnVO(ReturnCode.SUCCESS,competitionService.getClaimList(page));
     }
     /**
      * 修改比赛认领状态
      */
     @RequestMapping("/updateClaim")
-    public ReturnVO updateClaim(String competitionId,String code){
-        competitionService.setClaimCompetition(competitionId,code);
+    public ReturnVO updateClaim(ClaimCompetition claimCompetition, String code){
+        competitionService.setClaimCompetition(claimCompetition,code);
         return new ReturnVO(ReturnCode.SUCCESS);
     }
 }

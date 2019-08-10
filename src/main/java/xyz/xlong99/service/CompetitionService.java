@@ -39,10 +39,10 @@ public interface CompetitionService extends IService<Competition>{
      * 获取未审核的赛事
      * @return
      */
-    List<Competition> getCheckoutList();
+    List<Competition> getCheckoutList(Integer page);
 
     /**
-     * 审核赛事状态
+     * 设置审核赛事状态
      * @param competitionId
      * @param code
      */
@@ -52,12 +52,12 @@ public interface CompetitionService extends IService<Competition>{
      * 获取认领比赛的列表
      * @return
      */
-    List<ClaimCompetition> getClaimList();
+    List<ClaimCompetition> getClaimList(Integer page);
 
     /**
      * 设置认领比赛成功与否
-     * @param ClaimCompetitionId
+     * @param claimCompetition
      * @param checkout
      */
-    void setClaimCompetition(String ClaimCompetitionId,String checkout);
+    void setClaimCompetition(ClaimCompetition claimCompetition,String checkout);
 }

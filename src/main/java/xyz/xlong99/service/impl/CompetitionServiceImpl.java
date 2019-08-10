@@ -47,8 +47,10 @@ public class CompetitionServiceImpl extends ServiceImpl<CompetitionDao,Competiti
      * @return competitionDao.selectCompetitionList()
      */
     @Override
-    public List<Competition> getCheckoutList() {
-        return competitionDao.selectCheckoutList();
+    public List<Competition> getCheckoutList(Integer page) {
+        Integer startNum = (page-1)*10;
+        Integer lastNum = page*10;
+        return competitionDao.selectCheckoutList(startNum,lastNum);
     }
 
     /**
@@ -66,17 +68,23 @@ public class CompetitionServiceImpl extends ServiceImpl<CompetitionDao,Competiti
      * @return competitionDao.selectCheckoutList()
      */
     @Override
-    public List<ClaimCompetition> getClaimList() {
-        return competitionDao.selectClaimList();
+    public List<ClaimCompetition> getClaimList(Integer page) {
+        Integer startNum = (page-1)*2;
+        Integer lastNum = page*2;
+        return competitionDao.selectClaimList(startNum,lastNum);
     }
 
     /**
      * 设置需认领比赛的code
-     * @param ClaimCompetitionId
+     * @param claimCompetition
      * @param checkout
      */
     @Override
-    public void setClaimCompetition(String ClaimCompetitionId, String checkout) {
-        competitionDao.updateClaim(ClaimCompetitionId,checkout);
+    public void setClaimCompetition(ClaimCompetition claimCompetition, String checkout) {
+        competitionDao.updateClaim(claimCompetition.getId(),checkout);
+        if(checkout.equals("1")){
+            competitionDao.updateCompetitionHost(claimCompetition.getUserId(),claimCompetition.getCompetitionId());
+        }
+
     }
 }

@@ -19,21 +19,21 @@ public interface UserDao{
      */
     @Select(" SELECT portrait,introduction,user_name,realname,user_no,user_school,user_major,user_sex,user_birth,user_phone,user_email,is_active,ip_address,checkout,user_type" +
             " FROM `user`" +
-            " WHERE user_type = 'student' ")
-    List<Student> selectAllStudent();
+            " WHERE user_type = 'student' LIMIT #{startNum},#{lastNum} ")
+    List<Student> selectAllStudent(Integer startNum,Integer lastNum);
     /**
      * 获取组织用户列表(分页)
      * @return 返回组织的list集合
      */
     @Select(" SELECT user_id,portrait,introduction,user_name,realname,user_school,user_phone,user_email,is_active,ip_address,checkout,user_type" +
             " FROM `user`" +
-            " WHERE user_type = 'organization' ")
-    List<Organization> selectAllOrganization();
+            " WHERE user_type = 'organization' LIMIT #{startNum},#{lastNum} ")
+    List<Organization> selectAllOrganization(Integer startNum,Integer lastNum);
     /**
      * 通过用户id修改学生用户资料
      */
     @Update(" UPDATE `user` " +
-            "SET password=#{password},portrait=#{portrait},introduction=#{introduction},user_name=#{userName},realname=#{realname},user_no=#{userNo},user_school=#{userSchool},user_major=#{userMajor},user_sex=#{userSex},user_birth=#{userBirth},user_phone=#{userPhone},user_email=#{userEmail},ip_address=#{ipAddress},checkout=#{checkout}" +
+            "SET portrait=#{portrait},introduction=#{introduction},user_name=#{userName},realname=#{realname},user_no=#{userNo},user_school=#{userSchool},user_major=#{userMajor},user_sex=#{userSex},user_birth=#{userBirth},ip_address=#{ipAddress},checkout=#{checkout}" +
             " WHERE user_id = #{userId} ")
     void updateStudent(Student student);
 
@@ -41,7 +41,7 @@ public interface UserDao{
      * 通过id修改组织用户资料
      */
     @Update(" UPDATE `user`" +
-            " SET password=#{password},portrait=#{portrait},introduction=#{introduction},user_name=#{userName},realname=#{realname},user_school=#{userSchool},user_phone=#{userPhone},user_email=#{userEmail},ip_address=#{ipAddress},checkout=#{checkout} " +
+            " SET portrait=#{portrait},introduction=#{introduction},user_name=#{userName},realname=#{realname},user_school=#{userSchool},ip_address=#{ipAddress},checkout=#{checkout} " +
             " WHERE user_id = #{userId} ")
     void updateOrganization(Organization organization);
 

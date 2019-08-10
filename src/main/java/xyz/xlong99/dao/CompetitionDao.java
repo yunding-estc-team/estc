@@ -82,4 +82,5 @@ public interface CompetitionDao extends BaseMapper<Competition  > {
      */
     @Update("UPDATE competition SET host=#{userId} WHERE competition_id = #{competitionId}")
     void updateCompetitionHost(String userId,String competitionId);
+
 }

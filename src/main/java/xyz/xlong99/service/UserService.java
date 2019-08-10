@@ -42,4 +42,5 @@ public interface UserService {
      * @param isActive
      */
     void changePermission(String userId,String isActive);
+
 }
