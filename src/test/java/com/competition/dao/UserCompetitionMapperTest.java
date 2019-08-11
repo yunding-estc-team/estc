@@ -27,7 +27,7 @@ public class UserCompetitionMapperTest {
 
 		List<String> strings = userCompetitionMapper.listHost(hostId);
 		log.info(strings.get(0));
-		List<CompetitionRewardVO> rewardVOS = userCompetitionMapper.listReward(hostId);
+		List<CompetitionRewardVO> rewardVOS = userCompetitionMapper.listReward(hostId,1,2);
 		log.info(rewardVOS.get(0).toString());
 	}
 }

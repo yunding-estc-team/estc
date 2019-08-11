@@ -278,6 +278,17 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2019-08-03 15:02:47.317 INFO  --- com.competition.shiro.UserRealm.doGetAuthenticationInfo                                              [line64    ] : 执行认证逻辑
 2019-08-03 15:03:00.652 INFO  --- com.competition.shiro.UserRealm.doGetAuthenticationInfo                                              [line64    ] : 执行认证逻辑
 >>>>>>> a2b9a95a85b2327d3776219597b52ba049b5ed88
+<<<<<<<<< Temporary merge branch 1
+2019-08-03 18:21:33.719 INFO  --- com.competition.SpringbootDemoApplication.logStarting                                                [line50    ] : Starting SpringbootDemoApplication on LAPTOP-DCJ3IIE0 with PID 6196 (started by HJUN in D:\【project】workHouse\20190803-02\estc)
+2019-08-03 18:21:33.722 INFO  --- com.competition.SpringbootDemoApplication.logStartupProfileInfo                                      [line650   ] : The following profiles are active: csw
+2019-08-03 18:21:34.467 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected    [line244   ] : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-03 18:21:34.469 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line126   ] : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-03 18:21:34.512 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn    [line182   ] : Finished Spring Data repository scanning in 26ms. Found 0 repository interfaces.
+2019-08-03 18:21:34.877 INFO  --- xt.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization [line330   ] : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$aed6d50b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-03 18:21:34.944 INFO  --- org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener.logMessage   [line135   ] : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+=========
 2019-08-03 18:07:32.302 INFO  --- com.competition.SpringbootDemoApplicationTests.logStarting                                           [line50    ] : Starting SpringbootDemoApplicationTests on 27 with PID 21456 (started by guohaodong in /home/guohaodong/Idea/estc)
 2019-08-03 18:07:32.319 INFO  --- com.competition.SpringbootDemoApplicationTests.logStartupProfileInfo                                 [line650   ] : The following profiles are active: csw
 2019-08-03 18:07:35.423 INFO  --- org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected    [line244   ] : Multiple Spring Data modules found, entering strict repository configuration mode!
@@ -326,3 +337,4 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2019-08-03 19:49:11.415 INFO  --- org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown                            [line208   ] : Shutting down ExecutorService 'applicationTaskExecutor'
 2019-08-03 19:49:11.540 INFO  --- com.alibaba.druid.pool.DruidDataSource.close                                                         [line1948  ] : {dataSource-1} closing ...
 2019-08-03 19:49:11.557 INFO  --- com.alibaba.druid.pool.DruidDataSource.close                                                         [line2020  ] : {dataSource-1} closed
+>>>>>>>>> Temporary merge branch 2

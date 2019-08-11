@@ -3,6 +3,7 @@ package com.competition.form;
 import com.competition.entity.Competition;
 import com.competition.util.Individual;
 import lombok.Data;
+import lombok.NonNull;
 
 /**
  * 前端提交的发布赛事表单
@@ -11,6 +12,7 @@ import lombok.Data;
  */
 @Data
 public class CompetitionForm implements IBaseDTO<Competition>{
+
 	private String id;
 	private String name;
 	private String cover;
@@ -23,7 +25,7 @@ public class CompetitionForm implements IBaseDTO<Competition>{
 
 	/**
 	 * 转换为entity方法
-	 * @return
+	 * @return entity
 	 */
 	@Override
 	public Competition toEntity() {
@@ -56,6 +58,7 @@ public class CompetitionForm implements IBaseDTO<Competition>{
 		this.name = entity.getName();
 		this.type = entity.getType();
 
+		//todo magic
 		if("1".equals(entity.getIsIndividual())) {
 			this.individual = Individual.TRUE;
 		}

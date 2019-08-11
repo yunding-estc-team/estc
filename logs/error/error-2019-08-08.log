@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2019-08-08 16:41:06.558 ERROR  --- org.apache.catalina.util.LifecycleBase.log                                                           [line175   ] : Failed to start component [Connector[HTTP/1.1-8080]]
 org.apache.catalina.LifecycleException: Protocol handler start failed
 	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1008)
@@ -131,3 +132,139 @@ Action:
 Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
 
 2019-08-08 16:48:08.481 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line35    ] : 空指针异常
+=======
+2019-08-08 08:04:42.866 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line34    ] : 空指针异常
+2019-08-08 08:08:10.892 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='systemAnnounce', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.sql.SQLException: Invalid argument value: java.io.NotSerializableException
+2019-08-08 08:17:31.507 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='systemAnnounce', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.sql.SQLException: Invalid argument value: java.io.NotSerializableException
+2019-08-08 08:37:35.437 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='systemAnnounce', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #1 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.sql.SQLException: Invalid argument value: java.io.NotSerializableException
+2019-08-08 08:48:51.374 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'read,
+title )  VALUES  ( '6bf89e5cb57042feb12b3d397752de1c',
+'11',
+'您的提问' at line 5
+### The error may exist in com/competition/dao/UserAnnounceMapper.java (best guess)
+### The error may involve com.competition.dao.UserAnnounceMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO user_announce  ( id, user_id, announce,  read, title )  VALUES  ( ?, ?, ?,  ?, ? )
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'read,
+title )  VALUES  ( '6bf89e5cb57042feb12b3d397752de1c',
+'11',
+'您的提问' at line 5
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'read,
+title )  VALUES  ( '6bf89e5cb57042feb12b3d397752de1c',
+'11',
+'您的提问' at line 5
+2019-08-08 09:05:06.742 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'read,
+title )  VALUES  ( 'b1f207fb79314b68aa8841f527526665',
+'11',
+'您的提问' at line 5
+### The error may exist in com/competition/dao/UserAnnounceMapper.java (best guess)
+### The error may involve com.competition.dao.UserAnnounceMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO user_announce  ( id, user_id, announce,  read, title )  VALUES  ( ?, ?, ?,  ?, ? )
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'read,
+title )  VALUES  ( 'b1f207fb79314b68aa8841f527526665',
+'11',
+'您的提问' at line 5
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'read,
+title )  VALUES  ( 'b1f207fb79314b68aa8841f527526665',
+'11',
+'您的提问' at line 5
+2019-08-08 09:08:46.110 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error updating database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.alibaba.druid.pool.DataSourceDisableException
+### The error may exist in com/competition/dao/UserAnnounceMapper.java (best guess)
+### The error may involve com.competition.dao.UserAnnounceMapper.insert
+### The error occurred while executing an update
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.alibaba.druid.pool.DataSourceDisableException
+2019-08-08 09:21:38.391 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line34    ] : 空指针异常
+2019-08-08 10:18:01.296 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'userType' in 'field list'
+### The error may exist in com/competition/dao/UserMapper.java (best guess)
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT   userType   FROM user     WHERE user_id = ?
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'userType' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'userType' in 'field list'
+2019-08-08 10:28:13.719 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line34    ] : 空指针异常
+2019-08-08 10:31:51.012 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line34    ] : 空指针异常
+2019-08-08 10:32:37.001 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'hasRead' in 'field list'
+### The error may exist in com/competition/dao/UserAnnounceMapper.java (best guess)
+### The error may involve com.competition.dao.UserAnnounceMapper.selectAnnounceByUserId-Inline
+### The error occurred while setting parameters
+### SQL: SELECT `id`,`title`, `hasRead`, `createAt` FROM user_announce WHERE user_id = ? OR user_id = 'allUser' OR user_id = ?;
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'hasRead' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'hasRead' in 'field list'
+2019-08-08 10:46:13.444 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常Error attempting to get column 'id' from result set.  Cause: java.sql.SQLException: Error
+; uncategorized SQLException; SQL state [null]; error code [0]; Error; nested exception is java.sql.SQLException: Error
+2019-08-08 10:48:10.245 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常Error attempting to get column 'announceId' from result set.  Cause: java.sql.SQLException: Error
+; uncategorized SQLException; SQL state [null]; error code [0]; Error; nested exception is java.sql.SQLException: Error
+2019-08-08 10:52:15.021 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常Error attempting to get column 'announce_id' from result set.  Cause: java.sql.SQLException: Error
+; uncategorized SQLException; SQL state [null]; error code [0]; Error; nested exception is java.sql.SQLException: Error
+2019-08-08 11:15:38.612 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line25    ] : 数据库访问异常
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'creatAt' in 'order clause'
+### The error may exist in com/competition/dao/UserAnnounceMapper.java (best guess)
+### The error may involve com.competition.dao.UserAnnounceMapper.selectAnnounceByUserId-Inline
+### The error occurred while setting parameters
+### SQL: SELECT `id` AS announce_id,`title`, `has_read`, `createAt` FROM user_announce WHERE user_id = ? OR user_id = 'allUser' OR user_id = ? ORDER BY creatAt  DESC LIMIT ?, ?;
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'creatAt' in 'order clause'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'creatAt' in 'order clause'
+2019-08-08 11:17:07.828 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line34    ] : 空指针异常
+2019-08-08 11:34:34.170 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line34    ] : 空指针异常
+2019-08-08 09:41:27.473 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1817955671b34e56bc2921a6763ade5a' for key 'PRIMARY'
+### The error may exist in com/competition/dao/UserMapper.java (best guess)
+### The error may involve com.competition.dao.UserMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO user  ( user_id,             file, hash )  VALUES  ( ?,             ?, ? )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1817955671b34e56bc2921a6763ade5a' for key 'PRIMARY'
+; Duplicate entry '1817955671b34e56bc2921a6763ade5a' for key 'PRIMARY'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1817955671b34e56bc2921a6763ade5a' for key 'PRIMARY'
+2019-08-08 09:43:02.030 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1817955671b34e56bc2921a6763ade5a' for key 'PRIMARY'
+### The error may exist in com/competition/dao/UserMapper.java (best guess)
+### The error may involve com.competition.dao.UserMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO user  ( user_id,             file, hash )  VALUES  ( ?,             ?, ? )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1817955671b34e56bc2921a6763ade5a' for key 'PRIMARY'
+; Duplicate entry '1817955671b34e56bc2921a6763ade5a' for key 'PRIMARY'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1817955671b34e56bc2921a6763ade5a' for key 'PRIMARY'
+2019-08-08 09:51:49.627 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line65    ] : 喂不活的异常
+2019-08-08 09:51:49.628 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line66    ] : org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Illegal unquoted character ((CTRL-CHAR, code 10)): has to be escaped using backslash to be included in string value; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Illegal unquoted character ((CTRL-CHAR, code 10)): has to be escaped using backslash to be included in string value
+ at [Source: (PushbackInputStream); line: 5, column: 9] (through reference chain: com.competition.form.CompetitionForm["id"])
+2019-08-08 10:41:43.411 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE  competition_id='1'
+ AND user_id='11'
+ AND reward='特等奖'
+ AND certifi' at line 3
+### The error may exist in com/competition/dao/UserCompetitionMapper.java (best guess)
+### The error may involve com.competition.dao.UserCompetitionMapper.update-Inline
+### The error occurred while setting parameters
+### SQL: UPDATE user_competition        WHERE  competition_id=?  AND user_id=?  AND reward=?  AND certificate=?  AND checkout=?  AND hash=?  AND createAt=?  AND updateAt=?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE  competition_id='1'
+ AND user_id='11'
+ AND reward='特等奖'
+ AND certifi' at line 3
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE  competition_id='1'
+ AND user_id='11'
+ AND reward='特等奖'
+ AND certifi' at line 3
+2019-08-08 10:41:44.760 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE  competition_id='1'
+ AND user_id='11'
+ AND reward='特等奖'
+ AND certifi' at line 3
+### The error may exist in com/competition/dao/UserCompetitionMapper.java (best guess)
+### The error may involve com.competition.dao.UserCompetitionMapper.update-Inline
+### The error occurred while setting parameters
+### SQL: UPDATE user_competition        WHERE  competition_id=?  AND user_id=?  AND reward=?  AND certificate=?  AND checkout=?  AND hash=?  AND createAt=?  AND updateAt=?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE  competition_id='1'
+ AND user_id='11'
+ AND reward='特等奖'
+ AND certifi' at line 3
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE  competition_id='1'
+ AND user_id='11'
+ AND reward='特等奖'
+ AND certifi' at line 3
+2019-08-08 10:47:31.196 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line65    ] : 喂不活的异常
+2019-08-08 10:47:31.197 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line66    ] : org.springframework.web.bind.MissingRequestHeaderException: Missing request header 'authorization' for method parameter of type String
+>>>>>>> b50a4519c8a399f87933292be99ac8b18eda44f8

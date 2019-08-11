@@ -49,7 +49,7 @@ logging:
 
 # mybatis
 mybatis-plus:
-  mapper-locations: classpath*:mapper/*.Mapper.xml
+  mapper-locations: classpath*:mapper/*Mapper.xml
   type-aliases-package: com.competition.entity
   check-config-location: true
 

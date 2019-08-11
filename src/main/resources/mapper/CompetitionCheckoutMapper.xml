@@ -9,11 +9,15 @@
         <result column="file" property="file" />
         <result column="hash" property="hash" />
         <result column="user_id" property="userId"/>
+        <result column="checkout" property="checkout"/>
+        <result column="description" property="description"/>
+        <result column="create_at" property="createAt"/>
+        <result column="update_at" property="updateAt"/>
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id,competitionId, file, hash,userId
+        id,competitionId, file, hash,userId,checkout,description,createAt,updateAt
     </sql>
 
 </mapper>

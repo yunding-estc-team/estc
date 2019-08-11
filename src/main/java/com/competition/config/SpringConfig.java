@@ -5,6 +5,7 @@ import com.competition.response.ReturnVO;
 import org.mybatis.spring.annotation.MapperScan;
 import org.mybatis.spring.annotation.MapperScans;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 
@@ -15,7 +16,8 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  */
 
 @EnableAspectJAutoProxy
-@MapperScan("com.competition.dao")
+@MapperScan(basePackages = {"com.competition.dao","xyz.xlong99.dao"})
+
 public class SpringConfig {
 	@Bean
 	public UserAttention userAttention(){

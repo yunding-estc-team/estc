@@ -3,6 +3,8 @@ package com.competition;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.ComponentScans;
 import org.springframework.context.annotation.Import;
 
 /**
@@ -15,7 +17,6 @@ import org.springframework.context.annotation.Import;
 		com.competition.config.ShiroConfig.class,
 		com.competition.config.SwaggerConfig.class
 		})
-//@MapperScan(basePackages = "com.competition.dao")
 public class SpringbootDemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootDemoApplication.class, args);
