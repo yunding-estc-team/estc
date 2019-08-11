@@ -1,0 +1,163 @@
+2019-08-09 10:33:21.213 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+ 'ghd' +'%'ORDER BY createAt DESC LIMIT 0, 3' at line 1
+### The error may exist in com/competition/dao/UserMapper.java (best guess)
+### The error may involve com.competition.dao.UserMapper.searchName-Inline
+### The error occurred while setting parameters
+### SQL: select userName or name from user,competition WHERE userName or name like '%'+ ? +'%'ORDER BY createAt DESC LIMIT ?, ?;
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+ 'ghd' +'%'ORDER BY createAt DESC LIMIT 0, 3' at line 1
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+ 'ghd' +'%'ORDER BY createAt DESC LIMIT 0, 3' at line 1
+2019-08-09 10:34:03.108 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+ 'ghd' +'%'ORDER BY createAt DESC LIMIT 3, 3' at line 1
+### The error may exist in com/competition/dao/UserMapper.java (best guess)
+### The error may involve com.competition.dao.UserMapper.searchName-Inline
+### The error occurred while setting parameters
+### SQL: select userName or name from user,competition WHERE userName or name like '%'+ ? +'%'ORDER BY createAt DESC LIMIT ?, ?;
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+ 'ghd' +'%'ORDER BY createAt DESC LIMIT 3, 3' at line 1
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+ 'ghd' +'%'ORDER BY createAt DESC LIMIT 3, 3' at line 1
+2019-08-09 10:39:06.831 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+ 'ghd' +'%'LIMIT 3, 3' at line 1
+### The error may exist in com/competition/dao/UserMapper.java (best guess)
+### The error may involve com.competition.dao.UserMapper.searchName-Inline
+### The error occurred while setting parameters
+### SQL: select userName or name from user,competition WHERE userName or name like '%'+ ? +'%'LIMIT ?, ?;
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+ 'ghd' +'%'LIMIT 3, 3' at line 1
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+ 'ghd' +'%'LIMIT 3, 3' at line 1
+2019-08-09 10:40:35.893 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='pageSize', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #3 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #3 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.sql.SQLException: Parameter index out of range (3 > number of parameters, which is 2).
+2019-08-09 10:48:20.347 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+ 'ghd' +'%'LIMIT 3, 3' at line 1
+### The error may exist in com/competition/dao/UserMapper.java (best guess)
+### The error may involve com.competition.dao.UserMapper.searchName-Inline
+### The error occurred while setting parameters
+### SQL: select userName or name from user,competition WHERE userName or name like '%'+ ? +'%'LIMIT ?, ?;
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+ 'ghd' +'%'LIMIT 3, 3' at line 1
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+ 'ghd' +'%'LIMIT 3, 3' at line 1
+2019-08-09 10:51:37.118 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+ 'ghd' +"%"LIMIT 3, 3' at line 1
+### The error may exist in com/competition/dao/UserMapper.java (best guess)
+### The error may involve com.competition.dao.UserMapper.searchName-Inline
+### The error occurred while setting parameters
+### SQL: select userName or name from user,competition WHERE userName or name like "%"+ ? +"%"LIMIT ?, ?;
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+ 'ghd' +"%"LIMIT 3, 3' at line 1
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+ 'ghd' +"%"LIMIT 3, 3' at line 1
+2019-08-09 10:53:55.315 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+ 'ghd' +'%'LIMIT 3, 3' at line 1
+### The error may exist in com/competition/dao/UserMapper.java (best guess)
+### The error may involve com.competition.dao.UserMapper.searchName-Inline
+### The error occurred while setting parameters
+### SQL: select userName or name from user,competition WHERE userName or name like '%'+ ? +'%'LIMIT ?, ?;
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+ 'ghd' +'%'LIMIT 3, 3' at line 1
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+ 'ghd' +'%'LIMIT 3, 3' at line 1
+2019-08-09 10:54:32.300 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'userName' in 'field list'
+### The error may exist in com/competition/dao/UserMapper.java (best guess)
+### The error may involve com.competition.dao.UserMapper.searchName-Inline
+### The error occurred while setting parameters
+### SQL: select userName or name from user,competition WHERE userName or name like ('%'+ ? +'%')LIMIT ?, ?;
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'userName' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'userName' in 'field list'
+2019-08-09 10:55:03.150 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'userName' in 'where clause'
+### The error may exist in com/competition/dao/UserMapper.java (best guess)
+### The error may involve com.competition.dao.UserMapper.searchName-Inline
+### The error occurred while setting parameters
+### SQL: select user_name or name from user,competition WHERE userName or name like ('%'+ ? +'%')LIMIT ?, ?;
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'userName' in 'where clause'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'userName' in 'where clause'
+2019-08-09 10:56:29.023 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'userName' in 'where clause'
+### The error may exist in com/competition/dao/UserMapper.java (best guess)
+### The error may involve com.competition.dao.UserMapper.searchName-Inline
+### The error occurred while setting parameters
+### SQL: select  name from user,competition WHERE userName or name like ('%'+ ? +'%')LIMIT ?, ?;
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'userName' in 'where clause'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'userName' in 'where clause'
+2019-08-09 10:57:53.924 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常nested exception is org.apache.ibatis.binding.BindingException: Parameter 'aParam' not found. Available parameters are [aparam, name, pageSize, param3, param1, param2]
+2019-08-09 10:58:23.431 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'userName' in 'where clause'
+### The error may exist in com/competition/dao/UserMapper.java (best guess)
+### The error may involve com.competition.dao.UserMapper.searchAll-Inline
+### The error occurred while setting parameters
+### SQL: select * from user,competition WHERE userName or name like ('%'+ ? +'%')ORDER BY createAt DESC LIMIT ?, ?;
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'userName' in 'where clause'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'userName' in 'where clause'
+2019-08-09 10:59:04.563 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常
+### Error querying database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'createAt' in order clause is ambiguous
+### The error may exist in com/competition/dao/UserMapper.java (best guess)
+### The error may involve com.competition.dao.UserMapper.searchAll-Inline
+### The error occurred while setting parameters
+### SQL: select * from user,competition WHERE user_name or name like ('%'+ ? +'%')ORDER BY createAt DESC LIMIT ?, ?;
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'createAt' in order clause is ambiguous
+; Column 'createAt' in order clause is ambiguous; nested exception is java.sql.SQLIntegrityConstraintViolationException: Column 'createAt' in order clause is ambiguous
+2019-08-09 11:00:47.135 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%'ghd'%)LIMIT 0, 3' at line 1
+### The error may exist in com/competition/dao/UserMapper.java (best guess)
+### The error may involve com.competition.dao.UserMapper.searchName-Inline
+### The error occurred while setting parameters
+### SQL: select user_name or name from user,competition WHERE user_name or name like (%?%)LIMIT ?, ?;
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%'ghd'%)LIMIT 0, 3' at line 1
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%'ghd'%)LIMIT 0, 3' at line 1
+2019-08-09 11:04:42.428 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+ 'ghd' +'%'LIMIT 0, 3' at line 1
+### The error may exist in com/competition/dao/UserMapper.java (best guess)
+### The error may involve com.competition.dao.UserMapper.searchName-Inline
+### The error occurred while setting parameters
+### SQL: select user_name or name from user,competition WHERE user_name or name like '%'+ ? +'%'LIMIT ?, ?;
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+ 'ghd' +'%'LIMIT 0, 3' at line 1
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+ 'ghd' +'%'LIMIT 0, 3' at line 1
+2019-08-09 11:05:27.728 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+ 'ghd' +'%' LIMIT 0, 3' at line 1
+### The error may exist in com/competition/dao/UserMapper.java (best guess)
+### The error may involve com.competition.dao.UserMapper.searchName-Inline
+### The error occurred while setting parameters
+### SQL: select user_name or name from user,competition WHERE user_name or name like '%'+ ? +'%' LIMIT ?, ?;
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+ 'ghd' +'%' LIMIT 0, 3' at line 1
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+ 'ghd' +'%' LIMIT 0, 3' at line 1
+2019-08-09 11:06:06.604 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='pageSize', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #3 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #3 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.sql.SQLException: Parameter index out of range (3 > number of parameters, which is 2).
+2019-08-09 11:06:59.219 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+ 'ghd' +"%" LIMIT 0, 3' at line 1
+### The error may exist in com/competition/dao/UserMapper.java (best guess)
+### The error may involve com.competition.dao.UserMapper.searchName-Inline
+### The error occurred while setting parameters
+### SQL: select user_name or name from user,competition WHERE user_name or name like "%"+ ? +"%" LIMIT ?, ?;
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+ 'ghd' +"%" LIMIT 0, 3' at line 1
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+ 'ghd' +"%" LIMIT 0, 3' at line 1
+2019-08-09 11:07:37.759 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%"+" 'ghd' "+"% LIMIT 0, 3' at line 1
+### The error may exist in com/competition/dao/UserMapper.java (best guess)
+### The error may involve com.competition.dao.UserMapper.searchName-Inline
+### The error occurred while setting parameters
+### SQL: select user_name or name from user,competition WHERE user_name or name like %"+" ? "+"% LIMIT ?, ?;
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%"+" 'ghd' "+"% LIMIT 0, 3' at line 1
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%"+" 'ghd' "+"% LIMIT 0, 3' at line 1
+2019-08-09 11:09:13.063 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='pageSize', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #3 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #3 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.sql.SQLException: Parameter index out of range (3 > number of parameters, which is 2).
+2019-08-09 11:21:46.422 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+'ghd'+'%' LIMIT 0, 1' at line 1
+### The error may exist in com/competition/dao/UserMapper.java (best guess)
+### The error may involve com.competition.dao.UserMapper.searchName-Inline
+### The error occurred while setting parameters
+### SQL: select user_name or name from user,competition WHERE user_name or name like '%'+?+'%' LIMIT ?, ?;
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+'ghd'+'%' LIMIT 0, 1' at line 1
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+'ghd'+'%' LIMIT 0, 1' at line 1
+2019-08-09 11:23:29.803 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='pageSize', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #3 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #3 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.sql.SQLException: Parameter index out of range (3 > number of parameters, which is 2).
+2019-08-09 11:24:48.889 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='pageSize', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #3 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #3 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.sql.SQLException: Parameter index out of range (3 > number of parameters, which is 2).
+2019-08-09 19:44:48.480 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+'ghd'+'%' LIMIT 0, 1' at line 1
+### The error may exist in com/competition/dao/UserMapper.java (best guess)
+### The error may involve com.competition.dao.UserMapper.searchName-Inline
+### The error occurred while setting parameters
+### SQL: select user_name from user where user_name like '%' +?+'%' LIMIT ?, ?;
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+'ghd'+'%' LIMIT 0, 1' at line 1
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+'ghd'+'%' LIMIT 0, 1' at line 1
+2019-08-09 19:45:27.620 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常nested exception is org.apache.ibatis.type.TypeException: Could not set parameters for mapping: ParameterMapping{property='pageSize', mode=IN, javaType=class java.lang.Object, jdbcType=null, numericScale=null, resultMapId='null', jdbcTypeName='null', expression='null'}. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #3 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: org.apache.ibatis.type.TypeException: Error setting non null for parameter #3 with JdbcType null . Try setting a different JdbcType for this parameter or a different configuration property. Cause: java.sql.SQLException: Parameter index out of range (3 > number of parameters, which is 2).
+2019-08-09 19:47:27.314 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+'ghd'+'%' LIMIT 0, 1' at line 1
+### The error may exist in com/competition/dao/UserMapper.java (best guess)
+### The error may involve com.competition.dao.UserMapper.searchName-Inline
+### The error occurred while setting parameters
+### SQL: select user_name from user where user_name like '%'+?+'%' LIMIT ?, ?;
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+'ghd'+'%' LIMIT 0, 1' at line 1
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+'ghd'+'%' LIMIT 0, 1' at line 1
+2019-08-09 20:23:02.954 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常nested exception is org.apache.ibatis.binding.BindingException: Parameter '0' not found. Available parameters are [aParam, name, pageSize, param3, param1, param2]
+2019-08-09 20:31:28.317 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line26    ] : 数据库访问异常nested exception is org.apache.ibatis.binding.BindingException: Parameter '0' not found. Available parameters are [aParam, name, pageSize, param3, param1, param2]
+2019-08-09 21:01:55.500 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line64    ] : 喂不活的异常
+2019-08-09 21:01:55.501 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line65    ] : org.springframework.http.converter.HttpMessageConversionException: Type definition error: [simple type, class com.competition.form.SearchPost]; nested exception is com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class com.competition.form.SearchPost and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: com.competition.response.ReturnVO["data"]->java.util.ArrayList[0])

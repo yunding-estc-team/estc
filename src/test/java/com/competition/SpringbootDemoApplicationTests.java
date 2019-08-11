@@ -10,6 +10,7 @@ import com.competition.entity.CompetitionWiki;
 import com.competition.service.CompetitionService;
 import com.competition.service.CompetitionWikiService;
 import com.competition.response.ReturnCode;
+import com.competition.util.JwtHelper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -18,6 +19,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.Date;
 
 import static org.assertj.core.api.Assertions.assertThat;
 @RunWith(SpringRunner.class)
@@ -88,6 +91,7 @@ public class SpringbootDemoApplicationTests {
 		Competition competition = new Competition();
 
 	}
+
 
 
 	@Test

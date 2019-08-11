@@ -2,13 +2,14 @@ package com.competition.service.impl;
 
 import com.competition.entity.User;
 import com.competition.dao.UserMapper;
+import com.competition.form.SearchForm;
+import com.competition.form.SearchPost;
 import com.competition.response.PermissionClass;
 import com.competition.service.UserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.sql.Wrapper;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -94,5 +95,38 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             permissionClass.setWiki(true);
         }
         return permissionClass;
+    }
+    /**
+     * 通过用户输入的信息模糊查询个人或赛事名称
+     *
+     *
+     */
+    @Override
+    public List<String> searchName(SearchForm searchForm){
+        // 获取分页信息
+        Integer pageCurrent = searchForm.getPageCurrent();
+        Integer pageSize = searchForm.getPageSize();
+        Integer aParam = (pageCurrent-1)*pageSize;
+
+        List<String> list = userMapper.searchUserName(searchForm.getName(),aParam,pageSize);
+        System.out.println(list);
+        List<String> list1 = userMapper.searchCompetitionName(searchForm.getName(),aParam,pageSize);
+        System.out.println(list1);
+        list.addAll(list1);
+        System.out.println(list);
+        return list;
+    }
+
+    @Override
+    public List<SearchPost> searchAll(SearchForm searchForm){
+        // 获取分页信息
+        Integer pageCurrent = searchForm.getPageCurrent();
+        Integer pageSize = searchForm.getPageSize();
+        Integer aParam = (pageCurrent-1)*pageSize;
+
+        List<SearchPost> list = userMapper.searchAllUser(searchForm.getName(),aParam,pageSize);
+        List<SearchPost> list1 = userMapper.searchAllCompetition(searchForm.getName(),aParam,pageSize);
+        list.addAll(list1);
+        return list;
     }
 }

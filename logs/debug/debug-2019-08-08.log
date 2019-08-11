@@ -1,0 +1,3 @@
+2019-08-08 16:48:08.278 DEBUG  --- com.competition.dao.UserMapper.selectOne.debug                                                       [line143   ] : ==>  Preparing: SELECT user_id,password,portrait,introduction,user_name,realname,user_no,user_school,user_major,user_sex,user_birth,user_phone,user_email,file,hash,is_active,ip_address,checkout,createAt,updateAt,user_type FROM user WHERE user_id = ? 
+2019-08-08 16:48:08.433 DEBUG  --- com.competition.dao.UserMapper.selectOne.debug                                                       [line143   ] : ==> Parameters: 1(String)
+2019-08-08 16:48:08.477 DEBUG  --- com.competition.dao.UserMapper.selectOne.debug                                                       [line143   ] : <==      Total: 0
