@@ -2,7 +2,11 @@ package com.competition.service;
 
 import com.competition.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.competition.form.SearchForm;
+import com.competition.form.SearchPost;
 import com.competition.response.PermissionClass;
+
+import java.util.List;
 
 /**
  * <p>
@@ -28,4 +32,27 @@ public interface UserService extends IService<User> {
      */
     User findByPhoneNumber(String phoneNumber);
 
+    /**
+     * 设置用户属性
+     * @param userId
+     * @param isActive
+     */
+    void setPermission(String userId,String isActive);
+
+    /**
+     * 根据id获得permissionClass对象，id对应用户的权限对象
+     * @param userId
+     * @return
+     */
+    PermissionClass getIsActive(String userId);
+
+    /**
+     * 通过用户输入的信息模糊查询个人或赛事名称
+     */
+    List<String> searchName(SearchForm searchForm);
+
+    /**
+     * 通过用户输入的信息模糊查询个人或赛事名称
+     */
+    List<SearchPost> searchAll(SearchForm searchForm);
 }

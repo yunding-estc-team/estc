@@ -1,2 +1,4 @@
-2019-08-10 10:14:36.945 ERROR  --- com.competition.controller.UserController.login                                                      [line153   ] : 用户不存在
-2019-08-10 10:14:53.771 ERROR  --- com.competition.controller.UserController.login                                                      [line153   ] : 用户不存在
+2019-08-10 09:00:47.273 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line64    ] : 喂不活的异常
+2019-08-10 09:00:47.274 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line65    ] : org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported
+2019-08-10 09:01:43.021 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line64    ] : 喂不活的异常
+2019-08-10 09:01:43.021 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line65    ] : org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported

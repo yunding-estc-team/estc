@@ -132,3 +132,4 @@ title )  VALUES  ( 'b1f207fb79314b68aa8841f527526665',
  AND certifi' at line 3
 2019-08-08 10:47:31.196 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line65    ] : 喂不活的异常
 2019-08-08 10:47:31.197 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line66    ] : org.springframework.web.bind.MissingRequestHeaderException: Missing request header 'authorization' for method parameter of type String
+

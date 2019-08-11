@@ -282,3 +282,4 @@
 2019-08-08 11:39:25.602 DEBUG  --- com.competition.dao.UserCompetitionMapper.update.debug                                               [line143   ] : ==>  Preparing: UPDATE user_competition SET checkout=?,reward=? WHERE competition_id = ? AND user_id = ? 
 2019-08-08 11:39:25.606 DEBUG  --- com.competition.dao.UserCompetitionMapper.update.debug                                               [line143   ] : ==> Parameters: 1(Integer), string(String), 1(String), 11(String)
 2019-08-08 11:39:25.660 DEBUG  --- com.competition.dao.UserCompetitionMapper.update.debug                                               [line143   ] : <==    Updates: 1
+

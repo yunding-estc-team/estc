@@ -1,5 +1,6 @@
 package com.competition.controller;
 
+import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
@@ -7,11 +8,13 @@ import com.baomidou.mybatisplus.extension.api.R;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.competition.VO.TokenObjectVO;
 import com.competition.dao.UserMapper;
+import com.competition.entity.Competition;
 import com.competition.entity.User;
 import com.competition.entity.UserCompetition;
 import com.competition.form.FileForm;
 import com.competition.form.PageForm;
 import com.competition.form.PasswordForm;
+import com.competition.form.SearchForm;
 import com.competition.response.ReturnCode;
 import com.competition.response.ReturnVO;
 import com.competition.service.UserCompetitionService;
@@ -22,11 +25,15 @@ import com.competition.util.JwtHelper;
 import com.competition.util.SendMessage;
 import com.sun.org.apache.regexp.internal.RE;
 import com.sun.org.apache.regexp.internal.REUtil;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwt;
 import javafx.print.PaperSource;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.mail.EmailException;
+import org.omg.CORBA.Current;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.web.bind.EscapedErrors;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.stereotype.Controller;
 import sun.security.jca.GetInstance;
@@ -34,6 +41,8 @@ import sun.security.util.Password;
 
 import javax.xml.transform.Templates;
 import java.security.PublicKey;
+import java.util.Date;
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
@@ -152,6 +161,7 @@ public class  UserController {
         userService.save(user);
         return new ReturnVO(ReturnCode.SUCCESS);
     }
+
     /**
      * 忘记密码
      */
@@ -234,7 +244,7 @@ public class  UserController {
         IPage<UserCompetition> userCompetitionIPage =userCompetitionService.page(
                 new Page<UserCompetition>(pageForm.getPageCurrent(),pageForm.getPageSize()),
                 Wrappers.<UserCompetition>lambdaQuery()
-                        .eq(UserCompetition::getUserId,s));
+                       .eq(UserCompetition::getCompetitionId,s));
         return new ReturnVO(ReturnCode.SUCCESS,userCompetitionIPage);
 
     }
@@ -273,16 +283,31 @@ public class  UserController {
         userCompetition.insert();
         return new ReturnVO(ReturnCode.SUCCESS);
     }
+    /**
+     * 搜索展示（输入框填充）
+     */
+    @PostMapping("/searchName")
+    public ReturnVO searchName(@RequestBody SearchForm searchForm){
+        return new ReturnVO(ReturnCode.SUCCESS,userService.searchName(searchForm));
+    }
+    /**
+     * 搜索（功能）
+     */
+    @PostMapping("searchAll")
+    public ReturnVO searchByName(@RequestBody SearchForm searchForm){
+        return new ReturnVO(ReturnCode.SUCCESS,userService.searchAll(searchForm));
+    }
+
 
 
     /**
      * sign in
      *
      */
-    @RequestMapping("signin")
+    @RequestMapping("/signin")
     public String signin(){
         TokenObjectVO tokenObjectVO = new TokenObjectVO();
-        tokenObjectVO.setId("10");
+        tokenObjectVO.setId("1234");
         //      tokenObjectVO.setType("admin");
 
 

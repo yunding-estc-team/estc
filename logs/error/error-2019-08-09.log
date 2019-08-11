@@ -1,4 +1,4 @@
-2019-08-09 10:44:37.017 ERROR  --- org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter.report                           [line40    ] : 
+2019-08-09 10:44:37.017 ERROR  --- org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter.report                           [line40    ] :
 
 ***************************
 APPLICATION FAILED TO START
