@@ -1,0 +1,6 @@
+2019-08-10 10:14:36.904 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==>  Preparing: select * from user where user_phone = ? 
+2019-08-10 10:14:36.917 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==> Parameters: 15698614402(String)
+2019-08-10 10:14:36.942 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : <==      Total: 0
+2019-08-10 10:14:53.755 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==>  Preparing: select * from user where user_phone = ? 
+2019-08-10 10:14:53.757 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==> Parameters: 15103558101(String)
+2019-08-10 10:14:53.770 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : <==      Total: 0

@@ -1,0 +1,2 @@
+2019-08-10 10:14:36.945 ERROR  --- com.competition.controller.UserController.login                                                      [line153   ] : 用户不存在
+2019-08-10 10:14:53.771 ERROR  --- com.competition.controller.UserController.login                                                      [line153   ] : 用户不存在
