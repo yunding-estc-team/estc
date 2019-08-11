@@ -107,7 +107,7 @@ public class Generator {
 		 */
 		gen.setStrategy(new StrategyConfig()
 						// .setCapitalMode(true)// 全局大写命名
-						//.setDbColumnUnderline(true)//全局下划线命名
+//						.setDbColumnUnderline(true)//全局下划线命名
 //                        .setTablePrefix(new String[]{prefix})// 此处可以修改为您的表前缀
 						.setNaming(NamingStrategy.underline_to_camel)// 表名生成策略
 						//.setInclude(tables) // 需要生成的表

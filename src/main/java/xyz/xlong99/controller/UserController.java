@@ -31,7 +31,7 @@ public class UserController {
     @RequestMapping("/getStudent")
     public ReturnVO getStudent(String page,String sort,String order){
         List<Student> students = userService.findAllStudent(page, sort, order);
-        return new ReturnVO(ReturnCode.SUCCESS,students);
+        return new ReturnVO(ReturnCode.SUCCESS,ActiveUtil.permissionStdHelper(students));
     }
 
     /**
@@ -41,7 +41,7 @@ public class UserController {
     @RequestMapping("/getOrganization")
     public ReturnVO getOrganization(String page,String sort,String order){
         List<Organization> organizations = userService.findAllOrganization(page, sort, order);
-        return new ReturnVO(ReturnCode.SUCCESS,ActiveUtil.permissionHelper(organizations));
+        return new ReturnVO(ReturnCode.SUCCESS,ActiveUtil.permissionOrgHelper(organizations));
     }
 
     /**

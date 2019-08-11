@@ -24,11 +24,11 @@ import java.util.Map;
 public class ShiroConfig {
 
     @Bean
-    public CompetitionService getCompetitionService1(){
+    public CompetitionService getCompetitionService(){
         return new CompetitionServiceImpl();
     }
     @Bean
-    public UserServiceImpl getUserService1(){
+    public UserServiceImpl getUserService(){
         return new UserServiceImpl();
     }
     //    为html标签引用而注入的bean
@@ -53,11 +53,10 @@ public class ShiroConfig {
 //        filter.put("/shiro/publish","authc,roles[organization]");
 //        filter.put("/shiro/participate","authc,roles[student]");
         filter.put("/shiro/attention","perms[user:attention]");
-        filter.put("/shiro/praise","perms[user:praise]");
         filter.put("/shiro/wiki","perms[user:wiki]");
         filter.put("/shiro/comment","perms[user:comment]");
         //todo 生产环境打开
-//        filter.put("/*","authc");
+        filter.put("/*","authc");
         //修改调整登录页面
         factoryBean.setLoginUrl("/shiro/toLogin");
         factoryBean.setUnauthorizedUrl("/shiro/noAuth");
