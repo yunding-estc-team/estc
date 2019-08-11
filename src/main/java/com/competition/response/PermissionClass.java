@@ -13,8 +13,6 @@ public class PermissionClass {
 
     private boolean login;
 
-    private boolean praise;
-
     private boolean comment;
 
     private boolean attention;

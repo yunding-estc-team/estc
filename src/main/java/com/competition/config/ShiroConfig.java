@@ -2,13 +2,15 @@ package com.competition.config;
 
 import at.pollux.thymeleaf.shiro.dialect.ShiroDialect;
 import com.competition.shiro.UserRealm;
+import xyz.xlong99.service.CompetitionService;
+import xyz.xlong99.service.impl.CompetitionServiceImpl;
+import xyz.xlong99.service.impl.UserServiceImpl;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.mgt.DefaultSecurityManager;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -20,6 +22,15 @@ import java.util.Map;
  */
 
 public class ShiroConfig {
+
+    @Bean
+    public CompetitionService getCompetitionService(){
+        return new CompetitionServiceImpl();
+    }
+    @Bean
+    public UserServiceImpl getUserService(){
+        return new UserServiceImpl();
+    }
     //    为html标签引用而注入的bean
     @Bean
     public ShiroDialect shiroDialect() {
@@ -42,11 +53,10 @@ public class ShiroConfig {
 //        filter.put("/shiro/publish","authc,roles[organization]");
 //        filter.put("/shiro/participate","authc,roles[student]");
         filter.put("/shiro/attention","perms[user:attention]");
-        filter.put("/shiro/praise","perms[user:praise]");
         filter.put("/shiro/wiki","perms[user:wiki]");
         filter.put("/shiro/comment","perms[user:comment]");
         //todo 生产环境打开
-//        filter.put("/*","authc");
+        filter.put("/*","authc");
         //修改调整登录页面
         factoryBean.setLoginUrl("/shiro/toLogin");
         factoryBean.setUnauthorizedUrl("/shiro/noAuth");

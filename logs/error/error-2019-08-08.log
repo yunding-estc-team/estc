@@ -278,3 +278,4 @@ Caused by: java.net.SocketException: Connection reset
 	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
 	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:556)
 	... 114 common frames omitted
+

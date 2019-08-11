@@ -5,14 +5,15 @@ import com.competition.service.UserService;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
+import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.util.ByteSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import java.util.HashSet;
-import java.util.Set;
+
+import java.util.*;
 
 /**
  * @author:Cui
@@ -69,9 +70,23 @@ public class UserRealm extends AuthorizingRealm {
         if(user==null){
             return null;
         }
+        //得到用户权限集合
+        List<String> list = new ArrayList<>(Arrays.asList(user.getIsActive().split(",")));
+        if(!list.contains("user:login")){
+            throw new AccountException("账号封停！");
+        }
         ByteSource salt = ByteSource.Util.bytes("xlong");
         //判断密码
         SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(user,user.getPassword(),salt,getName());
         return info;
+    }
+
+    public static void main(String[] args) {
+        String hashAlgorithmName = "MD5";
+        Object credentials = "123456";
+        Object salt = ByteSource.Util.bytes("xlong");
+        int hashIterations = 1;
+        Object result = new SimpleHash(hashAlgorithmName, credentials, salt, hashIterations);
+        System.out.println(result);
     }
 }

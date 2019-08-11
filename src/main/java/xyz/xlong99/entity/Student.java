@@ -1,7 +1,6 @@
 package xyz.xlong99.entity;
 import com.competition.response.PermissionClass;
 import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -15,13 +14,13 @@ import java.time.LocalDateTime;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-public class Student {
+public class Student  {
     private static final long serialVersionUID=1L;
 
     /**
      * 用户唯一标识,采用uuid(主键)
      */
-    @TableId
+
     private String userId;
 
     /**
@@ -101,5 +100,4 @@ public class Student {
      * 权限
      */
     private PermissionClass permissionClass;
-
 }

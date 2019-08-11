@@ -1,29 +1,34 @@
 package xyz.xlong99.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
-import com.competition.response.PermissionClass;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
- * @author xlong
- * @date 2019-08-07 10:52
+ * <p>
+ * 
+ * </p>
+ *
+ * @author GuoHaodong
+ * @since 2019-08-03
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-public class Organization extends Model<Organization> {
+public class UserBack extends Model<UserBack> {
+
     private static final long serialVersionUID=1L;
 
     /**
      * 用户唯一标识,采用uuid(主键)
      */
-//    @TableId
-
+    @TableId
     private String userId;
 
     /**
@@ -52,10 +57,29 @@ public class Organization extends Model<Organization> {
     private String realname;
 
     /**
+     * 学号，比赛发布者为空
+     */
+    private Integer userNo;
+
+    /**
      * 学校
      */
     private String userSchool;
 
+    /**
+     * 专业
+     */
+    private String userMajor;
+
+    /**
+     * 0女1男
+     */
+    private String userSex;
+
+    /**
+     * 生日
+     */
+    private String userBirth;
     /**
      * 手机号
      */
@@ -65,6 +89,16 @@ public class Organization extends Model<Organization> {
      * 邮箱
      */
     private String userEmail;
+
+    /**
+     * 认证文件照片
+     */
+    private String file;
+
+    /**
+     * 删除照片对应的hash值
+     */
+    private String hash;
 
     private String isActive;
 
@@ -85,8 +119,11 @@ public class Organization extends Model<Organization> {
      * 用户类型标示
      */
     private String userType;
-    /**
-     * 权限
-     */
-    private PermissionClass permissionClass;
+
+
+    @Override
+    protected Serializable pkVal() {
+        return this.userId;
+    }
+
 }
