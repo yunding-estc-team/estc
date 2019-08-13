@@ -47,10 +47,10 @@ public class CompetitionServiceImpl extends ServiceImpl<CompetitionDao,Competiti
      * @return competitionDao.selectCompetitionList()
      */
     @Override
-    public List<Competition> getCheckoutList(Integer page) {
-        Integer startNum = (page-1)*10;
-        Integer lastNum = page*10;
-        return competitionDao.selectCheckoutList(startNum,lastNum);
+    public List<Competition> getCheckoutList(String page,String sort,String order) {
+        Integer startNum = (Integer.parseInt(page)-1)*10;
+        String orderSql = SortUtil.toSortSql(sort, order);
+        return competitionDao.selectCheckoutList(startNum,orderSql);
     }
 
     /**
@@ -68,10 +68,10 @@ public class CompetitionServiceImpl extends ServiceImpl<CompetitionDao,Competiti
      * @return competitionDao.selectCheckoutList()
      */
     @Override
-    public List<ClaimCompetition> getClaimList(Integer page) {
-        Integer startNum = (page-1)*2;
-        Integer lastNum = page*2;
-        return competitionDao.selectClaimList(startNum,lastNum);
+    public List<ClaimCompetition> getClaimList(String page,String sort,String order) {
+        Integer startNum = (Integer.parseInt(page)-1)*10;
+        String orderSql = SortUtil.toSortSql(sort, order);
+        return competitionDao.selectClaimList(startNum,orderSql);
     }
 
     /**
@@ -85,6 +85,5 @@ public class CompetitionServiceImpl extends ServiceImpl<CompetitionDao,Competiti
         if(checkout.equals("1")){
             competitionDao.updateCompetitionHost(claimCompetition.getUserId(),claimCompetition.getCompetitionId());
         }
-
     }
 }

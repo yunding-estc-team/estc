@@ -93,9 +93,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         if (list.contains("user:attention")) {
             permissionClass.setAttention(true);
         }
-        if (list.contains("user:praise")) {
-            permissionClass.setPraise(true);
-        }
         if (list.contains("user:wiki")) {
             permissionClass.setWiki(true);
         }

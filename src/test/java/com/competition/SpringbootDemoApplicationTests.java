@@ -40,8 +40,8 @@ public class SpringbootDemoApplicationTests {
 	public void selectById(){
 		System.out.println("1");
 	}
-	@Autowired
-	CompetitionMapper mapper;
+//	@Autowired
+//	CompetitionMapper mapper;
 	@Autowired
 	CompetitionService service;
 
@@ -80,11 +80,11 @@ public class SpringbootDemoApplicationTests {
 //					.forEach(x->{
 //						assertThat(x.getCompetitionId()).isNotNull();
 //					});
-		competitionService.getOne(Wrappers.<Competition>lambdaQuery().eq(Competition::getClickCount,1));
-		mapper.selectOne(Wrappers.<Competition>lambdaQuery().select(Competition::getCompetitionId));
-		System.out.println(
-				mapper.selectOne(Wrappers.<Competition>lambdaQuery().select(Competition::getCompetitionId,Competition::getClickCount))
-		);
+//		competitionService.getOne(Wrappers.<Competition>lambdaQuery().eq(Competition::getClickCount,1));
+//		mapper.selectOne(Wrappers.<Competition>lambdaQuery().select(Competition::getCompetitionId));
+//		System.out.println(
+//				mapper.selectOne(Wrappers.<Competition>lambdaQuery().select(Competition::getCompetitionId,Competition::getClickCount))
+//		);
 	}
 	@Test
 	public void selectT(){
@@ -114,7 +114,12 @@ public class SpringbootDemoApplicationTests {
 	}
 	@Test
 	public void competitionC(){
+<<<<<<< HEAD
+//		List<Organization> organizations = userService1.findAllOrganization();
+//		System.out.println("organizations = " + organizations);
+=======
 		Competition competition = competitionService.getById("1800bb87da81438ab982c0416631054c");
+>>>>>>> origin/master
 	}
 
 

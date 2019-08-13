@@ -2,6 +2,7 @@ package xyz.xlong99.util;
 
 import com.competition.response.PermissionClass;
 import xyz.xlong99.entity.Organization;
+import xyz.xlong99.entity.Student;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -15,7 +16,7 @@ public class ActiveUtil {
 
 
     /**
-     * 设置单个PermissionClass权限
+     * 设置单个组织对象PermissionClass权限
      * @param organization
      * @return
      */
@@ -34,9 +35,6 @@ public class ActiveUtil {
         if(list.contains("user:attention")){
             permissionClass.setAttention(true);
         }
-        if(list.contains("user:praise")){
-            permissionClass.setPraise(true);
-        }
         if(list.contains("user:wiki")){
             permissionClass.setWiki(true);
         }
@@ -45,11 +43,11 @@ public class ActiveUtil {
     }
 
     /**
-     * 设置list对象的PermissionClass权限
+     * 设置组织list对象的PermissionClass权限
      * @param list
      * @return
      */
-    public static List<Organization> permissionHelper(List<Organization> list){
+    public static List<Organization> permissionOrgHelper(List<Organization> list){
         List<Organization> list1 = new ArrayList<>();
         for (Organization organization : list) {
             Organization organization1 = permissionHelper(organization);
@@ -57,6 +55,47 @@ public class ActiveUtil {
         }
         return list1;
     }
+    /**
+     * 设置单个组织对象PermissionClass权限
+     * @param student
+     * @return
+     */
+    public static Student permissionHelper (Student student){
+
+        //生成Permission对象，并用isActive属性实例化
+        PermissionClass permissionClass = new PermissionClass();
+        String isActives = student.getIsActive();
+        List<String> list = new ArrayList<>(Arrays.asList(isActives.split(",")));
+        if(list.contains("user:login")){
+            permissionClass.setLogin(true);
+        }
+        if(list.contains("user:comment")){
+            permissionClass.setComment(true);
+        }
+        if(list.contains("user:attention")){
+            permissionClass.setAttention(true);
+        }
+        if(list.contains("user:wiki")){
+            permissionClass.setWiki(true);
+        }
+        student.setPermissionClass(permissionClass);
+        return student;
+    }
+
+    /**
+     * 设置组织list对象的PermissionClass权限
+     * @param list
+     * @return
+     */
+    public static List<Student> permissionStdHelper(List<Student> list){
+        List<Student> list1 = new ArrayList<>();
+        for (Student std : list) {
+            Student student = permissionHelper(std);
+            list1.add(student);
+        }
+        return list1;
+    }
+
 
     /**
      * 调用方法修改权限

@@ -6,6 +6,7 @@ import xyz.xlong99.dao.UserDao;
 import xyz.xlong99.entity.Organization;
 import xyz.xlong99.entity.Student;
 import xyz.xlong99.service.UserService;
+import xyz.xlong99.util.SortUtil;
 
 import java.util.List;
 
@@ -22,17 +23,17 @@ public class UserServiceImpl implements UserService {
     private UserDao userDao;
 
     @Override
-    public List<Student> findAllStudent(Integer page) {
-        Integer startNum = (page-1)*10;
-        Integer lastNum = page*10;
-        return userDao.selectAllStudent(startNum,lastNum);
+    public List<Student> findAllStudent(String page,String sort,String order) {
+        Integer startNum = (Integer.parseInt(page)-1)*10;
+        String orderSql = SortUtil.toSortSql(sort, order);
+        return userDao.selectAllStudent(startNum,orderSql);
     }
 
     @Override
-    public List<Organization> findAllOrganization(Integer page) {
-        Integer startNum = (page-1)*10;
-        Integer lastNum = page*10;
-        return userDao.selectAllOrganization(startNum,lastNum);
+    public List<Organization> findAllOrganization(String page,String sort,String order) {
+        Integer startNum = (Integer.parseInt(page)-1)*10;
+        String orderSql = SortUtil.toSortSql(sort, order);
+        return userDao.selectAllOrganization(startNum,orderSql);
     }
 
     @Override

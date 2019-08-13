@@ -96,3 +96,9 @@
 2019-08-13 11:03:22.442 DEBUG  --- com.competition.dao.UserMapper.searchAllStd.debug                                                    [line143   ] : ==>  Preparing: select * from user WHERE 1=1 and user_name like CONCAT('%',?,'%') and user_type = ?LIMIT ?, ?; 
 2019-08-13 11:03:22.479 DEBUG  --- com.competition.dao.UserMapper.searchAllStd.debug                                                    [line143   ] : ==> Parameters: ghd(String), student(String), 1(Integer), 5(Integer)
 2019-08-13 11:03:22.523 DEBUG  --- com.competition.dao.UserMapper.searchAllStd.debug                                                    [line143   ] : <==      Total: 3
+2019-08-13 11:11:24.191 DEBUG  --- com.competition.dao.UserMapper.searchAllStd.debug                                                    [line143   ] : ==>  Preparing: select * from user WHERE 1=1 and user_name like CONCAT('%',?,'%') and user_type = ?LIMIT ?, ?; 
+2019-08-13 11:11:24.219 DEBUG  --- com.competition.dao.UserMapper.searchAllStd.debug                                                    [line143   ] : ==> Parameters: ghd(String), student(String), 1(Integer), 5(Integer)
+2019-08-13 11:11:24.269 DEBUG  --- com.competition.dao.UserMapper.searchAllStd.debug                                                    [line143   ] : <==      Total: 3
+2019-08-13 11:13:28.652 DEBUG  --- com.competition.dao.UserMapper.searchAllStd.debug                                                    [line143   ] : ==>  Preparing: select * from user WHERE 1=1 and user_name like CONCAT('%',?,'%') and user_type = ?LIMIT ?, ?; 
+2019-08-13 11:13:28.653 DEBUG  --- com.competition.dao.UserMapper.searchAllStd.debug                                                    [line143   ] : ==> Parameters: ghd(String), student(String), 1(Integer), 5(Integer)
+2019-08-13 11:13:28.679 DEBUG  --- com.competition.dao.UserMapper.searchAllStd.debug                                                    [line143   ] : <==      Total: 3

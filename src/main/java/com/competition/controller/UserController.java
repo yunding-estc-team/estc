@@ -323,6 +323,8 @@ public class  UserController {
         TokenObjectVO tokenObjectVO = new TokenObjectVO();
         tokenObjectVO.setId("1234");
         //      tokenObjectVO.setType("admin");
+
+
         return JwtHelper.generateToken(tokenObjectVO);
     }
 }
