@@ -9,4 +9,7 @@ public class SearchForm extends PageForm{
      */
     String name;
 
+
+    String type;
+
 }

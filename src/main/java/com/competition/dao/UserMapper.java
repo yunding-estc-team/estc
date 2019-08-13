@@ -49,14 +49,20 @@ public interface UserMapper extends BaseMapper<User> {
     /**
      * 通过用户输入的信息模糊搜索
      */
-    @Select("select * from user WHERE user_name like CONCAT('%',#{name},'%')"+
+    @Select("select * from user WHERE 1=1 and user_name like CONCAT('%',#{name},'%') and user_type = #{type}"+
 //            "ORDER BY createAt DESC " +
             "LIMIT #{aParam}, #{pageSize};")
-    List<SearchPost> searchAllCompetition(String name,Integer aParam,Integer pageSize);
+    List<SearchPost>  searchAllStd(String name,String type,Integer aParam,Integer pageSize);
 
-    @Select("select * from competition WHERE  name like CONCAT('%',#{name},'%')"+
+    @Select("select * from user WHERE 1=1 and user_name like CONCAT('%',#{name},'%') and user_type = #{type}"+
 //            "ORDER BY createAt DESC " +
             "LIMIT #{aParam}, #{pageSize};")
-    List<SearchPost> searchAllUser(String name, Integer aParam, Integer pageSize);
+    List<SearchPost> searchAllOrg(String name,String type,Integer aParam,Integer pageSize);
+
+
+    @Select("select * from competition WHERE 1=1 and name like CONCAT('%',#{name},'%')"+
+//            "ORDER BY createAt DESC " +
+            "LIMIT #{aParam}, #{pageSize};")
+    List<SearchPost> searchAllCompetition(String name,Integer aParam, Integer pageSize);
 
 }

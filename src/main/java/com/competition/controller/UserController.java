@@ -205,7 +205,7 @@ public class  UserController {
         }
     }
 
-    /**
+    /**-
      * 个人信息获取
      */
     @GetMapping("/info")
@@ -223,13 +223,27 @@ public class  UserController {
      * 编辑个人资料
      */
     @PostMapping("/updateInfo")
-    public ReturnVO updateInof(@RequestBody User user, @RequestHeader String authorization){
+    public ReturnVO updateInfo(@RequestBody User user, @RequestHeader String authorization){
         //解析token
         String id =JwtHelper.parserToken(authorization).getId();
-        user.setUserId("10");
+        user.setUserId(id);
         user.update(new QueryWrapper<User>().lambda().eq(User::getUserId,id));
         return new ReturnVO(ReturnCode.SUCCESS);
     }
+    /**
+     * 编辑个人隐私资料（需要重新认证）
+     */
+    @PostMapping("/updatePrivateInfo")
+    public ReturnVO updatePrivateInfo(@RequestBody User user, @RequestHeader String authorization) {
+        //解析token
+        String id = JwtHelper.parserToken(authorization).getId();
+        user.setUserId(id);
+        user.setCheckout("3");
+        user.update(new QueryWrapper<User>().lambda().eq(User::getUserId, id));
+        return new ReturnVO(ReturnCode.SUCCESS);
+    }
+
+
 
     /**
      * 获取获奖赛事相关信息（作分页）
