@@ -48,6 +48,8 @@ public class CompetitionController {
         competitionServiceX.save(competition);
         return new ReturnVO(ReturnCode.SUCCESS);
     }
+
+
     /**
      * 修改赛事信息
      */

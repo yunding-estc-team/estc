@@ -1,6 +1,8 @@
 package com.competition.controller;
 
 import com.competition.entity.User;
+import com.competition.response.ReturnCode;
+import com.competition.response.ReturnVO;
 import com.competition.service.UserService;
 import com.competition.shiro.UserNamePasswordTelphoneToken;
 import com.competition.shiro.UsernamePasswordEntity;
@@ -134,12 +136,11 @@ public class ShiroController {
      * @return
      */
     @RequestMapping("/loginByPassword")
-    public String loginByPassword(@RequestParam("name")String name, @RequestParam("password")String password, Model model){
+    public ReturnVO loginByPassword(@RequestParam("name")String name, @RequestParam("password")String password, Model model){
         /**
          *shiro编写认证操作
          */
         Subject subject = SecurityUtils.getSubject();
-
         //封装用户数据
         if(!subject.isAuthenticated()){
             UsernamePasswordEntity entity = new UsernamePasswordEntity();
@@ -148,25 +149,25 @@ public class ShiroController {
             //执行登录操作
             try {
                 subject.login(token);
-                return "redirect:testThymeleaf";
+                return new ReturnVO(ReturnCode.SUCCESS);
             }catch (UnknownAccountException e){
-                model.addAttribute("msg","用户不存在");
+                model.addAttribute("msg","用户名或密码错误");
                 logger.error("用户不存在");
-                return "login";
+                return new ReturnVO(ReturnCode.FAILURE_6);
             }catch (AccountException e){
                 model.addAttribute("msg","此号已被封停！");
                 logger.error("此号被封！");
-                return "login";
+                return new ReturnVO(ReturnCode.FAILURE_8);
             }catch (IncorrectCredentialsException e){
-                model.addAttribute("msg","密码错误");
+                model.addAttribute("msg","用户名或密码错误");
                 logger.error("密码错误");
-                return "login";
+                return new ReturnVO(ReturnCode.FAILURE_6);
             }
         }
-        return "redirect:testThymeleaf";
+        return new ReturnVO(ReturnCode.SUCCESS);
     }
     @RequestMapping("loginByCode")
-    public String loginByCode(@RequestParam("name")String name,@RequestParam("code")String code,Model model){
+    public ReturnVO loginByCode(@RequestParam("name")String name,@RequestParam("code")String code,Model model){
         /**
          *shiro编写认证操作
          */
@@ -181,24 +182,31 @@ public class ShiroController {
                 //执行登录功能
                 try{
                     subject.login(token);
-                    return "redirect:testThymeleaf";
+                    return new ReturnVO();
                 }catch (IncorrectCredentialsException e){
                     System.out.println("验证码登录异常！");
                     model.addAttribute("msg","验证码登录异常！");
-                    return "login";
+                    return new ReturnVO(ReturnCode.FAILURE_3);
                 }catch (AccountException e){
                     model.addAttribute("msg","账号封停！");
-                    return "login";
+                    return new ReturnVO(ReturnCode.FAILURE_8);
                 }
             }else {
                 model.addAttribute("msg", "验证码错误！");
-                return "login";
+                return new ReturnVO(ReturnCode.FAILURE_7);
             }
         }
-        return "redirect:testThymeleaf";
+        return new ReturnVO(ReturnCode.SUCCESS);
     }
+
+    /**
+     *发送验证码
+     * @param name
+     * @param model
+     * @return
+     */
     @PostMapping("loginByCodeSend")
-    public String loginByCodeSend(@RequestParam("name")String name,Model model){
+    public ReturnVO loginByCodeSend(@RequestParam("name")String name, Model model){
         CheckAccountType checkAccountType = new CheckAccountType();
         //判断用户输入是手机号还是邮箱
         if(checkAccountType.checkPhone(name)){
@@ -210,11 +218,11 @@ public class ShiroController {
                 template.opsForValue().set(name, truecode);
                 System.out.println(template.opsForValue().get(name));
                 model.addAttribute("msg","验证码发送成功!");
-                return "login";
+                return new ReturnVO(ReturnCode.SUCCESS);
             }else {
-                model.addAttribute("msg","用户名不存在！");
+                model.addAttribute("msg","用户名或密码错误！");
                 System.out.println("用户名不存在");
-                return "login";
+                return new ReturnVO(ReturnCode.FAILURE_6);
             }
         }else if(checkAccountType.checkEmail(name)) {
             User user = userService.findByEmail(name);
@@ -230,15 +238,14 @@ public class ShiroController {
                 //redis存储验证码
                 template.opsForValue().set(name, truecode);
                 model.addAttribute("msg", "验证码发送成功！");
-                return "login";
+                return new ReturnVO(ReturnCode.SUCCESS);
             }else {
-                model.addAttribute("msg","用户名不存在！");
-                return "login";
+                model.addAttribute("msg","用户名或密码错误！");
+                return new ReturnVO(ReturnCode.FAILURE_6);
             }
         }else{
             model.addAttribute("手机号或邮箱错误！");
-            return "login";
+            return new ReturnVO(ReturnCode.FAILURE_5);
         }
-
     }
 }
