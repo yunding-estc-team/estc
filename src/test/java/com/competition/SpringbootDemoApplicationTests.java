@@ -114,12 +114,7 @@ public class SpringbootDemoApplicationTests {
 	}
 	@Test
 	public void competitionC(){
-<<<<<<< HEAD
-//		List<Organization> organizations = userService1.findAllOrganization();
-//		System.out.println("organizations = " + organizations);
-=======
 		Competition competition = competitionService.getById("1800bb87da81438ab982c0416631054c");
->>>>>>> origin/master
 	}
 
 

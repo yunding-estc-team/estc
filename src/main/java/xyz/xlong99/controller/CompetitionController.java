@@ -3,12 +3,14 @@ package xyz.xlong99.controller;
 import com.competition.entity.Competition;
 import com.competition.response.ReturnCode;
 import com.competition.response.ReturnVO;
+import org.springframework.beans.factory.annotation.Autowired;
 import xyz.xlong99.entity.ClaimCompetition;
 import xyz.xlong99.form.CompetitionForm;
 import xyz.xlong99.service.CompetitionService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
 
 /**
  * @author xlong
@@ -19,8 +21,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/admin/Competition")
 public class CompetitionController {
 
-    @Autowired
-    private CompetitionService competitionService;
+	@Autowired
+    CompetitionService competitionServiceX;
 //    /**
 //     * 获取全部比赛信息
 //     * @return
@@ -35,7 +37,7 @@ public class CompetitionController {
     @RequestMapping("/orderCompetition")
     public ReturnVO orderCompetition(String page,String sort,String order){
 
-        return new ReturnVO(ReturnCode.SUCCESS, competitionService.orderCompetition(page,sort,order));
+        return new ReturnVO(ReturnCode.SUCCESS, competitionServiceX.orderCompetition(page,sort,order));
     }
     /**
      * 添加赛事信息(用save方法)
@@ -43,7 +45,7 @@ public class CompetitionController {
     @RequestMapping("/addCompetition")
     public ReturnVO addCompetition(CompetitionForm competitionForm){
         Competition competition = competitionForm.toEntity();
-        competitionService.save(competition);
+        competitionServiceX.save(competition);
         return new ReturnVO(ReturnCode.SUCCESS);
     }
     /**
@@ -51,7 +53,7 @@ public class CompetitionController {
      */
     @RequestMapping("/updateCompetition")
     public ReturnVO updateCompetition(Competition competition){
-        competitionService.updateCompetition(competition);
+        competitionServiceX.updateCompetition(competition);
         return new ReturnVO(ReturnCode.SUCCESS);
     }
     /**
@@ -59,14 +61,14 @@ public class CompetitionController {
      */
     @RequestMapping("/getCheck")
     public ReturnVO getCheck(String page,String sort,String order){
-        return new ReturnVO(ReturnCode.SUCCESS,competitionService.getCheckoutList(page, sort, order));
+        return new ReturnVO(ReturnCode.SUCCESS,competitionServiceX.getCheckoutList(page, sort, order));
     }
     /**
      * 修改赛事审核状态
      */
     @RequestMapping("/updateCheck")
     public ReturnVO updateCheck(String competitionId,String code){
-        competitionService.setCheckoutCompetition(competitionId,code);
+        competitionServiceX.setCheckoutCompetition(competitionId,code);
         return new ReturnVO(ReturnCode.SUCCESS);
     }
     /**
@@ -74,14 +76,14 @@ public class CompetitionController {
      */
     @RequestMapping("/getClaim")
     public ReturnVO getClaim(String page,String sort,String order){
-        return new ReturnVO(ReturnCode.SUCCESS,competitionService.getClaimList(page, sort, order));
+        return new ReturnVO(ReturnCode.SUCCESS,competitionServiceX.getClaimList(page, sort, order));
     }
     /**
      * 修改比赛认领状态
      */
     @RequestMapping("/updateClaim")
     public ReturnVO updateClaim(ClaimCompetition claimCompetition, String code){
-        competitionService.setClaimCompetition(claimCompetition,code);
+        competitionServiceX.setClaimCompetition(claimCompetition,code);
         return new ReturnVO(ReturnCode.SUCCESS);
     }
 }

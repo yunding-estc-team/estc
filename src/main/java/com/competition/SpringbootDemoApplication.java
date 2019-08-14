@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Import;
 /**
  * @author AsparagusFern
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.competition","xyz.xlong99"})
 @Import({com.competition.config.SpringConfig.class,
 		com.competition.config.RedisConfig.class,
 		com.competition.config.MybatisPlusConfig.class,
