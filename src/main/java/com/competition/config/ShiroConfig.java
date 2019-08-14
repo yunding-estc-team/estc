@@ -58,7 +58,7 @@ public class ShiroConfig {
         filter.put("/shiro/wiki","perms[user:wiki]");
         filter.put("/shiro/comment","perms[user:comment]");
         //todo 生产环境打开
-//        filter.put("/*","authc");
+        filter.put("/*","authc");
         //修改调整登录页面
         factoryBean.setLoginUrl("/shiro/toLogin");
         factoryBean.setUnauthorizedUrl("/shiro/noAuth");

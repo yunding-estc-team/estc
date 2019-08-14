@@ -47,6 +47,16 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     }
 
     /**
+     * 通过邮箱查询用户
+     * @param email
+     * @return
+     */
+    @Override
+    public User findByEmail(String email) {
+        return userMapper.findByEmail(email);
+    }
+
+    /**
      * 设置属性
      *
      * @param userId

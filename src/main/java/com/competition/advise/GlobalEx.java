@@ -63,7 +63,7 @@ public class GlobalEx {
 	@ExceptionHandler(Exception.class)
 	public ReturnVO ex(Exception ex){
 		log.error("喂不活的异常");
-		log.error(ex.toString());
+		log.error(ex.getClass().toString());
 		return ReturnVO.failure(ReturnCode.FAILURE_3);
 	}
 
