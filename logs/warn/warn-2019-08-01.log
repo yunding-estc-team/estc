@@ -1,4 +1,0 @@
-2019-08-01 08:56:00.282 WARN   --- com.competition.demo.LogbackDemo.test1                                                               [line30    ] : 警告
-2019-08-01 08:58:49.272 WARN   --- com.competition.demo.LogbackDemo.test1                                                               [line30    ] : 警告
-2019-08-01 08:59:26.647 WARN   --- com.competition.demo.LogbackDemo.test1                                                               [line30    ] : 警告
-2019-08-01 09:04:35.024 WARN   --- com.competition.demo.LogbackDemo.test1                                                               [line30    ] : 警告

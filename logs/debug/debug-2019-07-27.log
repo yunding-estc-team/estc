@@ -1,6 +1,0 @@
-2019-07-27 20:14:47.658 DEBUG  --- com.competition.dao.mapper.UserMapper.getUserById.debug                                          [line143   ] : ==>  Preparing: SELECT * FROM user WHERE user_id=?
-2019-07-27 20:14:47.862 DEBUG  --- com.competition.dao.mapper.UserMapper.getUserById.debug                                          [line143   ] : ==> Parameters: 1(String)
-2019-07-27 20:14:48.018 DEBUG  --- com.competition.dao.mapper.UserMapper.getUserById.debug                                          [line143   ] : <==      Total: 1
-2019-07-27 20:16:37.648 DEBUG  --- com.competition.dao.mapper.UserMapper.getUserById.debug                                          [line143   ] : ==>  Preparing: SELECT * FROM user WHERE user_id=?
-2019-07-27 20:16:37.695 DEBUG  --- com.competition.dao.mapper.UserMapper.getUserById.debug                                          [line143   ] : ==> Parameters: 1(String)
-2019-07-27 20:16:37.777 DEBUG  --- com.competition.dao.mapper.UserMapper.getUserById.debug                                          [line143   ] : <==      Total: 1
