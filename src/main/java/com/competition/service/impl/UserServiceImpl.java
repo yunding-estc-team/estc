@@ -23,7 +23,7 @@ import java.util.Map;
  * @author GuoHaodong
  * @since 2019-08-02
  */
-@Service
+@Service("UserService")
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 
     @Autowired
@@ -44,6 +44,16 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Override
     public User findByPhoneNumber(String phoneNumber) {
         return userMapper.findByPhoneNumber(phoneNumber);
+    }
+
+    /**
+     * 通过邮箱查询用户
+     * @param email
+     * @return
+     */
+    @Override
+    public User findByEmail(String email) {
+        return userMapper.findByEmail(email);
     }
 
     /**

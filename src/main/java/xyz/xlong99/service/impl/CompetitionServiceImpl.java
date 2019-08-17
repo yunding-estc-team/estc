@@ -18,7 +18,7 @@ import java.util.List;
  * @description:
  * @action:
  */
-@Service
+@Service("CompetitonServiceX")
 public class CompetitionServiceImpl extends ServiceImpl<CompetitionDao,Competition> implements CompetitionService {
 
     @Autowired

@@ -1,5 +1,6 @@
 package xyz.xlong99.service.impl;
 
+import org.springframework.stereotype.Service;
 import xyz.xlong99.util.ActiveUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import xyz.xlong99.dao.UserDao;
@@ -17,6 +18,7 @@ import java.util.List;
  * @description:
  * @action:
  */
+@Service("UserServiceX")
 public class UserServiceImpl implements UserService {
 
     @Autowired

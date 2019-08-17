@@ -1,0 +1,4 @@
+2019-08-17 09:00:28.485 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line65    ] : 喂不活的异常
+2019-08-17 09:00:28.486 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line66    ] : org.springframework.web.bind.MissingRequestHeaderException: Missing request header 'authorization' for method parameter of type String
+2019-08-17 09:03:17.325 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line65    ] : 喂不活的异常
+2019-08-17 09:03:17.325 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line66    ] : org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' not supported
