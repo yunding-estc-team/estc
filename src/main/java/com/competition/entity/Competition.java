@@ -91,15 +91,6 @@ public class Competition extends Model<Competition> {
      */
     private Integer hot;
 
-    /**
-     * 审核文件
-     */
-    private String file;
-
-    /**
-     * 删除文件用的hash值
-     */
-    private String hash;
 
     @TableField("createAt")
     private LocalDateTime createAt;

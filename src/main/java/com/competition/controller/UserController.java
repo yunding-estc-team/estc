@@ -321,7 +321,7 @@ public class  UserController {
     @RequestMapping("/signin")
     public String signin(){
         TokenObjectVO tokenObjectVO = new TokenObjectVO();
-        tokenObjectVO.setId("1234");
+        tokenObjectVO.setId("08c1104f-4e82-41a5-b52a-3750a616b6c3");
         //      tokenObjectVO.setType("admin");
 
 
