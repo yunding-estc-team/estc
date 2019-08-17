@@ -4,13 +4,13 @@ import com.competition.entity.Competition;
 import com.competition.response.ReturnCode;
 import com.competition.response.ReturnVO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import xyz.xlong99.entity.ClaimCompetition;
 import xyz.xlong99.form.CompetitionForm;
+import xyz.xlong99.form.UserForm;
 import xyz.xlong99.service.CompetitionService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.annotation.Resource;
 
 /**
  * @author xlong
@@ -35,9 +35,9 @@ public class CompetitionController {
      * 按照特定规则排序比赛
      */
     @RequestMapping("/orderCompetition")
-    public ReturnVO orderCompetition(String page,String sort,String order){
+    public ReturnVO orderCompetition(@RequestBody UserForm form){
 
-        return new ReturnVO(ReturnCode.SUCCESS, competitionServiceX.orderCompetition(page,sort,order));
+        return new ReturnVO(ReturnCode.SUCCESS, competitionServiceX.orderCompetition(form.getPage(),form.getSort(),form.getOrder()));
     }
     /**
      * 添加赛事信息(用save方法)
@@ -62,8 +62,8 @@ public class CompetitionController {
      * 获取未审核的赛事
      */
     @RequestMapping("/getCheck")
-    public ReturnVO getCheck(String page,String sort,String order){
-        return new ReturnVO(ReturnCode.SUCCESS,competitionServiceX.getCheckoutList(page, sort, order));
+    public ReturnVO getCheck(@RequestBody UserForm form){
+        return new ReturnVO(ReturnCode.SUCCESS,competitionServiceX.getCheckoutList(form.getPage(), form.getSort(), form.getOrder()));
     }
     /**
      * 修改赛事审核状态
@@ -77,8 +77,8 @@ public class CompetitionController {
      * 获取比赛认领申请
      */
     @RequestMapping("/getClaim")
-    public ReturnVO getClaim(String page,String sort,String order){
-        return new ReturnVO(ReturnCode.SUCCESS,competitionServiceX.getClaimList(page, sort, order));
+    public ReturnVO getClaim(@RequestBody UserForm form){
+        return new ReturnVO(ReturnCode.SUCCESS,competitionServiceX.getClaimList(form.getPage(), form.getSort(), form.getOrder()));
     }
     /**
      * 修改比赛认领状态
