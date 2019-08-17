@@ -1,0 +1,4 @@
+2019-08-15 10:29:22.728 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line65    ] : 喂不活的异常
+2019-08-15 10:29:22.730 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line66    ] : class org.springframework.web.bind.MissingServletRequestParameterException
+2019-08-15 10:32:47.466 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line65    ] : 喂不活的异常
+2019-08-15 10:32:47.467 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line66    ] : class org.springframework.web.bind.MissingServletRequestParameterException

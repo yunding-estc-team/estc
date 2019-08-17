@@ -1,14 +1,12 @@
 package com.competition;
 
-import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.competition.entity.Competition;
-import com.competition.entity.CompetitionCheckout;
-import com.competition.entity.UserCompetition;
+import com.competition.entity.UserAttention;
 import com.competition.response.CompetitionRewardVO;
 import com.competition.service.CompetitionCheckoutService;
 import com.competition.service.CompetitionService;
+import com.competition.service.UserAttentionService;
 import com.competition.service.UserCompetitionService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
@@ -39,13 +37,28 @@ public class ControllerTest {
 	}
 
 
+	@Autowired
+	UserAttentionService userAttentionService;
 	@Test
 	public void competitionHistory(){
-		IPage competitionList = competitionService.
-				page(new Page<Competition>(1,1), Wrappers.<Competition>lambdaQuery()
-						.select(Competition::getName)
-						.eq(Competition::getHost,1));
-		log.info(competitionList.toString());
+		competitionService.list().forEach(competition -> {
+			//关注
+			double attention = userAttentionService.count(Wrappers.<UserAttention>lambdaQuery()
+					.eq(UserAttention::getCompetitionId,competition.getCompetitionId())
+			);
+			//点击量
+			double click = competition.getClickCount();
+
+			//保研率
+			double rgr = competition.getRgr();
+
+			Double hot =rgr*0.5+click*0.1+attention*0.3;
+
+			String s = hot.toString().substring(0,hot.toString().indexOf('.'));
+			log.info(s);
+			competition.setHot(Integer.valueOf(s));
+			competitionService.updateById(competition);
+		});
 	}
 
 	@Autowired

@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.naming.AuthenticationException;
+
 /**
  * @author GuoHaodong
  * @date 2019-0804 11:55:29
@@ -58,6 +60,18 @@ public class GlobalEx {
 		log.error("mybatis plus 运行错误");
 		log.error(ex.toString());
 		return ReturnVO.failure(ReturnCode.FAILURE_3);
+	}
+
+	@ExceptionHandler({IllegalArgumentException.class,})
+	public ReturnVO e(IllegalArgumentException ex){
+		log.warn("参数错误");
+		log.warn(ex.getMessage());
+		return ReturnVO.failure(ReturnCode.FAILURE_3);
+	}
+	@ExceptionHandler(AuthenticationException.class)
+	public ReturnVO e(AuthenticationException ex){
+		log.warn("用户认证失败");
+		return ReturnVO.failure(ReturnCode.FAILURE_6);
 	}
 
 	@ExceptionHandler(Exception.class)
