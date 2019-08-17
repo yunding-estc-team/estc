@@ -33,8 +33,10 @@ spring:
       max-file-size: 3MB
   #  redis
   redis:
-    host: 39.105.210.140
-    password: root
+#    host: 39.105.210.140
+    host: localhost
+#    password: root
+    password: redis
     port: 6379
     lettuce:
       pool:

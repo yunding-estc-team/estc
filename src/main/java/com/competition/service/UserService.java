@@ -33,6 +33,13 @@ public interface UserService extends IService<User> {
     User findByPhoneNumber(String phoneNumber);
 
     /**
+     * 通过邮箱查询手机号
+     * @param email
+     * @return
+     */
+    User findByEmail(String email);
+
+    /**
      * 设置用户属性
      * @param userId
      * @param isActive

@@ -7,9 +7,26 @@
 <body>
 <h3>登录</h3>
 <h3 th:text="${msg}" style="color: red"></h3>
-<form method="post" action="login">
+<form method="post" action="loginByPassword">
     用户名：<input type="text" name="name">
+    <br/>
     密码：<input type="password" name="password">
+    <input type="submit" value="登录">
+</form>
+<br/>
+<br/>
+<h3 th:text="${msg}" style="color: red"></h3>
+<form method="post" action="loginByCodeSend">
+    用户名：<input type="text" name="name">
+    <input type="submit" value="发送验证码">
+</form>
+<br/>
+<br/>
+<h3 th:text="${msg}" style="color: red"></h3>
+<form method="post" action="loginByCode">
+    用户名：<input type="text" name="name">
+    <br/>
+    验证码：<input type="password" name="code">
     <input type="submit" value="登录">
 </form>
 </body>
