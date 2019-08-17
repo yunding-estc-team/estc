@@ -24,4 +24,8 @@ public class DeleteUtil {
             }
             return jsonObject;
         }
+
+    public static void main(String[] args) {
+        System.out.println(deletePhoto("tASfz3PuIXpljceWFx7RC5iMOo"));
+    }
 }

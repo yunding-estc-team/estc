@@ -57,7 +57,7 @@ public class CompetitionController {
 	public ReturnVO rank(Page<Competition> page){
 		log.info("获取排行榜");
 		IPage iPage = competitionService.page(page,Wrappers.<Competition>lambdaQuery()
-				.select(Competition::getHot)
+				.select(Competition::getHot,Competition::getCompetitionId,Competition::getName,Competition::getType)
 				.orderByDesc(Competition::getHot));
 		log.info("分页信息"+iPage.getRecords().toString());
 		return new ReturnVO(ReturnCode.SUCCESS,iPage);
@@ -66,21 +66,10 @@ public class CompetitionController {
 	/**
 	 * 排行榜源数据获取
 	 */
-	@GetMapping("data/{id}")
-	public ReturnVO data(@PathVariable String id) {
-		//todo
-		// 热度,报名链接点击次数,升学辅助,点击量,主办方资质(能力),
-		return ReturnVO.success();
-	}
-
-	/**
-	 * 发布赛事
-	 */
-	@PostMapping("new")
-	public ReturnVO postCompetition(Competition competition){
-		competitionService.save(competition);
-		return new ReturnVO(ReturnCode.SUCCESS);
-	}
+		@GetMapping("data")
+	public ReturnVO data(@RequestParam String id) {
+		return ReturnVO.success(competitionService.getById(id).getRgr());
+		}
 
 
 	/**
@@ -97,18 +86,19 @@ public class CompetitionController {
 		checkout.setUserId(userId);
 		checkout.setDescription(fileForm.getDescription());
 		checkout.setId(UUID.randomUUID().toString());
+		checkout.insert();
 
-		return new ReturnVO();
+		return new ReturnVO(ReturnCode.SUCCESS);
 	}
 
 	/**
 	 * 赛事访问量获取
 	 */
-	@GetMapping("clickCount")
+		@GetMapping("clickCount")
 	public ReturnVO clickCount(@RequestBody CompetitionForm competitionForm){
 		Competition competition = new Competition();
 		competition.setClickCount(competitionService.getById(competitionForm.getId()).getClickCount());
-		return new ReturnVO(ReturnCode.SUCCESS,competition);
+		return new ReturnVO(ReturnCode.SUCCESS,competition.getClickCount());
 	}
 
 	/**
@@ -153,9 +143,5 @@ public class CompetitionController {
 				 .eq(Competition::getCompetitionId, competitionForm.getId()))
 		);
 	}
-
-	/**
-	 * 获取历史问答
-	 */
 }
 
