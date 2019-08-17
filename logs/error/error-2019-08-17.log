@@ -1,0 +1,2 @@
+2019-08-17 09:38:21.009 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line65    ] : 喂不活的异常
+2019-08-17 09:38:21.009 ERROR  --- com.competition.advise.GlobalEx.ex                                                                   [line66    ] : class org.springframework.web.HttpRequestMethodNotSupportedException
