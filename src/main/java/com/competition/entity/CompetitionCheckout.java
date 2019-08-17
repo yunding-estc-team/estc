@@ -27,7 +27,6 @@ public class CompetitionCheckout extends Model<CompetitionCheckout> {
     /**
      * 赛事id
      */
-    @TableField("competitionId")
     private String competitionId;
 
     /**

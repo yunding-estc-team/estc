@@ -91,6 +91,7 @@ public class Competition extends Model<Competition> {
      */
     private Integer hot;
 
+
     @TableField("createAt")
     private LocalDateTime createAt;
 
