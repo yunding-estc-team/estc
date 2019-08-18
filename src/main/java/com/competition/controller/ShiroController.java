@@ -32,8 +32,8 @@ import static com.competition.util.SendMessage.sendMessage;
  * @action:
  */
 @RestController
-@CrossOrigin
 @RequestMapping("/shiro")
+@CrossOrigin
 public class ShiroController {
     Logger logger = LoggerFactory.getLogger(UserController.class);
 

@@ -30,6 +30,7 @@ import io.jsonwebtoken.Jwt;
 import javafx.print.PaperSource;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.mail.EmailException;
+import org.apache.shiro.authc.Account;
 import org.omg.CORBA.Current;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -57,6 +58,7 @@ import static com.competition.util.SendMessage.sendMessage;
         * @since 2019-08-02
         */
 @Slf4j
+@CrossOrigin
 @RestController
 @RequestMapping("/user")
 public class  UserController {
@@ -75,8 +77,10 @@ public class  UserController {
      * 校验用户是否存在
      */
     @PostMapping("/checkUser")
-    public ReturnVO  checkUser(@RequestBody String email){
-        User user =userService.getOne(new QueryWrapper<User>().lambda().eq(User::getUserEmail,email));
+    public ReturnVO  checkUser(@RequestBody PasswordForm passwordForm){
+        User user =userService.getOne(new QueryWrapper<User>()
+                .lambda().eq(User::getUserEmail,passwordForm.getAddress())
+                .or().eq(User::getUserPhone,passwordForm.getAddress()));
         Boolean bool = (user != null);
         if(bool){
             return new ReturnVO(ReturnCode.SUCCESS);
@@ -89,26 +93,21 @@ public class  UserController {
      * 判断用户类型(邮箱或手机)
      */
     @PostMapping("/checkAccountType")
-    public ReturnVO checkAccountType(@RequestBody String Account){
+    public ReturnVO checkAccountType(@RequestBody PasswordForm passwordForm){
         CheckAccountType checkAccountType = new CheckAccountType();
-        if(Account.length() == 11){
-            if(checkAccountType.checkPhone(Account)){
-                return new ReturnVO(ReturnCode.SUCCESS,"手机号");
-            }else{
-                return new ReturnVO(ReturnCode.FAILURE_2);
-            }
-        }else if(checkAccountType.checkEmail(Account)) {
-            return new ReturnVO(ReturnCode.SUCCESS,"邮箱");
+        if(checkAccountType.checkPhone(passwordForm.getAddress())) {
+            return new ReturnVO(ReturnCode.SUCCESS, "phone");
+        }else if(checkAccountType.checkEmail(passwordForm.getAddress())) {
+            return new ReturnVO(ReturnCode.SUCCESS,"email");
         }else{
             return new ReturnVO(ReturnCode.FAILURE_2);
         }
-
     }
     /**
      * 发送邮箱验证码
      */
     @PostMapping("/msg/email")
-    public ReturnVO sendEmmailCode(@RequestBody String adress){
+    public ReturnVO sendEmailCode(@RequestBody String adress){
         SendMessage sendMessage =new SendMessage();
         try {
             //发送验证码
@@ -220,7 +219,7 @@ public class  UserController {
     }
 
     /**
-     * 编辑个人资料
+     * 编辑个人资料（非私密信息）
      */
     @PostMapping("/updateInfo")
     public ReturnVO updateInfo(@RequestBody User user, @RequestHeader String authorization){
@@ -242,6 +241,7 @@ public class  UserController {
         user.update(new QueryWrapper<User>().lambda().eq(User::getUserId, id));
         return new ReturnVO(ReturnCode.SUCCESS);
     }
+
 
 
 
@@ -275,9 +275,10 @@ public class  UserController {
         log.info(passwordForm.toString());
         if(checkCode.checkcode(passwordForm,template)) {
             String uuid = UUID.randomUUID().toString().replaceAll("-", "");
-            user.setUserName(passwordForm.getUsername());
+            user.setUserName(passwordForm.getUserName());
             user.setPassword(passwordForm.getPassword());
-            user.setUserEmail(passwordForm.getAddress());
+            user.setUserEmail(passwordForm.getEmail());
+            user.setUserPhone(passwordForm.getPhone());
             user.setUserType(passwordForm.getType());
             user.setUserId(uuid);
             user.insert();
