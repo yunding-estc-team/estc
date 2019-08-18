@@ -11,7 +11,6 @@ import com.competition.shiro.UsernamePasswordEntity;
 import com.competition.util.CheckAccountType;
 import com.competition.util.JwtHelper;
 import com.competition.util.SendMessage;
-import net.bytebuddy.description.method.MethodDescription;
 import org.apache.commons.mail.EmailException;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AccountException;
@@ -22,15 +21,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
 import static com.competition.util.SendMessage.sendMessage;
 
 /**
- * @author:Cui
- * @date:2019/8/2
+ * @author: Cui
+ * @date: 2019/8/2
  * @description:
  * @action:
  */
@@ -137,7 +134,7 @@ public class ShiroController {
      * @param model
      * @return
      */
-    @RequestMapping("/loginByPassword")
+    @PostMapping("/loginByPassword")
     public ReturnVO loginByPassword(@RequestParam String name,@RequestParam String password,Model model){
         Subject subject = SecurityUtils.getSubject();
         //封装用户数据
@@ -176,7 +173,7 @@ public class ShiroController {
         logger.info("用户:"+vo.getId()+"登陆成功");
         return ReturnVO.success(token);
     }
-    @RequestMapping("loginByCode")
+    @PostMapping("loginByCode")
     public ReturnVO loginByCode(@RequestBody String name,@RequestBody String code,Model model){
         /**
          *shiro编写认证操作
