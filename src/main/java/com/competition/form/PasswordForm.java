@@ -20,6 +20,10 @@ public class PasswordForm {
 
     String address;
 
+    String email;
+
+    String phone;
+
     /**
      * 填入的新密码
      */
@@ -35,12 +39,13 @@ public class PasswordForm {
     /**
      * 注册时用户填入的昵称
      */
-    String username;
+    String userName;
 
     /**
      * 用户类型
      */
     String type;
+
 
 
 }

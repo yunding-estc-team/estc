@@ -43,7 +43,9 @@
 ////	@Autowired
 ////	CompetitionMapper mapper;
 //	@Autowired
-<<<<<<< HEAD
+
+//import org.junit.Test;
+//import org.springframework.beans.factory.annotation.Autowired;<<<<<<< HEAD
 //	CompetitionService service;
 //
 //	@Test
@@ -125,42 +127,44 @@
 //
 //
 //}
-=======
-//	CompetitionMapper mapper;
-	@Autowired
-	CompetitionService service;
-
-	@Test
-	public void entityT(){
-		CompetitionWiki competitionWiki = new CompetitionWiki();
-		competitionWiki.setWikiId("1234");
-		competitionWiki.setContent("weizhi");
-//		competitionWiki.insert();
-		logger.warn(competitionWiki.selectById().toString());
-
-	}
-	@Autowired
-	CompetitionWikiService competitionWikiService;
-	@Test
-	public void serviceT(){
-		CompetitionWiki competitionWiki = new CompetitionWiki();
-		competitionWiki.setWikiId("1234");
-		competitionWiki.setContent("weizhi");
-
-		String s = competitionWikiService.getById(1234).toString();
-
-		logger.debug("s" );
-		logger.info("dfa");
-
-
-
-	}
-
-
-	@Autowired
-	CompetitionService competitionService;
-	@Test
-	public void insertT(){
+//
+//import org.junit.Test;
+//import org.springframework.beans.factory.annotation.Autowired;=======
+////	CompetitionMapper mapper;
+//	@Autowired
+//	CompetitionService service;
+//
+//	@Test
+//	public void entityT(){
+//		CompetitionWiki competitionWiki = new CompetitionWiki();
+//		competitionWiki.setWikiId("1234");
+//		competitionWiki.setContent("weizhi");
+////		competitionWiki.insert();
+//		logger.warn(competitionWiki.selectById().toString());
+//
+//	}
+//	@Autowired
+//	CompetitionWikiService competitionWikiService;
+//	@Test
+//	public void serviceT(){
+//		CompetitionWiki competitionWiki = new CompetitionWiki();
+//		competitionWiki.setWikiId("1234");
+//		competitionWiki.setContent("weizhi");
+//
+//		String s = competitionWikiService.getById(1234).toString();
+//
+//		logger.debug("s" );
+//		logger.info("dfa");
+//
+//
+//
+//	}
+//
+//
+//	@Autowired
+//	CompetitionService competitionService;
+//	@Test
+//	public void insertT(){
 //		mapper.selectList(Wrappers.<Competition>lambdaQuery().select(Competition::getCompetitionId))
 //					.forEach(x->{
 //						assertThat(x.getCompetitionId()).isNotNull();
@@ -169,39 +173,39 @@
 //		mapper.selectOne(Wrappers.<Competition>lambdaQuery().select(Competition::getCompetitionId));
 //		System.out.println(
 //				mapper.selectOne(Wrappers.<Competition>lambdaQuery().select(Competition::getCompetitionId,Competition::getClickCount))
-//		);
-	}
-	@Test
-	public void selectT(){
-		Competition competition = new Competition();
-
-	}
-
-
-
-	@Test
-	public void testAOP() {
-	}
-	@Autowired
-	RedisTemplate<String,String> redisTemplate;
-
-	@Test
-	public void testReturncode(){
-		ReturnCode.SUCCESS.getDescription();
-	}
-
-	@Test
-	public void hashCodeT(){
-		String s = "2018005644";
-		System.out.println(s.hashCode());
-		String y = "2018005643";
-		System.out.println(y.hashCode()+"\n"+s.hashCode());
-	}
-	@Test
-	public void competitionC(){
-		Competition competition = competitionService.getById("1800bb87da81438ab982c0416631054c");
-	}
-
-
-}
->>>>>>> 5a7cc91c011b12b809e7fa7bd2722b2229bda4bb
+////		);
+//	}
+//	@Test
+//	public void selectT(){
+//		Competition competition = new Competition();
+//
+//	}
+//
+//
+//
+//	@Test
+//	public void testAOP() {
+//	}
+//	@Autowired
+//	RedisTemplate<String,String> redisTemplate;
+//
+//	@Test
+//	public void testReturncode(){
+//		ReturnCode.SUCCESS.getDescription();
+//	}
+//
+//	@Test
+//	public void hashCodeT(){
+//		String s = "2018005644";
+//		System.out.println(s.hashCode());
+//		String y = "2018005643";
+//		System.out.println(y.hashCode()+"\n"+s.hashCode());
+//	}
+//	@Test
+//	public void competitionC(){
+//		Competition competition = competitionService.getById("1800bb87da81438ab982c0416631054c");
+//	}
+//
+//
+//}
+//>>>>>>> 5a7cc91c011b12b809e7fa7bd2722b2229bda4bb
