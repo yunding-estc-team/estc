@@ -1,5 +1,7 @@
 package com.competition.controller;
 
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import com.competition.VO.TokenObjectVO;
 import com.competition.entity.User;
 import com.competition.response.ReturnCode;
 import com.competition.response.ReturnVO;
@@ -7,7 +9,9 @@ import com.competition.service.UserService;
 import com.competition.shiro.UserNamePasswordTelphoneToken;
 import com.competition.shiro.UsernamePasswordEntity;
 import com.competition.util.CheckAccountType;
+import com.competition.util.JwtHelper;
 import com.competition.util.SendMessage;
+import net.bytebuddy.description.method.MethodDescription;
 import org.apache.commons.mail.EmailException;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AccountException;
@@ -30,7 +34,7 @@ import static com.competition.util.SendMessage.sendMessage;
  * @description:
  * @action:
  */
-@Controller
+@RestController
 @RequestMapping("/shiro")
 @CrossOrigin
 public class ShiroController {
@@ -134,10 +138,7 @@ public class ShiroController {
      * @return
      */
     @RequestMapping("/loginByPassword")
-    public ReturnVO loginByPassword(@RequestParam("name")String name, @RequestParam("password")String password, Model model){
-        /**
-         *shiro编写认证操作
-         */
+    public ReturnVO loginByPassword(@RequestParam String name,@RequestParam String password,Model model){
         Subject subject = SecurityUtils.getSubject();
         //封装用户数据
         if(!subject.isAuthenticated()){
@@ -147,7 +148,7 @@ public class ShiroController {
             //执行登录操作
             try {
                 subject.login(token);
-                return new ReturnVO(ReturnCode.SUCCESS);
+//                return new ReturnVO(ReturnCode.SUCCESS);
             }catch (UnknownAccountException e){
                 model.addAttribute("msg","用户名或密码错误");
                 logger.error("用户不存在");
@@ -162,10 +163,21 @@ public class ShiroController {
                 return new ReturnVO(ReturnCode.FAILURE_6);
             }
         }
-        return new ReturnVO(ReturnCode.SUCCESS);
+
+        // 生成token
+        User u = userService.getOne(Wrappers.
+                <User>lambdaQuery()
+                .select(User::getUserId,User::getUserType)
+                    .eq(User::getUserEmail,name)
+                    .or()
+                    .eq(User::getUserPhone,name));
+        TokenObjectVO vo = TokenObjectVO.fromUser(u);
+        String token = JwtHelper.generateToken(vo);
+        logger.info("用户:"+vo.getId()+"登陆成功");
+        return ReturnVO.success(token);
     }
     @RequestMapping("loginByCode")
-    public ReturnVO loginByCode(@RequestParam("name")String name,@RequestParam("code")String code,Model model){
+    public ReturnVO loginByCode(@RequestBody String name,@RequestBody String code,Model model){
         /**
          *shiro编写认证操作
          */

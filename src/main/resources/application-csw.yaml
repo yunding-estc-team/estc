@@ -36,7 +36,7 @@ spring:
 #    host: 39.105.210.140
     host: localhost
 #    password: root
-    password: redis
+    password: wenzhu27
     port: 6379
     lettuce:
       pool:

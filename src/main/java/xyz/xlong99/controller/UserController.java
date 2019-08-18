@@ -2,6 +2,8 @@ package xyz.xlong99.controller;
 
 import com.competition.response.ReturnCode;
 import com.competition.response.ReturnVO;
+import org.springframework.web.bind.annotation.RequestBody;
+import xyz.xlong99.form.UserForm;
 import xyz.xlong99.util.ActiveUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,8 +31,8 @@ public class UserController {
      * @return
      */
     @RequestMapping("/getStudent")
-    public ReturnVO getStudent(String page,String sort,String order){
-        List<Student> students = userService.findAllStudent(page, sort, order);
+    public ReturnVO getStudent(@RequestBody UserForm form){
+        List<Student> students = userService.findAllStudent(form.getPage(), form.getSort(), form.getOrder());
         return new ReturnVO(ReturnCode.SUCCESS,ActiveUtil.permissionStdHelper(students));
     }
 
@@ -39,8 +41,8 @@ public class UserController {
      * @return
      */
     @RequestMapping("/getOrganization")
-    public ReturnVO getOrganization(String page,String sort,String order){
-        List<Organization> organizations = userService.findAllOrganization(page, sort, order);
+    public ReturnVO getOrganization(@RequestBody UserForm form){
+        List<Organization> organizations = userService.findAllOrganization(form.getPage(), form.getSort(), form.getOrder());
         return new ReturnVO(ReturnCode.SUCCESS,ActiveUtil.permissionOrgHelper(organizations));
     }
 

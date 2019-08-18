@@ -1,4 +1,1 @@
-2019-08-16 20:59:32.764 WARN   --- com.competition.advise.Competition.deRecovery                                                        [line29    ] : null
-2019-08-16 21:00:20.085 WARN   --- com.competition.advise.Competition.deRecovery                                                        [line29    ] : null
-2019-08-16 21:03:01.799 WARN   --- com.competition.advise.Competition.deRecovery                                                        [line29    ] : null
-2019-08-16 21:03:05.255 WARN   --- com.competition.advise.Competition.deRecovery                                                        [line29    ] : null
+2019-08-16 11:47:09.699 WARN   --- org.apache.catalina.util.SessionIdGeneratorBase.log                                                  [line173   ] : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [201] milliseconds.
