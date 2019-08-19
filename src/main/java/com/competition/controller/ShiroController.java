@@ -129,18 +129,16 @@ public class ShiroController {
 
     /**
      * 登录页面请求
-     * @param name
-     * @param password
+     * @param entity
      * @param model
      * @return
      */
     @PostMapping("/loginByPassword")
-    public ReturnVO loginByPassword(@RequestParam String name,@RequestParam String password,Model model){
+    public ReturnVO loginByPassword(@RequestBody UsernamePasswordEntity entity, Model model){
         Subject subject = SecurityUtils.getSubject();
         //封装用户数据
         if(!subject.isAuthenticated()){
-            UsernamePasswordEntity entity = new UsernamePasswordEntity();
-            entity.setUserName(name).setPassword(password).setLoginType(false);
+            entity.setLoginType(false);
             UserNamePasswordTelphoneToken token = new UserNamePasswordTelphoneToken(entity);
             //执行登录操作
             try {
@@ -165,25 +163,24 @@ public class ShiroController {
         User u = userService.getOne(Wrappers.
                 <User>lambdaQuery()
                 .select(User::getUserId,User::getUserType)
-                    .eq(User::getUserEmail,name)
+                    .eq(User::getUserEmail,entity.getUserName())
                     .or()
-                    .eq(User::getUserPhone,name));
+                    .eq(User::getUserPhone,entity.getUserName()));
         TokenObjectVO vo = TokenObjectVO.fromUser(u);
         String token = JwtHelper.generateToken(vo);
         logger.info("用户:"+vo.getId()+"登陆成功");
         return ReturnVO.success(token);
     }
     @PostMapping("loginByCode")
-    public ReturnVO loginByCode(@RequestBody String name,@RequestBody String code,Model model){
+    public ReturnVO loginByCode(@RequestBody UsernamePasswordEntity entity,Model model){
         /**
          *shiro编写认证操作
          */
         Subject subject = SecurityUtils.getSubject();
         if(!subject.isAuthenticated()){
-            if(template.opsForValue().get(name).equals(code)){
-                UsernamePasswordEntity entity = new UsernamePasswordEntity();
+            if(template.opsForValue().get(entity.getUserName()).equals(entity.getCode())){
 //                参数传入
-                entity.setLoginType(true).setUserName(name).setPassword("ok");
+                entity.setLoginType(true).setPassword("ok");
 //                传入entity对象
                 UserNamePasswordTelphoneToken token = new UserNamePasswordTelphoneToken(entity);
                 //执行登录功能
@@ -208,22 +205,22 @@ public class ShiroController {
 
     /**
      *发送验证码
-     * @param name
+     * @param entity
      * @param model
      * @return
      */
     @PostMapping("loginByCodeSend")
-    public ReturnVO loginByCodeSend(@RequestParam("name")String name, Model model){
+    public ReturnVO loginByCodeSend(@RequestBody UsernamePasswordEntity entity, Model model){
         CheckAccountType checkAccountType = new CheckAccountType();
         //判断用户输入是手机号还是邮箱
-        if(checkAccountType.checkPhone(name)){
-            User user = userService.findByPhoneNumber(name);
+        if(checkAccountType.checkPhone(entity.getUserName())){
+            User user = userService.findByPhoneNumber(entity.getUserName());
             if(user!=null) {
                 //发送验证码
-                String truecode = sendMessage(name);
+                String truecode = sendMessage(entity.getUserName());
                 //redis存储验证码
-                template.opsForValue().set(name, truecode);
-                System.out.println(template.opsForValue().get(name));
+                template.opsForValue().set(entity.getUserName(), truecode);
+                System.out.println(template.opsForValue().get(entity.getUserName()));
                 model.addAttribute("msg","验证码发送成功!");
                 return new ReturnVO(ReturnCode.SUCCESS);
             }else {
@@ -231,19 +228,19 @@ public class ShiroController {
                 System.out.println("用户名不存在");
                 return new ReturnVO(ReturnCode.FAILURE_6);
             }
-        }else if(checkAccountType.checkEmail(name)) {
-            User user = userService.findByEmail(name);
+        }else if(checkAccountType.checkEmail(entity.getUserName())) {
+            User user = userService.findByEmail(entity.getUserName());
             if(user!=null) {
                 SendMessage sendMessage = new SendMessage();
                 //发送验证码
                 String truecode = null;
                 try {
-                    truecode = sendMessage.sendEmail(name);
+                    truecode = sendMessage.sendEmail(entity.getUserName());
                 } catch (EmailException e) {
                     System.out.println("发送验证码出错！");
                 }
                 //redis存储验证码
-                template.opsForValue().set(name, truecode);
+                template.opsForValue().set(entity.getUserName(), truecode);
                 model.addAttribute("msg", "验证码发送成功！");
                 return new ReturnVO(ReturnCode.SUCCESS);
             }else {
