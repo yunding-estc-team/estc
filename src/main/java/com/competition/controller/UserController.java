@@ -37,6 +37,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.EscapedErrors;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.stereotype.Controller;
+import sun.plugin2.main.client.MessagePassingOneWayJSObject;
 import sun.security.jca.GetInstance;
 import sun.security.util.Password;
 
@@ -70,6 +71,8 @@ public class  UserController {
     UserCompetitionService userCompetitionService;
     @Autowired
     RedisTemplate<String,String> template;
+    @Autowired
+    CheckCode checkCode;
 
 
 
@@ -92,7 +95,7 @@ public class  UserController {
     /**
      * 判断用户类型(邮箱或手机)
      */
-    @PostMapping("/checkAccountType")
+    @PostMapping("/i")
     public ReturnVO checkAccountType(@RequestBody PasswordForm passwordForm){
         CheckAccountType checkAccountType = new CheckAccountType();
         if(checkAccountType.checkPhone(passwordForm.getAddress())) {
@@ -107,17 +110,17 @@ public class  UserController {
      * 发送邮箱验证码
      */
     @PostMapping("/msg/email")
-    public ReturnVO sendEmailCode(@RequestBody String adress){
+    public ReturnVO sendEmailCode(@RequestBody PasswordForm passwordForm){
         SendMessage sendMessage =new SendMessage();
         try {
             //发送验证码
-            String truecode =sendMessage.sendEmail(adress);
+            String truecode =sendMessage.sendEmail(passwordForm.getAddress());
             //redis存储验证码
-            template.opsForValue().set(adress,truecode);
+            template.opsForValue().set(passwordForm.getAddress(),truecode);
             return new ReturnVO(ReturnCode.SUCCESS);
         } catch (EmailException e) {
             e.printStackTrace();
-            return new ReturnVO(ReturnCode.FAILURE_2);
+            return new ReturnVO(ReturnCode.FAILURE_3);
         }
     }
 
@@ -125,19 +128,31 @@ public class  UserController {
      * 发送手机验证码
      */
     @PostMapping("/msg/phone")
-    public ReturnVO sendPhoneCode(@RequestBody String phoneNum){
+    public ReturnVO sendPhoneCode(@RequestBody PasswordForm passwordForm){
         SendMessage sendMessage =new SendMessage();
-        String adress =phoneNum;
         try {
             //发送验证码
-            String truecode =sendMessage(phoneNum);
+            String truecode =sendMessage(passwordForm.getAddress());
             //redis存储验证码
-            template.opsForValue().set(adress,truecode);
+            template.opsForValue().set(passwordForm.getAddress(),truecode);
             return new ReturnVO(ReturnCode.SUCCESS,truecode);
         } catch (Exception e) {
             e.printStackTrace();
             return new ReturnVO(ReturnCode.FAILURE_3);
         }
+    }
+    /**
+     * 校验验证码
+     */
+    @PostMapping("/msg/checkCode")
+    public ReturnVO checkCode(@RequestBody PasswordForm passwordForm){
+       try {
+           checkCode.checkcode(passwordForm, template);
+           return new ReturnVO(ReturnCode.SUCCESS);
+       }catch (Exception e){
+           e.printStackTrace();
+           return new ReturnVO(ReturnCode.FAILURE_7);
+       }
     }
 
 
