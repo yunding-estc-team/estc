@@ -193,3 +193,12 @@
 2019-08-17 14:35:56.476 DEBUG  --- com.competition.dao.UserMapper.selectOne.debug                                                       [line143   ] : ==>  Preparing: SELECT user_id,user_type FROM user WHERE user_email = ? OR user_phone = ? 
 2019-08-17 14:35:56.477 DEBUG  --- com.competition.dao.UserMapper.selectOne.debug                                                       [line143   ] : ==> Parameters: 15698614402(String), 15698614402(String)
 2019-08-17 14:35:56.491 DEBUG  --- com.competition.dao.UserMapper.selectOne.debug                                                       [line143   ] : <==      Total: 1
+2019-08-17 21:21:09.504 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==>  Preparing: select * from user where user_phone = ? 
+2019-08-17 21:21:09.543 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==> Parameters: 15698614402(String)
+2019-08-17 21:21:09.719 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : <==      Total: 1
+2019-08-17 21:22:37.665 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==>  Preparing: select * from user where user_phone = ? 
+2019-08-17 21:22:37.666 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==> Parameters: 15698614402(String)
+2019-08-17 21:22:37.869 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : <==      Total: 1
+2019-08-17 21:24:14.925 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==>  Preparing: select * from user where user_phone = ? 
+2019-08-17 21:24:14.944 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==> Parameters: 15698614402(String)
+2019-08-17 21:24:14.993 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : <==      Total: 1
