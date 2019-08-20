@@ -178,6 +178,24 @@ public class  UserController {
        }
     }
 
+    /**
+     * 通过token校验验证码
+     */
+    @PostMapping("/msg/tokenCheckCode")
+    public ReturnVO checkCode(@RequestBody PasswordForm passwordForm,@RequestHeader  String authorization){
+        // 解析token，查询数据库，获取手机号
+        String phoneNumber = userService.getById(JwtHelper.getTokenInfo(authorization).getId()).getUserPhone();
+        passwordForm.setAddress(phoneNumber);
+        try {
+            checkCode.checkcode(passwordForm, template);
+            return new ReturnVO(ReturnCode.SUCCESS);
+        }catch (Exception e){
+            e.printStackTrace();
+            return new ReturnVO(ReturnCode.FAILURE_7);
+        }
+    }
+
+
 
 
     /**
@@ -203,14 +221,36 @@ public class  UserController {
      * 忘记密码
      */
 
-    @PostMapping("/updatePassword")
-    public ReturnVO updatePassword(@RequestBody PasswordForm passwordForm) {
+    @PostMapping("/updatePasswordByPhone")
+    public ReturnVO updatePasswordBy(@RequestBody PasswordForm passwordForm) {
         CheckCode checkCode =new CheckCode();
         //校验验证码是否正确
         if(checkCode.checkcode(passwordForm,template)) {
-            User user = new User();
+            User user =userService.getOne(new QueryWrapper<User>().lambda().eq(User::getUserPhone,passwordForm.getAddress()));
             //存储    新的密码
             user.setPassword(passwordForm.getNewpassword());
+
+            try {
+                userService.updateById(user);
+                return new ReturnVO(ReturnCode.SUCCESS);
+            } catch (Exception e) {
+                e.printStackTrace();
+                return new ReturnVO(ReturnCode.FAILURE_3);
+            }
+        }else{
+            return new ReturnVO(ReturnCode.FAILURE_2);
+        }
+    }
+
+    @PostMapping("/updatePasswordByEmail")
+    public ReturnVO updatePasswordByEmail(@RequestBody PasswordForm passwordForm) {
+        CheckCode checkCode =new CheckCode();
+        //校验验证码是否正确
+        if(checkCode.checkcode(passwordForm,template)) {
+            User user =userService.getOne(new QueryWrapper<User>().lambda().eq(User::getUserEmail,passwordForm.getAddress()));
+            //存储    新的密码
+            user.setPassword(passwordForm.getNewpassword());
+
             try {
                 userService.updateById(user);
                 return new ReturnVO(ReturnCode.SUCCESS);
@@ -344,6 +384,7 @@ public class  UserController {
     public ReturnVO insertPrizeInfo(@RequestBody UserCompetition userCompetition,@RequestHeader String authorization) {
         String id = JwtHelper.parserToken(authorization).getId();
         userCompetition.setUserId(id);
+        userCompetition.setCheckout("2");
         userCompetition.insert();
         return new ReturnVO(ReturnCode.SUCCESS);
     }
