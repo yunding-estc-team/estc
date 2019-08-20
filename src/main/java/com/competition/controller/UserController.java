@@ -11,6 +11,7 @@ import com.competition.dao.UserMapper;
 import com.competition.entity.Competition;
 import com.competition.entity.User;
 import com.competition.entity.UserCompetition;
+import com.competition.exception.MyIllegalFormatException;
 import com.competition.form.FileForm;
 import com.competition.form.PageForm;
 import com.competition.form.PasswordForm;
@@ -66,7 +67,6 @@ public class  UserController {
 
     @Autowired
     UserService userService;
-
     @Autowired
     UserCompetitionService userCompetitionService;
     @Autowired
@@ -110,37 +110,60 @@ public class  UserController {
      * 发送邮箱验证码
      */
     @PostMapping("/msg/email")
-    public ReturnVO sendEmailCode(@RequestBody PasswordForm passwordForm){
+    public ReturnVO sendEmailCode(@RequestBody PasswordForm passwordForm)throws MyIllegalFormatException {
         SendMessage sendMessage =new SendMessage();
-        try {
             //发送验证码
-            String truecode =sendMessage.sendEmail(passwordForm.getAddress());
-            //redis存储验证码
+        String truecode = null;
+        try {
+            truecode = sendMessage.sendEmail(passwordForm.getAddress());
+        } catch (EmailException e) {
+            throw new MyIllegalFormatException();
+        }
+        //redis存储验证码
             template.opsForValue().set(passwordForm.getAddress(),truecode);
             return new ReturnVO(ReturnCode.SUCCESS);
-        } catch (EmailException e) {
-            e.printStackTrace();
-            return new ReturnVO(ReturnCode.FAILURE_3);
-        }
     }
 
     /**
      * 发送手机验证码
      */
     @PostMapping("/msg/phone")
-    public ReturnVO sendPhoneCode(@RequestBody PasswordForm passwordForm){
+    public ReturnVO sendPhoneCode(@RequestBody PasswordForm passwordForm) throws MyIllegalFormatException {
         SendMessage sendMessage =new SendMessage();
-        try {
             //发送验证码
-            String truecode =sendMessage(passwordForm.getAddress());
-            //redis存储验证码
-            template.opsForValue().set(passwordForm.getAddress(),truecode);
-            return new ReturnVO(ReturnCode.SUCCESS,truecode);
+        String truecode = null;
+        try {
+            truecode = sendMessage(passwordForm.getAddress());
         } catch (Exception e) {
-            e.printStackTrace();
-            return new ReturnVO(ReturnCode.FAILURE_3);
+            throw new MyIllegalFormatException();
         }
+        //redis存储验证码
+            template.opsForValue().set(passwordForm.getAddress(),truecode);
+            return new ReturnVO(ReturnCode.SUCCESS);
     }
+
+    /**
+     * 通过token获取验证码
+     * @param authorization token
+     * @return 正常返回成功
+     */
+    @PostMapping("/msg/tokenPhone")
+    public ReturnVO sendPhoneCode(@RequestHeader String authorization) {
+        // 解析token，查询数据库，获取手机号
+        String phoneNumber = userService.getById(JwtHelper.getTokenInfo(authorization).getId()).getUserPhone();
+        // 发送验证码
+        String verifyCode = null;
+        try {
+            verifyCode = sendMessage(phoneNumber);
+        } catch (Exception e) {
+
+        }
+        // 存贮到redis
+        template.opsForValue().set(phoneNumber,verifyCode);
+        return ReturnVO.success();
+    }
+
+
     /**
      * 校验验证码
      */
@@ -241,6 +264,10 @@ public class  UserController {
         //解析token
         String id =JwtHelper.parserToken(authorization).getId();
         user.setUserId(id);
+        user.setRealname(null);
+        user.setUserMajor(null);
+        user.setUserSchool(null);
+        user.setUserNo(null);
         user.update(new QueryWrapper<User>().lambda().eq(User::getUserId,id));
         return new ReturnVO(ReturnCode.SUCCESS);
     }
@@ -252,6 +279,13 @@ public class  UserController {
         //解析token
         String id = JwtHelper.parserToken(authorization).getId();
         user.setUserId(id);
+        user.setUserPhone(null);
+        user.setUserEmail(null);
+        user.setUserName(null);
+        user.setIntroduction(null);
+        user.setUserBirth(null);
+        user.setUserSex(null);
+        user.setUserType(null);
         user.setCheckout("3");
         user.update(new QueryWrapper<User>().lambda().eq(User::getUserId, id));
         return new ReturnVO(ReturnCode.SUCCESS);
@@ -337,10 +371,8 @@ public class  UserController {
     @RequestMapping("/signin")
     public String signin(){
         TokenObjectVO tokenObjectVO = new TokenObjectVO();
-        tokenObjectVO.setId("08c1104f-4e82-41a5-b52a-3750a616b6c3");
+        tokenObjectVO.setId("sad");
         //      tokenObjectVO.setType("admin");
-
-
         return JwtHelper.generateToken(tokenObjectVO);
     }
 }

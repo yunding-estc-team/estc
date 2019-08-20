@@ -1,0 +1,62 @@
+2019-08-19 17:11:56.919 WARN   --- onObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer.logDuplicateJsonObjectsWarning [line81    ] : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/HP/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/HP/.m2/repository/org/json/json/20141113/json-20141113.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2019-08-19 17:14:30.607 WARN   --- onObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer.logDuplicateJsonObjectsWarning [line81    ] : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/HP/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/HP/.m2/repository/org/json/json/20141113/json-20141113.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2019-08-19 17:15:25.258 WARN   --- com.competition.advise.GlobalEx.e                                                                    [line70    ] : 参数错误
+2019-08-19 17:15:25.258 WARN   --- com.competition.advise.GlobalEx.e                                                                    [line71    ] : Value must not be null!
+2019-08-19 17:38:34.146 WARN   --- com.competition.advise.GlobalEx.e                                                                    [line70    ] : 参数错误
+2019-08-19 17:38:34.146 WARN   --- com.competition.advise.GlobalEx.e                                                                    [line71    ] : Value must not be null!
+2019-08-19 17:38:44.494 WARN   --- onObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer.logDuplicateJsonObjectsWarning [line81    ] : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/HP/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/HP/.m2/repository/org/json/json/20141113/json-20141113.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2019-08-19 17:39:21.543 WARN   --- onObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer.logDuplicateJsonObjectsWarning [line81    ] : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/HP/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/HP/.m2/repository/org/json/json/20141113/json-20141113.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2019-08-19 17:40:17.677 WARN   --- com.competition.advise.GlobalEx.e                                                                    [line71    ] : 参数错误
+2019-08-19 17:40:17.678 WARN   --- com.competition.advise.GlobalEx.e                                                                    [line72    ] : Value must not be null!
+2019-08-19 17:41:07.642 WARN   --- com.competition.advise.GlobalEx.e                                                                    [line71    ] : 参数错误
+2019-08-19 17:41:07.643 WARN   --- com.competition.advise.GlobalEx.e                                                                    [line72    ] : Value must not be null!
+2019-08-19 17:41:38.503 WARN   --- com.competition.advise.GlobalEx.e                                                                    [line71    ] : 参数错误
+2019-08-19 17:41:38.503 WARN   --- com.competition.advise.GlobalEx.e                                                                    [line72    ] : Value must not be null!
+2019-08-19 17:41:56.590 WARN   --- .springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext.refresh [line557   ] : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/C:/Users/HP/.m2/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/C:/Users/HP/.m2/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+public com.competition.response.ReturnVO com.competition.controller.UserController.sendPhoneCode(com.competition.form.PasswordForm) throws com.competition.exception.MyIllegalFormatException
+to {POST /user/msg/phone}: There is already 'userController' bean method
+public com.competition.response.ReturnVO com.competition.controller.UserController.sendPhoneCode(java.lang.String) throws com.competition.exception.MyIllegalFormatException mapped.
+2019-08-19 17:44:51.827 WARN   --- .springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext.refresh [line557   ] : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/C:/Users/HP/.m2/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/C:/Users/HP/.m2/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+public com.competition.response.ReturnVO com.competition.controller.UserController.sendPhoneCode(com.competition.form.PasswordForm) throws com.competition.exception.MyIllegalFormatException
+to {POST /user/msg/phone}: There is already 'userController' bean method
+public com.competition.response.ReturnVO com.competition.controller.UserController.sendPhoneCode(java.lang.String) throws com.competition.exception.MyIllegalFormatException mapped.
+2019-08-19 17:46:47.192 WARN   --- .springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext.refresh [line557   ] : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/C:/Users/HP/.m2/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/C:/Users/HP/.m2/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+public com.competition.response.ReturnVO com.competition.controller.UserController.sendPhoneCode(java.lang.String) throws com.competition.exception.MyIllegalFormatException
+to {POST /user/msg/phone}: There is already 'userController' bean method
+public com.competition.response.ReturnVO com.competition.controller.UserController.sendPhoneCode(com.competition.form.PasswordForm) mapped.
+2019-08-19 17:47:30.594 WARN   --- .springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext.refresh [line557   ] : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/C:/Users/HP/.m2/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/C:/Users/HP/.m2/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+public com.competition.response.ReturnVO com.competition.controller.UserController.sendPhoneCode(java.lang.String)
+to {POST /user/msg/phone}: There is already 'userController' bean method
+public com.competition.response.ReturnVO com.competition.controller.UserController.sendPhoneCode(com.competition.form.PasswordForm) mapped.

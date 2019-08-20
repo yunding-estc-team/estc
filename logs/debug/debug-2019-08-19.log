@@ -1,0 +1,45 @@
+2019-08-19 15:13:25.889 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==>  Preparing: select * from user where user_phone = ? 
+2019-08-19 15:13:26.109 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==> Parameters: 15698614402(String)
+2019-08-19 15:13:26.319 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : <==      Total: 1
+2019-08-19 15:13:54.373 DEBUG  --- com.competition.dao.UserMapper.selectOne.debug                                                       [line143   ] : ==>  Preparing: SELECT user_id,user_type FROM user WHERE user_email = ? OR user_phone = ? 
+2019-08-19 15:13:54.383 DEBUG  --- com.competition.dao.UserMapper.selectOne.debug                                                       [line143   ] : ==> Parameters: 15698614402(String), 15698614402(String)
+2019-08-19 15:13:54.413 DEBUG  --- com.competition.dao.UserMapper.selectOne.debug                                                       [line143   ] : <==      Total: 1
+2019-08-19 15:15:28.330 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==>  Preparing: select * from user where user_phone = ? 
+2019-08-19 15:15:28.330 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==> Parameters: 15698614402(String)
+2019-08-19 15:15:28.370 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : <==      Total: 1
+2019-08-19 15:15:28.370 DEBUG  --- com.competition.dao.UserMapper.selectOne.debug                                                       [line143   ] : ==>  Preparing: SELECT user_id,user_type FROM user WHERE user_email = ? OR user_phone = ? 
+2019-08-19 15:15:28.370 DEBUG  --- com.competition.dao.UserMapper.selectOne.debug                                                       [line143   ] : ==> Parameters: 15698614402(String), 15698614402(String)
+2019-08-19 15:15:28.390 DEBUG  --- com.competition.dao.UserMapper.selectOne.debug                                                       [line143   ] : <==      Total: 1
+2019-08-19 15:25:36.689 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==>  Preparing: select * from user where user_phone = ? 
+2019-08-19 15:25:36.709 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==> Parameters: 15698614402(String)
+2019-08-19 15:25:36.859 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : <==      Total: 1
+2019-08-19 15:25:36.909 DEBUG  --- com.competition.dao.UserMapper.selectOne.debug                                                       [line143   ] : ==>  Preparing: SELECT user_id,user_type FROM user WHERE user_email = ? OR user_phone = ? 
+2019-08-19 15:25:36.909 DEBUG  --- com.competition.dao.UserMapper.selectOne.debug                                                       [line143   ] : ==> Parameters: 15698614402(String), 15698614402(String)
+2019-08-19 15:25:36.929 DEBUG  --- com.competition.dao.UserMapper.selectOne.debug                                                       [line143   ] : <==      Total: 1
+2019-08-19 15:27:24.462 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==>  Preparing: select * from user where user_phone = ? 
+2019-08-19 15:27:24.462 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==> Parameters: 15698614402(String)
+2019-08-19 15:27:24.482 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : <==      Total: 1
+2019-08-19 15:27:24.482 DEBUG  --- com.competition.dao.UserMapper.selectOne.debug                                                       [line143   ] : ==>  Preparing: SELECT user_id,user_type FROM user WHERE user_email = ? OR user_phone = ? 
+2019-08-19 15:27:24.482 DEBUG  --- com.competition.dao.UserMapper.selectOne.debug                                                       [line143   ] : ==> Parameters: 15698614402(String), 15698614402(String)
+2019-08-19 15:27:24.501 DEBUG  --- com.competition.dao.UserMapper.selectOne.debug                                                       [line143   ] : <==      Total: 1
+2019-08-19 15:27:58.351 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==>  Preparing: select * from user where user_phone = ? 
+2019-08-19 15:27:58.351 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : ==> Parameters: 15698614402(String)
+2019-08-19 15:27:58.371 DEBUG  --- com.competition.dao.UserMapper.findByPhoneNumber.debug                                               [line143   ] : <==      Total: 1
+2019-08-19 15:27:58.381 DEBUG  --- com.competition.dao.UserMapper.selectOne.debug                                                       [line143   ] : ==>  Preparing: SELECT user_id,user_type FROM user WHERE user_email = ? OR user_phone = ? 
+2019-08-19 15:27:58.381 DEBUG  --- com.competition.dao.UserMapper.selectOne.debug                                                       [line143   ] : ==> Parameters: 15698614402(String), 15698614402(String)
+2019-08-19 15:27:58.391 DEBUG  --- com.competition.dao.UserMapper.selectOne.debug                                                       [line143   ] : <==      Total: 1
+2019-08-19 15:28:15.951 DEBUG  --- com.competition.dao.UserMapper.update.debug                                                          [line143   ] : ==>  Preparing: UPDATE user WHERE user_id = ? 
+2019-08-19 15:28:15.951 DEBUG  --- com.competition.dao.UserMapper.update.debug                                                          [line143   ] : ==> Parameters: sad(String)
+2019-08-19 15:28:16.021 DEBUG  --- com.competition.dao.UserMapper.update.debug                                                          [line143   ] : ==>  Preparing: UPDATE user WHERE user_id = ? 
+2019-08-19 15:28:16.021 DEBUG  --- com.competition.dao.UserMapper.update.debug                                                          [line143   ] : ==> Parameters: sad(String)
+2019-08-19 15:29:23.851 DEBUG  --- com.competition.dao.UserMapper.update.debug                                                          [line143   ] : ==>  Preparing: UPDATE user WHERE user_id = ? 
+2019-08-19 15:29:23.851 DEBUG  --- com.competition.dao.UserMapper.update.debug                                                          [line143   ] : ==> Parameters: sad(String)
+2019-08-19 15:29:24.910 DEBUG  --- com.competition.dao.UserMapper.update.debug                                                          [line143   ] : ==>  Preparing: UPDATE user SET realname=? WHERE user_id = ? 
+2019-08-19 15:29:24.910 DEBUG  --- com.competition.dao.UserMapper.update.debug                                                          [line143   ] : ==> Parameters: 刘竟强(String), sad(String)
+2019-08-19 15:29:24.961 DEBUG  --- com.competition.dao.UserMapper.update.debug                                                          [line143   ] : <==    Updates: 1
+2019-08-19 15:29:36.736 DEBUG  --- com.competition.dao.UserMapper.update.debug                                                          [line143   ] : ==>  Preparing: UPDATE user SET realname=? WHERE user_id = ? 
+2019-08-19 15:29:36.736 DEBUG  --- com.competition.dao.UserMapper.update.debug                                                          [line143   ] : ==> Parameters: 刘竟强(String), sad(String)
+2019-08-19 15:29:36.826 DEBUG  --- com.competition.dao.UserMapper.update.debug                                                          [line143   ] : <==    Updates: 1
+2019-08-19 16:06:02.565 DEBUG  --- com.competition.dao.UserMapper.update.debug                                                          [line143   ] : ==>  Preparing: UPDATE user SET checkout=? WHERE user_id = ? 
+2019-08-19 16:06:02.583 DEBUG  --- com.competition.dao.UserMapper.update.debug                                                          [line143   ] : ==> Parameters: 3(String), sad(String)
+2019-08-19 16:06:02.618 DEBUG  --- com.competition.dao.UserMapper.update.debug                                                          [line143   ] : <==    Updates: 1
