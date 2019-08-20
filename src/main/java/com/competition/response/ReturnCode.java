@@ -18,6 +18,7 @@ public enum ReturnCode {
 	FAILURE_6("用户名或密码错误"),
 	FAILURE_7("验证码错误"),
 	FAILURE_8("账号被封停！"),
+	FAILURE_9("格式错误"),
 	FAILURE("未知错误");
 
 	private String description;

@@ -11,6 +11,7 @@ import com.competition.dao.UserMapper;
 import com.competition.entity.Competition;
 import com.competition.entity.User;
 import com.competition.entity.UserCompetition;
+import com.competition.exception.MyIllegalFormatException;
 import com.competition.form.FileForm;
 import com.competition.form.PageForm;
 import com.competition.form.PasswordForm;
@@ -37,6 +38,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.EscapedErrors;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.stereotype.Controller;
+import sun.plugin2.main.client.MessagePassingOneWayJSObject;
 import sun.security.jca.GetInstance;
 import sun.security.util.Password;
 
@@ -65,11 +67,12 @@ public class  UserController {
 
     @Autowired
     UserService userService;
-
     @Autowired
     UserCompetitionService userCompetitionService;
     @Autowired
     RedisTemplate<String,String> template;
+    @Autowired
+    CheckCode checkCode;
 
 
 
@@ -92,7 +95,7 @@ public class  UserController {
     /**
      * 判断用户类型(邮箱或手机)
      */
-    @PostMapping("/checkAccountType")
+    @PostMapping("/i")
     public ReturnVO checkAccountType(@RequestBody PasswordForm passwordForm){
         CheckAccountType checkAccountType = new CheckAccountType();
         if(checkAccountType.checkPhone(passwordForm.getAddress())) {
@@ -107,37 +110,72 @@ public class  UserController {
      * 发送邮箱验证码
      */
     @PostMapping("/msg/email")
-    public ReturnVO sendEmailCode(@RequestBody String adress){
+    public ReturnVO sendEmailCode(@RequestBody PasswordForm passwordForm)throws MyIllegalFormatException {
         SendMessage sendMessage =new SendMessage();
-        try {
             //发送验证码
-            String truecode =sendMessage.sendEmail(adress);
-            //redis存储验证码
-            template.opsForValue().set(adress,truecode);
-            return new ReturnVO(ReturnCode.SUCCESS);
+        String truecode = null;
+        try {
+            truecode = sendMessage.sendEmail(passwordForm.getAddress());
         } catch (EmailException e) {
-            e.printStackTrace();
-            return new ReturnVO(ReturnCode.FAILURE_2);
+            throw new MyIllegalFormatException();
         }
+        //redis存储验证码
+            template.opsForValue().set(passwordForm.getAddress(),truecode);
+            return new ReturnVO(ReturnCode.SUCCESS);
     }
 
     /**
      * 发送手机验证码
      */
     @PostMapping("/msg/phone")
-    public ReturnVO sendPhoneCode(@RequestBody String phoneNum){
+    public ReturnVO sendPhoneCode(@RequestBody PasswordForm passwordForm) throws MyIllegalFormatException {
         SendMessage sendMessage =new SendMessage();
-        String adress =phoneNum;
-        try {
             //发送验证码
-            String truecode =sendMessage(phoneNum);
-            //redis存储验证码
-            template.opsForValue().set(adress,truecode);
-            return new ReturnVO(ReturnCode.SUCCESS,truecode);
+        String truecode = null;
+        try {
+            truecode = sendMessage(passwordForm.getAddress());
         } catch (Exception e) {
-            e.printStackTrace();
-            return new ReturnVO(ReturnCode.FAILURE_3);
+            throw new MyIllegalFormatException();
         }
+        //redis存储验证码
+            template.opsForValue().set(passwordForm.getAddress(),truecode);
+            return new ReturnVO(ReturnCode.SUCCESS);
+    }
+
+    /**
+     * 通过token获取验证码
+     * @param authorization token
+     * @return 正常返回成功
+     */
+    @PostMapping("/msg/tokenPhone")
+    public ReturnVO sendPhoneCode(@RequestHeader String authorization) {
+        // 解析token，查询数据库，获取手机号
+        String phoneNumber = userService.getById(JwtHelper.getTokenInfo(authorization).getId()).getUserPhone();
+        // 发送验证码
+        String verifyCode = null;
+        try {
+            verifyCode = sendMessage(phoneNumber);
+        } catch (Exception e) {
+
+        }
+        // 存贮到redis
+        template.opsForValue().set(phoneNumber,verifyCode);
+        return ReturnVO.success();
+    }
+
+
+    /**
+     * 校验验证码
+     */
+    @PostMapping("/msg/checkCode")
+    public ReturnVO checkCode(@RequestBody PasswordForm passwordForm){
+       try {
+           checkCode.checkcode(passwordForm, template);
+           return new ReturnVO(ReturnCode.SUCCESS);
+       }catch (Exception e){
+           e.printStackTrace();
+           return new ReturnVO(ReturnCode.FAILURE_7);
+       }
     }
 
 
@@ -226,6 +264,10 @@ public class  UserController {
         //解析token
         String id =JwtHelper.parserToken(authorization).getId();
         user.setUserId(id);
+        user.setRealname(null);
+        user.setUserMajor(null);
+        user.setUserSchool(null);
+        user.setUserNo(null);
         user.update(new QueryWrapper<User>().lambda().eq(User::getUserId,id));
         return new ReturnVO(ReturnCode.SUCCESS);
     }
@@ -237,6 +279,13 @@ public class  UserController {
         //解析token
         String id = JwtHelper.parserToken(authorization).getId();
         user.setUserId(id);
+        user.setUserPhone(null);
+        user.setUserEmail(null);
+        user.setUserName(null);
+        user.setIntroduction(null);
+        user.setUserBirth(null);
+        user.setUserSex(null);
+        user.setUserType(null);
         user.setCheckout("3");
         user.update(new QueryWrapper<User>().lambda().eq(User::getUserId, id));
         return new ReturnVO(ReturnCode.SUCCESS);
@@ -322,10 +371,8 @@ public class  UserController {
     @RequestMapping("/signin")
     public String signin(){
         TokenObjectVO tokenObjectVO = new TokenObjectVO();
-        tokenObjectVO.setId("08c1104f-4e82-41a5-b52a-3750a616b6c3");
+        tokenObjectVO.setId("sad");
         //      tokenObjectVO.setType("admin");
-
-
         return JwtHelper.generateToken(tokenObjectVO);
     }
 }

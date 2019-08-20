@@ -18,7 +18,8 @@ import java.util.List;
  * @since 2019-08-02
  */
 @Service
-public class UserCompetitionServiceImpl extends ServiceImpl<UserCompetitionMapper, UserCompetition> implements UserCompetitionService {
+public class
+UserCompetitionServiceImpl extends ServiceImpl<UserCompetitionMapper, UserCompetition> implements UserCompetitionService {
 	private final
 	UserCompetitionMapper userCompetitionMapper;
 

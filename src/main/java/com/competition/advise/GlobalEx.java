@@ -1,5 +1,6 @@
 package com.competition.advise;
 
+import com.competition.exception.MyIllegalFormatException;
 import com.competition.response.ReturnCode;
 import com.competition.response.ReturnVO;
 import lombok.extern.slf4j.Slf4j;
@@ -74,9 +75,15 @@ public class GlobalEx {
 		return ReturnVO.failure(ReturnCode.FAILURE_6);
 	}
 
+	@ExceptionHandler(MyIllegalFormatException.class)
+	public ReturnVO e(MyIllegalFormatException ex){
+		log.error("数据格式不正确");
+		log.error(ex.getMessage());
+		return ReturnVO.failure(ReturnCode.FAILURE_9);
+	}
 	@ExceptionHandler(Exception.class)
 	public ReturnVO ex(Exception ex){
-		log.error("喂不活的异常");
+		log.error("未捕获的的异常");
 		log.error(ex.getClass().toString());
 		return ReturnVO.failure(ReturnCode.FAILURE_3);
 	}
