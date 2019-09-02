@@ -368,7 +368,7 @@ public class  UserController {
             user.setUserName(passwordForm.getUserName());
             Object credentials =passwordForm.getPassword();
             Object result = new SimpleHash("MD5", credentials, "xlong", 1);
-            user.setPassword((String)result);
+            user.setPassword(((SimpleHash) result).toHex());
             user.setUserEmail(passwordForm.getEmail());
             user.setUserPhone(passwordForm.getPhone());
             user.setUserType(passwordForm.getType());

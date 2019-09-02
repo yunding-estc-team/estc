@@ -118,6 +118,5 @@ public class UserRealm extends AuthorizingRealm {
         Object salt = ByteSource.Util.bytes("xlong");
         int hashIterations = 1;
         Object result = new SimpleHash(hashAlgorithmName, credentials, salt, hashIterations);
-        System.out.println(result);
     }
 }
