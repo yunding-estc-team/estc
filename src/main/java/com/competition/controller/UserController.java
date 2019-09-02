@@ -414,6 +414,20 @@ public class  UserController {
         return new ReturnVO(ReturnCode.SUCCESS,userService.searchAll(searchForm));
     }
 
+    @PostMapping("/login")
+    public ReturnVO login(@RequestBody PasswordForm passwordForm){
+        User user=userService
+                .getOne(new QueryWrapper<User>().
+                        lambda().eq(User::getUserPhone,passwordForm.getPhone()));
+        if(passwordForm.getPassword()==user.getPassword()) {
+            TokenObjectVO tokenObjectVO = new TokenObjectVO();
+            tokenObjectVO.setId(user.getUserId());
+            return new ReturnVO(ReturnCode.SUCCESS,tokenObjectVO);
+        }else{
+            return new ReturnVO(ReturnCode.FAILURE_6);
+        }
+    }
+
 
 
     /**
