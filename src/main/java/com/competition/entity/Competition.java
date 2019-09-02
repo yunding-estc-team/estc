@@ -43,7 +43,6 @@ public class Competition extends Model<Competition> {
     /**
      * 是否为个人赛,1true0false
      */
-    @TableField("isIndividual")
     private String isIndividual;
 
     /**

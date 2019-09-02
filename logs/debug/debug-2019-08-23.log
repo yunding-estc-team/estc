@@ -1,0 +1,6 @@
+2019-08-23 11:01:22.831 DEBUG  --- com.competition.dao.UserMapper.findByEmail.debug                                                     [line143   ] : ==>  Preparing: select * from user where user_email = ? 
+2019-08-23 11:01:22.831 DEBUG  --- com.competition.dao.UserMapper.findByEmail.debug                                                     [line143   ] : ==>  Preparing: select * from user where user_email = ? 
+2019-08-23 11:01:22.831 DEBUG  --- com.competition.dao.UserMapper.findByEmail.debug                                                     [line143   ] : ==>  Preparing: select * from user where user_email = ? 
+2019-08-23 11:01:22.861 DEBUG  --- com.competition.dao.UserMapper.findByEmail.debug                                                     [line143   ] : ==> Parameters: 23456(String)
+2019-08-23 11:01:22.861 DEBUG  --- com.competition.dao.UserMapper.findByEmail.debug                                                     [line143   ] : ==> Parameters: 23456(String)
+2019-08-23 11:01:22.861 DEBUG  --- com.competition.dao.UserMapper.findByEmail.debug                                                     [line143   ] : ==> Parameters: 23456(String)

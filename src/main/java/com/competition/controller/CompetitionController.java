@@ -1,6 +1,8 @@
 package com.competition.controller;
 
 
+import com.baomidou.mybatisplus.core.conditions.Wrapper;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -31,19 +33,22 @@ import java.util.UUID;
  */
 @RestController
 @Slf4j
+@CrossOrigin
 @RequestMapping("/competition")
 public class CompetitionController {
 	@Autowired
 	CompetitionService competitionService;
 
+	// todo
 	/**
+	 *
 	 * 获取赛事信息
 	 */
 	@GetMapping("info")
-	public ReturnVO getInfoById(@RequestBody CompetitionForm competitionForm){
-		log.info("获取赛事信息\n赛事id:"+ competitionForm.getId());
+	public ReturnVO getInfoById(@RequestParam String id){
+		log.info("获取赛事信息\n赛事id:"+ id);
 
-		Competition competition = competitionService.getById(competitionForm.getId());
+		Competition competition = competitionService.getById(id);
 		competitionService.addClick(competition);
 		log.info(competition.getCompetitionId());
 		log.info("访问量加1");
@@ -51,16 +56,29 @@ public class CompetitionController {
 	}
 
 	/**
+	 * ok
 	 * 获取赛事排行榜
 	 */
 	@GetMapping("rank")
-	public ReturnVO rank(Page<Competition> page){
+	public ReturnVO rank(@RequestParam String t,@RequestParam int c,@RequestParam int p){
 		log.info("获取排行榜");
-		IPage iPage = competitionService.page(page,Wrappers.<Competition>lambdaQuery()
-				.select(Competition::getHot,Competition::getCompetitionId,Competition::getName,Competition::getType)
-				.orderByDesc(Competition::getHot));
+		boolean asc = "hot".equals(t);
+		IPage iPage = competitionService.page(new Page<Competition>(c,p),Wrappers.<Competition>lambdaQuery()
+				.select(
+						Competition::getCompetitionId,
+						Competition::getHot,
+						Competition::getJoinLink,
+						Competition::getCover,
+						Competition::getCreateAt,
+						Competition::getName,
+						Competition::getIsIndividual,
+						Competition::getClickCount
+						)
+				.orderByDesc(asc,Competition::getHot)
+				.orderByAsc(!asc,Competition::getCreateAt)
+		);
 		log.info("分页信息"+iPage.getRecords().toString());
-		return new ReturnVO(ReturnCode.SUCCESS,iPage);
+		return new ReturnVO(ReturnCode.SUCCESS,iPage.getRecords());
 	}
 
 	/**

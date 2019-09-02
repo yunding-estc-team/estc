@@ -2,12 +2,10 @@ package com.competition;
 
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.competition.entity.Competition;
+import com.competition.entity.User;
 import com.competition.entity.UserAttention;
 import com.competition.response.CompetitionRewardVO;
-import com.competition.service.CompetitionCheckoutService;
-import com.competition.service.CompetitionService;
-import com.competition.service.UserAttentionService;
-import com.competition.service.UserCompetitionService;
+import com.competition.service.*;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,6 +14,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
+import java.util.UUID;
 
 /**
  * @author GuoHaodong
@@ -37,15 +36,20 @@ public class ControllerTest {
 	}
 
 
+	// 计算hot
 	@Autowired
 	UserAttentionService userAttentionService;
 	@Test
 	public void competitionHistory(){
-		competitionService.list().forEach(competition -> {
+		competitionService.list(Wrappers.<Competition>lambdaQuery().ne(Competition::getName,null)).forEach(competition -> {
 			//关注
-			double attention = userAttentionService.count(Wrappers.<UserAttention>lambdaQuery()
-					.eq(UserAttention::getCompetitionId,competition.getCompetitionId())
-			);
+			double attention = 0;
+			try {
+				attention = userAttentionService.count(Wrappers.<UserAttention>lambdaQuery()
+						.eq(UserAttention::getCompetitionId,competition.getCompetitionId())
+				);
+			} catch (Exception ignore) {
+			}
 			//点击量
 			double click = competition.getClickCount();
 
@@ -61,6 +65,17 @@ public class ControllerTest {
 		});
 	}
 
+	// 生成id
+	@Autowired
+	private UserService userService;
+	@Test
+	public void generateCompetitionUUID(){
+		User user = new User();
+		for (int i=0;i<19;i++){
+			user.setUserId(UUID.randomUUID().toString());
+			userService.save(user);
+		}
+	}
 	@Autowired
 	CompetitionCheckoutService userCompetition;
 	@Test

@@ -12,18 +12,17 @@ import com.competition.entity.Competition;
 import com.competition.entity.User;
 import com.competition.entity.UserCompetition;
 import com.competition.exception.MyIllegalFormatException;
-import com.competition.form.FileForm;
-import com.competition.form.PageForm;
-import com.competition.form.PasswordForm;
-import com.competition.form.SearchForm;
+import com.competition.form.*;
 import com.competition.response.ReturnCode;
 import com.competition.response.ReturnVO;
+import com.competition.service.CompetitionService;
 import com.competition.service.UserCompetitionService;
 import com.competition.service.UserService;
 import com.competition.util.CheckAccountType;
 import com.competition.util.CheckCode;
 import com.competition.util.JwtHelper;
 import com.competition.util.SendMessage;
+import com.fasterxml.jackson.databind.annotation.JsonAppend;
 import com.sun.org.apache.regexp.internal.RE;
 import com.sun.org.apache.regexp.internal.REUtil;
 import io.jsonwebtoken.Claims;
@@ -32,7 +31,9 @@ import javafx.print.PaperSource;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.mail.EmailException;
 import org.apache.shiro.authc.Account;
+import org.apache.shiro.crypto.hash.SimpleHash;
 import org.omg.CORBA.Current;
+import org.omg.PortableInterceptor.USER_EXCEPTION;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.EscapedErrors;
@@ -365,7 +366,9 @@ public class  UserController {
         if(checkCode.checkcode(passwordForm,template)) {
             String uuid = UUID.randomUUID().toString().replaceAll("-", "");
             user.setUserName(passwordForm.getUserName());
-            user.setPassword(passwordForm.getPassword());
+            Object credentials =passwordForm.getPassword();
+            Object result = new SimpleHash("MD5", credentials, "xlong", 1);
+            user.setPassword((String)result);
             user.setUserEmail(passwordForm.getEmail());
             user.setUserPhone(passwordForm.getPhone());
             user.setUserType(passwordForm.getType());
@@ -377,14 +380,22 @@ public class  UserController {
         }
     }
 
-
+    @Autowired
+    CompetitionService competitionService;
     /**
      * 获奖信息录入
      */@PostMapping("/insertPrizeInfo")
-    public ReturnVO insertPrizeInfo(@RequestBody UserCompetition userCompetition,@RequestHeader String authorization) {
-        String id = JwtHelper.parserToken(authorization).getId();
+    public ReturnVO insertPrizeInfo(@RequestBody UserPrizeForm userPrizeForm, @RequestHeader String authorization) {
+        UserCompetition userCompetition=new UserCompetition();
+         String id = JwtHelper.parserToken(authorization).getId();
+         Competition competition =competitionService
+                    .getOne(new QueryWrapper<Competition>().
+                                lambda().eq(Competition::getName,userPrizeForm.getCompetitionName()));
         userCompetition.setUserId(id);
         userCompetition.setCheckout("2");
+        userCompetition.setCompetitionId(competition.getName());
+        userCompetition.setReward(userPrizeForm.getReward());
+        userCompetition.setCertificate(userPrizeForm.getCover());
         userCompetition.insert();
         return new ReturnVO(ReturnCode.SUCCESS);
     }

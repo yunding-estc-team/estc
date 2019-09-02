@@ -17,8 +17,9 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     username: root
-    password: root
+    password: xlong99
     url: jdbc:mysql://39.105.210.140/estc?serverTimezone=UTC
+#    url: jdbc:mysql://localhost/test?serverTimezone=UTC
     platform: mysql
     # druid连接池
     druid:
