@@ -31,6 +31,7 @@ import java.util.List;
  */
 @RestController
 @Slf4j
+@CrossOrigin
 @RequestMapping("/wiki")
 public class CompetitionWikiController {
 

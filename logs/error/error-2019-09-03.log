@@ -1,0 +1,62 @@
+2019-09-03 11:19:30.218 ERROR  --- com.alibaba.druid.pool.DruidDataSource.run                                                           [line2699  ] : create connection SQLException, url: jdbc:mysql://39.105.210.140/estc?serverTimezone=UTC, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1596)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1662)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2697)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeProtocol.negotiateSSLConnection(NativeProtocol.java:361)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.negotiateSSLConnection(NativeAuthenticationProvider.java:777)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:486)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:202)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1452)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:165)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:955)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	... 6 common frames omitted
+Caused by: javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:994)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1367)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1395)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1379)
+	at com.mysql.cj.protocol.ExportControlled.performTlsHandshake(ExportControlled.java:316)
+	at com.mysql.cj.protocol.StandardSocketFactory.performTlsHandshake(StandardSocketFactory.java:188)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.performTlsHandshake(NativeSocketConnection.java:99)
+	at com.mysql.cj.protocol.a.NativeProtocol.negotiateSSLConnection(NativeProtocol.java:352)
+	... 13 common frames omitted
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at sun.security.ssl.InputRecord.read(InputRecord.java:505)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:975)
+	... 20 common frames omitted
+2019-09-03 11:19:31.098 ERROR  --- com.competition.advise.Competition.deRecovery                                                        [line26    ] : 捕获异常null
+2019-09-03 11:19:31.098 ERROR  --- com.competition.advise.Competition.deRecovery                                                        [line26    ] : 捕获异常null
+2019-09-03 11:19:31.104 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line38    ] : 空指针异常
+2019-09-03 11:19:31.104 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line38    ] : 空指针异常
+2019-09-03 11:19:31.104 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line41    ] : java.lang.NullPointerException
+2019-09-03 11:19:31.104 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line41    ] : java.lang.NullPointerException
+2019-09-03 11:19:31.169 ERROR  --- com.competition.advise.Competition.deRecovery                                                        [line26    ] : 捕获异常null
+2019-09-03 11:19:31.169 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line38    ] : 空指针异常
+2019-09-03 11:19:31.170 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line41    ] : java.lang.NullPointerException
+2019-09-03 11:19:31.235 ERROR  --- com.competition.advise.Competition.deRecovery                                                        [line26    ] : 捕获异常null
+2019-09-03 11:19:31.236 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line38    ] : 空指针异常
+2019-09-03 11:19:31.236 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line41    ] : java.lang.NullPointerException
+2019-09-03 11:20:19.019 ERROR  --- com.competition.advise.Competition.deRecovery                                                        [line26    ] : 捕获异常null
+2019-09-03 11:20:19.020 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line38    ] : 空指针异常
+2019-09-03 11:20:19.020 ERROR  --- com.competition.advise.GlobalEx.e                                                                    [line41    ] : java.lang.NullPointerException
