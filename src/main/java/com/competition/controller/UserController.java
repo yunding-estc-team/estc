@@ -229,8 +229,9 @@ public class  UserController {
         if(checkCode.checkcode(passwordForm,template)) {
             User user =userService.getOne(new QueryWrapper<User>().lambda().eq(User::getUserPhone,passwordForm.getAddress()));
             //存储    新的密码
-            user.setPassword(passwordForm.getNewpassword());
-
+            Object credentials =passwordForm.getPassword();
+            Object result = new SimpleHash("MD5", credentials, "xlong", 1);
+            user.setPassword(((SimpleHash) result).toHex());
             try {
                 userService.updateById(user);
                 return new ReturnVO(ReturnCode.SUCCESS);
@@ -275,7 +276,9 @@ public class  UserController {
         if(passwordForm.getPassword().equals(nowuser.getPassword())){
             //存储新的密码
             user.setUserId(id);
-            user.setPassword(passwordForm.getNewpassword());
+            Object credentials =passwordForm.getPassword();
+            Object result = new SimpleHash("MD5", credentials, "xlong", 1);
+            user.setPassword(((SimpleHash) result).toHex());
             user.update(new QueryWrapper<User>().lambda().eq(User::getUserId,id));
             return  new ReturnVO(ReturnCode.SUCCESS);
         }else{
@@ -413,6 +416,8 @@ public class  UserController {
     public ReturnVO searchByName(@RequestBody SearchForm searchForm){
         return new ReturnVO(ReturnCode.SUCCESS,userService.searchAll(searchForm));
     }
+
+
 
     @PostMapping("/login")
     public ReturnVO login(@RequestBody PasswordForm passwordForm){
